@@ -45,6 +45,7 @@
     "xpack.watcher": "plugins/watcher"
   },
   "translations": [
+    "plugins/translations/translations/pt-br.json",
     "plugins/translations/translations/zh-CN.json",
     "plugins/translations/translations/ja-JP.json"
   ]

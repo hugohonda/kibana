@@ -30,7 +30,9 @@ export function getUiSettingDefaults() {
   // We add the `en` key manually here, since that's not a real numeral locale, but the
   // default fallback in case the locale is not found.
   const numeralLanguageIds = [
-    'en',
+    // modified by HHonda
+    // 'en',
+    'pt-br',
     ...numeralLanguages.map(function (numeralLanguage) {
       return numeralLanguage.id;
     }),
@@ -206,12 +208,21 @@ export function getUiSettingDefaults() {
         defaultMessage: 'Scaled date format',
       }),
       type: 'json',
+      // modified by HHonda
+      // value: `[
+      //   ["", "HH:mm:ss.SSS"],
+      //   ["PT1S", "HH:mm:ss"],
+      //   ["PT1M", "HH:mm"],
+      //   ["PT1H", "YYYY-MM-DD HH:mm"],
+      //   ["P1DT", "YYYY-MM-DD"],
+      //   ["P1YT", "YYYY"]
+      // ]`,
       value: `[
   ["", "HH:mm:ss.SSS"],
   ["PT1S", "HH:mm:ss"],
   ["PT1M", "HH:mm"],
-  ["PT1H", "YYYY-MM-DD HH:mm"],
-  ["P1DT", "YYYY-MM-DD"],
+  ["PT1H", "DD-MM-YYYY HH:mm"],
+  ["P1DT", "DD-MM-YYYY"],
   ["P1YT", "YYYY"]
 ]`,
       description: i18n.translate('kbn.advancedSettings.dateFormat.scaledText', {
@@ -725,7 +736,9 @@ export function getUiSettingDefaults() {
       name: i18n.translate('kbn.advancedSettings.format.numberFormatTitle', {
         defaultMessage: 'Number format',
       }),
-      value: '0,0.[000]',
+      // modified by HHonda
+      // value: '0,0.[000]',
+      value: '0.0,[000]',
       type: 'string',
       description: i18n.translate('kbn.advancedSettings.format.numberFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "number" format',
@@ -746,7 +759,9 @@ export function getUiSettingDefaults() {
       name: i18n.translate('kbn.advancedSettings.format.bytesFormatTitle', {
         defaultMessage: 'Bytes format',
       }),
-      value: '0,0.[0]b',
+      // modified by HHonda
+      // value: '0,0.[0]b',
+      value: '0.0,[0]b',
       type: 'string',
       description: i18n.translate('kbn.advancedSettings.format.bytesFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "bytes" format',
@@ -767,7 +782,9 @@ export function getUiSettingDefaults() {
       name: i18n.translate('kbn.advancedSettings.format.percentFormatTitle', {
         defaultMessage: 'Percent format',
       }),
-      value: '0,0.[000]%',
+      // modified by HHonda
+      // value: '0,0.[000]%',
+      value: '0.0,[000]%',
       type: 'string',
       description: i18n.translate('kbn.advancedSettings.format.percentFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "percent" format',
@@ -788,7 +805,9 @@ export function getUiSettingDefaults() {
       name: i18n.translate('kbn.advancedSettings.format.currencyFormatTitle', {
         defaultMessage: 'Currency format',
       }),
-      value: '($0,0.[00])',
+      // modified by HHonda
+      // value: '($0,0.[00])',
+      value: '(R$ 0.0,[00])',
       type: 'string',
       description: i18n.translate('kbn.advancedSettings.format.currencyFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "currency" format',
@@ -809,7 +828,9 @@ export function getUiSettingDefaults() {
       name: i18n.translate('kbn.advancedSettings.format.formattingLocaleTitle', {
         defaultMessage: 'Formatting locale',
       }),
-      value: 'en',
+      // modified by HHonda
+      // value: 'en',
+      value: 'pt-br',
       type: 'select',
       options: numeralLanguageIds,
       optionLabels: Object.fromEntries(
@@ -888,70 +909,90 @@ export function getUiSettingDefaults() {
             from: 'now/d',
             to: 'now/d',
             display: i18n.translate('kbn.advancedSettings.timepicker.today', {
-              defaultMessage: 'Today',
+              // modified by HHonda
+              // defaultMessage: 'Today',
+              defaultMessage: 'Hoje',
             }),
           },
           {
             from: 'now/w',
             to: 'now/w',
             display: i18n.translate('kbn.advancedSettings.timepicker.thisWeek', {
-              defaultMessage: 'This week',
+              // modified by HHonda
+              // defaultMessage: 'This week',
+              defaultMessage: 'Esta semana',
             }),
           },
           {
             from: 'now-15m',
             to: 'now',
             display: i18n.translate('kbn.advancedSettings.timepicker.last15Minutes', {
-              defaultMessage: 'Last 15 minutes',
+              // modified by HHonda
+              // defaultMessage: 'Last 15 minutes',
+              defaultMessage: 'Últimos 15 minutos',
             }),
           },
           {
             from: 'now-30m',
             to: 'now',
             display: i18n.translate('kbn.advancedSettings.timepicker.last30Minutes', {
-              defaultMessage: 'Last 30 minutes',
+              // modified by HHonda
+              // defaultMessage: 'Last 30 minutes',
+              defaultMessage: 'Últimos 30 minutos',
             }),
           },
           {
             from: 'now-1h',
             to: 'now',
             display: i18n.translate('kbn.advancedSettings.timepicker.last1Hour', {
-              defaultMessage: 'Last 1 hour',
+              // modified by HHonda
+              // defaultMessage: 'Last 1 hour',
+              defaultMessage: 'Última hora',
             }),
           },
           {
             from: 'now-24h',
             to: 'now',
             display: i18n.translate('kbn.advancedSettings.timepicker.last24Hours', {
-              defaultMessage: 'Last 24 hours',
+              // modified by HHonda
+              // defaultMessage: 'Last 24 hours',
+              defaultMessage: 'Últimos 24 horas',
             }),
           },
           {
             from: 'now-7d',
             to: 'now',
             display: i18n.translate('kbn.advancedSettings.timepicker.last7Days', {
-              defaultMessage: 'Last 7 days',
+              // modified by HHonda
+              // defaultMessage: 'Last 7 days',
+              defaultMessage: 'Últimos 7 dias',
             }),
           },
           {
             from: 'now-30d',
             to: 'now',
             display: i18n.translate('kbn.advancedSettings.timepicker.last30Days', {
-              defaultMessage: 'Last 30 days',
+              // modified by HHonda
+              // defaultMessage: 'Last 30 days',
+              defaultMessage: 'Últimos 30 dias',
             }),
           },
           {
             from: 'now-90d',
             to: 'now',
             display: i18n.translate('kbn.advancedSettings.timepicker.last90Days', {
-              defaultMessage: 'Last 90 days',
+              // modified by HHonda
+              // defaultMessage: 'Last 90 days',
+              defaultMessage: 'Últimos 90 days',
             }),
           },
           {
             from: 'now-1y',
             to: 'now',
             display: i18n.translate('kbn.advancedSettings.timepicker.last1Year', {
-              defaultMessage: 'Last 1 year',
+              // modified by HHonda
+              // defaultMessage: 'Last 1 year',
+              defaultMessage: 'Último ano',
             }),
           },
         ],
