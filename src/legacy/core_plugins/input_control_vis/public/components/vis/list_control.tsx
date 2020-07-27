@@ -132,6 +132,10 @@ class ListControlUi extends PureComponent<ListControlUiProps, ListControlUiState
         };
       })
       .sort((a, b) => {
+        // modified by HHonda + Edmar Moretti
+        if (!isNaN(a.label * 1)) {
+          return a.label * 1 - b.label * 1;
+        }
         return a.label.toLowerCase().localeCompare(b.label.toLowerCase());
       });
 
