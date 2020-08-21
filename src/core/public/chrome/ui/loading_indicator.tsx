@@ -61,7 +61,7 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
       ? 'globalLoadingIndicator'
       : 'globalLoadingIndicator-hidden';
 
-    const topStyle = {height: '4px'}
+    const topStyle = { height: '4px' };
 
     // editado por Edmar Moretti - DÚVIDA
     return (

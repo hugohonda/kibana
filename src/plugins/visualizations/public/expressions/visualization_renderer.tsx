@@ -32,21 +32,25 @@ export const visualization = () => ({
     // Acrescentado Edmar Moretti + HHonda
     // remove a palavra 'filters' dos títulos dos eixos x e y
     try {
-      if (config.visData.xAxisLabel == 'filters'){
+      if (config.visData.xAxisLabel === 'filters') {
         config.visData.xAxisLabel = ' ';
       }
-      if (config.visData.yAxisLabel == 'filters'){
+      if (config.visData.yAxisLabel === 'filters') {
         config.visData.yAxisLabel = ' ';
       }
-    } catch (e) {}
+    } catch (err) {
+      // continue regardless of error
+    }
     try {
-      if (config.visData.columns[0].xAxisLabel == 'filters'){
+      if (config.visData.columns[0].xAxisLabel === 'filters') {
         config.visData.columns[0].xAxisLabel = ' ';
       }
-      if (config.visData.columns[0].yAxisLabel == 'filters'){
+      if (config.visData.columns[0].yAxisLabel === 'filters') {
         config.visData.columns[0].yAxisLabel = ' ';
       }
-    } catch (e) {};
+    } catch (err) {
+      // continue regardless of error
+    }
     //
     const { visData, visConfig, params } = config;
     const visType = config.visType || visConfig.type;
