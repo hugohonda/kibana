@@ -29,6 +29,25 @@ export const visualization = () => ({
   displayName: 'visualization',
   reuseDomNode: true,
   render: async (domNode: HTMLElement, config: any, handlers: any) => {
+    // Acrescentado Edmar Moretti + HHonda
+    // remove a palavra 'filters' dos títulos dos eixos x e y
+    try {
+      if (config.visData.xAxisLabel == 'filters'){
+        config.visData.xAxisLabel = ' ';
+      }
+      if (config.visData.yAxisLabel == 'filters'){
+        config.visData.yAxisLabel = ' ';
+      }
+    } catch (e) {}
+    try {
+      if (config.visData.columns[0].xAxisLabel == 'filters'){
+        config.visData.columns[0].xAxisLabel = ' ';
+      }
+      if (config.visData.columns[0].yAxisLabel == 'filters'){
+        config.visData.columns[0].yAxisLabel = ' ';
+      }
+    } catch (e) {};
+    //
     const { visData, visConfig, params } = config;
     const visType = config.visType || visConfig.type;
 

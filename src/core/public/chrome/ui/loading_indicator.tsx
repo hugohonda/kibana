@@ -36,6 +36,11 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
 
   componentDidMount() {
     this.loadingCountSubscription = this.props.loadingCount$.subscribe((count) => {
+      // editado por Edmar Moretti
+      if (count === 0) {
+        window.parent.postMessage(document.scrollingElement.scrollHeight, '*');
+      }
+      //
       this.setState({
         visible: count > 0,
       });
@@ -56,8 +61,11 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
       ? 'globalLoadingIndicator'
       : 'globalLoadingIndicator-hidden';
 
+    const topStyle = {height: '4px'}
+
+    // editado por Edmar Moretti - DÚVIDA
     return (
-      <div className={className} data-test-subj={testSubj}>
+      <div className={className} data-test-subj={testSubj} style={topStyle}>
         <div className="kbnLoadingIndicator__bar essentialAnimation" />
       </div>
     );
