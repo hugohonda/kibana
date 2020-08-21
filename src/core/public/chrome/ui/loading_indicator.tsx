@@ -37,7 +37,7 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
   componentDidMount() {
     this.loadingCountSubscription = this.props.loadingCount$.subscribe((count) => {
       // editado por Edmar Moretti
-      if (count === 0) {
+      if (document.scrollingElement && count === 0) {
         window.parent.postMessage(document.scrollingElement.scrollHeight, '*');
       }
       //

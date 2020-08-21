@@ -359,24 +359,36 @@ export const euiContextMapping = {
     }
   ),
   'euiQuickSelect.applyButton': i18n.translate('core.euiQuickSelect.applyButton', {
-    defaultMessage: 'Apply',
+    // modified by HHonda
+    // defaultMessage: 'Apply',
+    defaultMessage: 'Aplicar',
   }),
   'euiQuickSelect.fullDescription': ({ timeTense, timeValue, timeUnit }: EuiValues) =>
     i18n.translate('core.euiQuickSelect.fullDescription', {
-      defaultMessage: 'Currently set to {timeTense} {timeValue} {timeUnit}.',
+      // modified by HHonda
+      // defaultMessage: 'Currently set to {timeTense} {timeValue} {timeUnit}.',
+      defaultMessage: 'Configurado para {timeTense} {timeValue} {timeUnit}.',
       values: { timeTense, timeValue, timeUnit },
     }),
   'euiQuickSelect.legendText': i18n.translate('core.euiQuickSelect.legendText', {
-    defaultMessage: 'Quick select a time range',
+    // modified by HHonda
+    // defaultMessage: 'Quick select a time range',
+    defaultMessage: 'Selecione rapidamente um intervalo de tempo',
   }),
   'euiQuickSelect.nextLabel': i18n.translate('core.euiQuickSelect.nextLabel', {
-    defaultMessage: 'Next time window',
+    // modified by HHonda
+    // defaultMessage: 'Next time window',
+    defaultMessage: 'Próxima janela de tempo',
   }),
   'euiQuickSelect.previousLabel': i18n.translate('core.euiQuickSelect.previousLabel', {
-    defaultMessage: 'Previous time window',
+    // modified by HHonda
+    // defaultMessage: 'Previous time window',
+    defaultMessage: 'Janela de tempo anterior',
   }),
   'euiQuickSelect.quickSelectTitle': i18n.translate('core.euiQuickSelect.quickSelectTitle', {
-    defaultMessage: 'Quick select',
+    // modified by HHonda
+    // defaultMessage: 'Quick select',
+    defaultMessage: 'Seleção rápida',
   }),
   'euiQuickSelect.tenseLabel': i18n.translate('core.euiQuickSelect.tenseLabel', {
     defaultMessage: 'Time tense',
@@ -393,17 +405,25 @@ export const euiContextMapping = {
       values: { optionValue, optionText },
     }),
   'euiRefreshInterval.legend': i18n.translate('core.euiRefreshInterval.legend', {
-    defaultMessage: 'Refresh every',
+    // modified by HHonda
+    // defaultMessage: 'Refresh every',
+    defaultMessage: 'Atualizar a cada',
   }),
   'euiRefreshInterval.start': i18n.translate('core.euiRefreshInterval.start', {
-    defaultMessage: 'Start',
+    // modified by HHonda
+    // defaultMessage: 'Start',
+    defaultMessage: 'Iniciar',
   }),
   'euiRefreshInterval.stop': i18n.translate('core.euiRefreshInterval.stop', {
-    defaultMessage: 'Stop',
+    // modified by HHonda
+    // defaultMessage: 'Stop',
+    defaultMessage: 'Parar',
   }),
   'euiRelativeTab.fullDescription': ({ unit }: EuiValues) =>
     i18n.translate('core.euiRelativeTab.fullDescription', {
-      defaultMessage: 'The unit is changeable. Currently set to {unit}.',
+      // modified by HHonda
+      // defaultMessage: 'The unit is changeable. Currently set to {unit}.',
+      defaultMessage: 'A unidade é alterável. Atualmente configurado para {unit}.',
       values: { unit },
     }),
   'euiRelativeTab.relativeDate': ({ position }: EuiValues) =>
@@ -413,7 +433,9 @@ export const euiContextMapping = {
     }),
   'euiRelativeTab.roundingLabel': ({ unit }: EuiValues) =>
     i18n.translate('core.euiRelativeTab.roundingLabel', {
-      defaultMessage: 'Round to the {unit}',
+      // modified by HHonda
+      // defaultMessage: 'Round to the {unit}',
+      defaultMessage: 'Arredondar para {unit}',
       values: { unit },
     }),
   'euiRelativeTab.unitInputLabel': i18n.translate('core.euiRelativeTab.unitInputLabel', {
@@ -462,32 +484,45 @@ export const euiContextMapping = {
     });
   },
   'euiStepHorizontal.step': i18n.translate('core.euiStepHorizontal.step', {
-    defaultMessage: 'Step',
+    // modified by HHonda
+    // defaultMessage: 'Step',
+    defaultMessage: 'Passo',
     description: 'Screen reader text announcing information about a step in some process',
   }),
   'euiStepNumber.hasErrors': i18n.translate('core.euiStepNumber.hasErrors', {
-    defaultMessage: 'has errors',
+    // modified by HHonda
+    // defaultMessage: 'has errors',
+    defaultMessage: 'tem erros',
     description:
       'Used as the title attribute on an image or svg icon to indicate a given process step has errors',
   }),
   'euiStepNumber.hasWarnings': i18n.translate('core.euiStepNumber.hasWarnings', {
-    defaultMessage: 'has warnings',
+    // modified by HHonda
+    // defaultMessage: 'has warnings',
+    defaultMessage: 'atenção',
     description:
       'Used as the title attribute on an image or svg icon to indicate a given process step has warnings',
   }),
   'euiStepNumber.isComplete': i18n.translate('core.euiStepNumber.isComplete', {
-    defaultMessage: 'complete',
+    // modified by HHonda
+    // defaultMessage: 'complete',
+    defaultMessage: 'completo',
     description:
       'Used as the title attribute on an image or svg icon to indicate a given process step is complete',
   }),
   'euiStyleSelector.buttonText': i18n.translate('core.euiStyleSelector.buttonText', {
-    defaultMessage: 'Density',
+    // modified by HHonda
+    // defaultMessage: 'Density',
+    defaultMessage: 'Densidade',
   }),
   'euiSuperDatePicker.showDatesButtonLabel': i18n.translate(
     'core.euiSuperDatePicker.showDatesButtonLabel',
     {
-      defaultMessage: 'Show dates',
-      description: 'Displayed in a button that shows date picker',
+      // modified by HHonda
+      // defaultMessage: 'Show dates',
+      // description: 'Displayed in a button that shows date picker',
+      defaultMessage: 'Mostrar datas',
+      description: 'Apresentado em um botão que mostra seleção de datas',
     }
   ),
   'euiSuperSelect.screenReaderAnnouncement': ({ optionsCount }: EuiValues) =>
@@ -518,26 +553,34 @@ export const euiContextMapping = {
   'euiSuperUpdateButton.refreshButtonLabel': i18n.translate(
     'core.euiSuperUpdateButton.refreshButtonLabel',
     {
-      defaultMessage: 'Refresh',
+      // modified by HHonda
+      // defaultMessage: 'Refresh',
+      defaultMessage: 'Atualizar',
       description: 'Displayed in a button that refreshes based on date picked',
     }
   ),
   'euiSuperUpdateButton.updatingButtonLabel': i18n.translate(
     'core.euiSuperUpdateButton.updatingButtonLabel',
     {
-      defaultMessage: 'Updating',
+      // modified by HHonda
+      // defaultMessage: 'Updating',
+      defaultMessage: 'Atualizando',
       description: 'Displayed in a button that refreshes when updates are happening',
     }
   ),
   'euiSuperUpdateButton.updateButtonLabel': i18n.translate(
     'core.euiSuperUpdateButton.updateButtonLabel',
     {
-      defaultMessage: 'Update',
+      // modified by HHonda
+      // defaultMessage: 'Update',
+      defaultMessage: 'Atualizar',
       description: 'Displayed in a button that updates based on date picked',
     }
   ),
   'euiTablePagination.rowsPerPage': i18n.translate('core.euiTablePagination.rowsPerPage', {
-    defaultMessage: 'Rows per page',
+    // modified by HHonda
+    // defaultMessage: 'Rows per page',
+    defaultMessage: 'Linhas por página',
     description: 'Displayed in a button that toggles a table pagination menu',
   }),
   'euiTablePagination.rowsPerPageOption': ({ rowsPerPage }: EuiValues) =>
