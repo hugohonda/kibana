@@ -36,6 +36,10 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
 
   componentDidMount() {
     this.loadingCountSubscription = this.props.loadingCount$.subscribe((count) => {
+      // editado por Edmar Moretti
+      if (document.scrollingElement && count === 0) {
+        window.parent.postMessage(document.scrollingElement.scrollHeight, '*');
+      }
       this.setState({
         visible: count > 0,
       });
@@ -56,10 +60,40 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
       ? 'globalLoadingIndicator'
       : 'globalLoadingIndicator-hidden';
 
-    return (
-      <div className={className} data-test-subj={testSubj}>
-        <div className="kbnLoadingIndicator__bar essentialAnimation" />
-      </div>
+    // Editado por Edmar Moretti + HHonda
+    const barra = React.createElement('div', {
+      className: 'kbnLoadingIndicator__bar essentialAnimation',
+    });
+
+    const texto = React.createElement(
+      'div',
+      {
+        className: 'euiBadge euiBadge--iconRight euiBadge--default globalFilterItem',
+        style: {
+          textAlign: 'center',
+          margin: 'auto',
+          opacity: '0.9',
+          width: '100%',
+          backgroundColor: 'white',
+          position: 'fixed',
+        },
+      },
+      'Aguarde...'
     );
+    return React.createElement(
+      'div',
+      {
+        className,
+        style: { height: '4px' },
+        'data-test-subj': testSubj,
+      },
+      barra,
+      texto
+    );
+    // return (
+    //   <div className={className} data-test-subj={testSubj}>
+    //     <div className="kbnLoadingIndicator__bar essentialAnimation" />
+    //   </div>
+    // );
   }
 }

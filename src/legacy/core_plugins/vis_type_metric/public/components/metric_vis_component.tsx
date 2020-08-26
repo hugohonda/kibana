@@ -94,6 +94,7 @@ export class MetricVisComponent extends Component<MetricVisComponentProps> {
       return false;
     }
 
+    // Editado por Edmar Moretti - DÚVIDA
     const [red, green, blue] = colors.slice(1).map((c) => parseInt(c, 10));
     return isColorDark(red, green, blue);
   }
@@ -141,7 +142,9 @@ export class MetricVisComponent extends Component<MetricVisComponentProps> {
 
         if (bucketColumnId) {
           const bucketValue = this.getFormattedValue(bucketFormatter, row[bucketColumnId]);
-          title = `${bucketValue} - ${title}`;
+          // Editado por Edmar Moretti
+          // title = `${bucketValue} - ${title}`;
+          title = ''.concat(bucketValue, ' - ').concat(title);
         }
 
         const shouldColor = config.colorsRange.length > 1;

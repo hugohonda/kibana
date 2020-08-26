@@ -61,7 +61,9 @@ export const termsBucketAgg = new BucketAggType({
   title: termsTitle,
   makeLabel(agg) {
     const params = agg.params;
-    return agg.getFieldDisplayName() + ': ' + params.order.text;
+    // Editado por Edmar Moretti + HHonda
+    // return agg.getFieldDisplayName() + ': ' + params.order.text;
+    return params.order.text + ': ' + agg.getFieldDisplayName();
   },
   getFormat(bucket): IFieldFormat {
     return {
