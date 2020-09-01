@@ -93,8 +93,6 @@ export class MetricVisComponent extends Component<MetricVisComponentProps> {
       return false;
     }
 
-    // Editado por Edmar Moretti + HHonda - DÚVIDA
-    // const [red, green, blue] = colors.slice(1).map((c) => parseInt(c, 10));
     const [red, green, blue] = colors.slice(1).map((c) => parseInt(c, 10));
     return isColorDark(red, green, blue);
   }

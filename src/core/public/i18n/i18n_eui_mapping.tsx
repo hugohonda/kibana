@@ -225,7 +225,9 @@ export const euiContextMapping = {
       description: 'ARIA label, `children` is the human-friendly value of an option',
     }),
   'euiCommonlyUsedTimeRanges.legend': i18n.translate('core.euiCommonlyUsedTimeRanges.legend', {
-    defaultMessage: 'Commonly used',
+    // modified by HHonda
+    // defaultMessage: 'Commonly used',
+    defaultMessage: 'Comumente utilizados',
   }),
   'euiDataGrid.screenReaderNotice': i18n.translate('core.euiDataGrid.screenReaderNotice', {
     defaultMessage: 'Cell contains interactive content.',

@@ -63,11 +63,40 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
 
     const topStyle = { height: '4px' };
 
-    // editado por Edmar Moretti - DÚVIDA
-    return (
-      <div className={className} data-test-subj={testSubj} style={topStyle}>
-        <div className="kbnLoadingIndicator__bar essentialAnimation" />
-      </div>
+    // Editado por Edmar Moretti + HHonda
+    const barra = React.createElement('div', {
+      className: 'kbnLoadingIndicator__bar essentialAnimation',
+    });
+
+    const texto = React.createElement(
+      'div',
+      {
+        className: 'euiBadge euiBadge--iconRight euiBadge--default globalFilterItem',
+        style: {
+          textAlign: 'center',
+          margin: 'auto',
+          opacity: '0.9',
+          width: '100%',
+          backgroundColor: 'white',
+          position: 'fixed',
+        },
+      },
+      'Aguarde...'
     );
+    return React.createElement(
+      'div',
+      {
+        className,
+        style: topStyle,
+        'data-test-subj': testSubj,
+      },
+      barra,
+      texto
+    );
+    // return (
+    //   <div className={className} data-test-subj={testSubj}>
+    //     <div className="kbnLoadingIndicator__bar essentialAnimation" />
+    //   </div>
+    // );
   }
 }
