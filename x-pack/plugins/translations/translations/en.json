@@ -604,7 +604,7 @@
       "text": "Remove {children} from selection in this group",
       "comment": "ARIA label, `children` is the human-friendly value of an option"
     },
-    "core.euiCommonlyUsedTimeRanges.legend": "Commonly used",
+    "core.euiCommonlyUsedTimeRanges.legend": "Comumente utilizados",
     "core.euiDataGrid.screenReaderNotice": "Cell contains interactive content.",
     "core.euiDataGridCell.expandButtonTitle": "Click or hit enter to interact with cell content",
     "core.euiDataGridSchema.booleanSortTextAsc": {
@@ -672,22 +672,22 @@
     "core.euiPagination.pageOfTotal": "Page {page} of {total}",
     "core.euiPagination.previousPage": "Previous page",
     "core.euiPopover.screenReaderAnnouncement": "You are in a dialog. To close this dialog, hit escape.",
-    "core.euiQuickSelect.applyButton": "Apply",
-    "core.euiQuickSelect.fullDescription": "Currently set to {timeTense} {timeValue} {timeUnit}.",
-    "core.euiQuickSelect.legendText": "Quick select a time range",
-    "core.euiQuickSelect.nextLabel": "Next time window",
-    "core.euiQuickSelect.previousLabel": "Previous time window",
-    "core.euiQuickSelect.quickSelectTitle": "Quick select",
+    "core.euiQuickSelect.applyButton": "Aplicar",
+    "core.euiQuickSelect.fullDescription": "Configurado para {timeTense} {timeValue} {timeUnit}.",
+    "core.euiQuickSelect.legendText": "Selecione rapidamente um intervalo de tempo",
+    "core.euiQuickSelect.nextLabel": "Próxima janela de tempo",
+    "core.euiQuickSelect.previousLabel": "Janela de tempo anterior",
+    "core.euiQuickSelect.quickSelectTitle": "Seleção rápida",
     "core.euiQuickSelect.tenseLabel": "Time tense",
     "core.euiQuickSelect.unitLabel": "Time unit",
     "core.euiQuickSelect.valueLabel": "Time value",
     "core.euiRefreshInterval.fullDescription": "Currently set to {optionValue} {optionText}.",
-    "core.euiRefreshInterval.legend": "Refresh every",
-    "core.euiRefreshInterval.start": "Start",
-    "core.euiRefreshInterval.stop": "Stop",
-    "core.euiRelativeTab.fullDescription": "The unit is changeable. Currently set to {unit}.",
+    "core.euiRefreshInterval.legend": "Atualizar a cada",
+    "core.euiRefreshInterval.start": "Iniciar",
+    "core.euiRefreshInterval.stop": "Parar",
+    "core.euiRelativeTab.fullDescription": "A unidade é alterável. Atualmente configurado para {unit}.",
     "core.euiRelativeTab.relativeDate": "{position} date",
-    "core.euiRelativeTab.roundingLabel": "Round to the {unit}",
+    "core.euiRelativeTab.roundingLabel": "Arredondar para {unit}",
     "core.euiRelativeTab.unitInputLabel": "Relative time span",
     "core.euiSaturation.roleDescription": "HSV color mode saturation and value selection",
     "core.euiSaturation.screenReaderAnnouncement": "Use the arrow keys to navigate the square color gradient. The coordinates resulting from each key press will be used to calculate HSV color mode \"saturation\" and \"value\" numbers, in the range of 0 to 1. Left and right decrease and increase (respectively) the \"saturation\" value. Up and down decrease and increase (respectively) the \"value\" value.",
@@ -701,25 +701,25 @@
     "core.euiStep.ariaLabel": "{stepStatus}",
     "core.euiStepHorizontal.buttonTitle": "Step {step}: {title}{titleAppendix}",
     "core.euiStepHorizontal.step": {
-      "text": "Step",
+      "text": "Passo",
       "comment": "Screen reader text announcing information about a step in some process"
     },
     "core.euiStepNumber.hasErrors": {
-      "text": "has errors",
+      "text": "tem erros",
       "comment": "Used as the title attribute on an image or svg icon to indicate a given process step has errors"
     },
     "core.euiStepNumber.hasWarnings": {
-      "text": "has warnings",
+      "text": "atenção",
       "comment": "Used as the title attribute on an image or svg icon to indicate a given process step has warnings"
     },
     "core.euiStepNumber.isComplete": {
-      "text": "complete",
+      "text": "completo",
       "comment": "Used as the title attribute on an image or svg icon to indicate a given process step is complete"
     },
-    "core.euiStyleSelector.buttonText": "Density",
+    "core.euiStyleSelector.buttonText": "Densidade",
     "core.euiSuperDatePicker.showDatesButtonLabel": {
-      "text": "Show dates",
-      "comment": "Displayed in a button that shows date picker"
+      "text": "Mostrar datas",
+      "comment": "Apresentado em um botão que mostra seleção de datas"
     },
     "core.euiSuperSelect.screenReaderAnnouncement": "You are in a form selector of {optionsCount} items and must select a single option. Use the Up and Down keys to navigate or Escape to close.",
     "core.euiSuperSelectControl.selectAnOption": "Select an option: {selectedValue}, is selected",
@@ -732,19 +732,19 @@
       "comment": "Displayed in a tooltip when there are changes that haven't been applied"
     },
     "core.euiSuperUpdateButton.refreshButtonLabel": {
-      "text": "Refresh",
+      "text": "Atualizar",
       "comment": "Displayed in a button that refreshes based on date picked"
     },
     "core.euiSuperUpdateButton.updateButtonLabel": {
-      "text": "Update",
+      "text": "Atualizar",
       "comment": "Displayed in a button that updates based on date picked"
     },
     "core.euiSuperUpdateButton.updatingButtonLabel": {
-      "text": "Updating",
+      "text": "Atualizando",
       "comment": "Displayed in a button that refreshes when updates are happening"
     },
     "core.euiTablePagination.rowsPerPage": {
-      "text": "Rows per page",
+      "text": "Linhas por página",
       "comment": "Displayed in a button that toggles a table pagination menu"
     },
     "core.euiTablePagination.rowsPerPageOption": {
@@ -10290,31 +10290,31 @@
     "xpack.licenseMgmt.licenseDashboard.licenseStatus.permanentActiveLicenseStatusDescription": "Your license will never expire.",
     "xpack.licenseMgmt.licenseDashboard.requestTrialExtension.extendTrialButtonLabel": "Extend trial",
     "xpack.licenseMgmt.licenseDashboard.requestTrialExtension.extendYourTrialTitle": "Extend your trial",
-    "xpack.licenseMgmt.licenseDashboard.requestTrialExtension.howToContinueUsingPluginsDescription": "If you’d like to continue using machine learning, advanced security, and our other awesome {platinumLicenseFeaturesLinkText}, request an extension now.",
-    "xpack.licenseMgmt.licenseDashboard.requestTrialExtension.platinumLicenseFeaturesLinkText": "Platinum features",
+    "xpack.licenseMgmt.licenseDashboard.requestTrialExtension.howToContinueUsingPluginsDescription": "If you’d like to continue using machine learning, advanced security, and our other awesome {subscriptionFeaturesLinkText}, request an extension now.",
+    "xpack.licenseMgmt.licenseDashboard.requestTrialExtension.subscriptionFeaturesLinkText": "subscription features",
     "xpack.licenseMgmt.licenseDashboard.revertToBasic.acknowledgeModal.revertToBasicButtonLabel": "Revert to Basic",
     "xpack.licenseMgmt.licenseDashboard.revertToBasic.acknowledgeModalTitle": "Revert to Basic license",
     "xpack.licenseMgmt.licenseDashboard.revertToBasic.confirmModal.cancelButtonLabel": "Cancel",
     "xpack.licenseMgmt.licenseDashboard.revertToBasic.confirmModal.confirmButtonLabel": "Confirm",
     "xpack.licenseMgmt.licenseDashboard.revertToBasic.confirmModalTitle": "Confirm Revert to Basic License",
-    "xpack.licenseMgmt.licenseDashboard.revertToBasic.platinumLicenseFeaturesLinkText": "Platinum features",
-    "xpack.licenseMgmt.licenseDashboard.revertToBasic.revertToFreeFeaturesDescription": "You’ll revert to our free features and lose access to machine learning, advanced security, and other {platinumLicenseFeaturesLinkText}.",
+    "xpack.licenseMgmt.licenseDashboard.revertToBasic.revertToFreeFeaturesDescription": "You’ll revert to our free features and lose access to machine learning, advanced security, and other {subscriptionFeaturesLinkText}.",
+    "xpack.licenseMgmt.licenseDashboard.revertToBasic.subscriptionFeaturesLinkText": "subscription features",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModal.cancelButtonLabel": "Cancel",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModal.startTrialButtonLabel": "Start my trial",
-    "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription": "This trial is for the full set of {platinumLicenseFeaturesLinkText} of the Elastic Stack. You'll get immediate access to:",
+    "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription": "This trial is for the full set of {subscriptionFeaturesLinkText} of the Elastic Stack. You'll get immediate access to:",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.alertingFeatureTitle": "Alerting",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.dataBaseConnectivityFeatureTitle": "{jdbcStandard} and {odbcStandard} connectivity for {sqlDataBase}",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.graphCapabilitiesFeatureTitle": "Graph capabilities",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.mashingLearningFeatureTitle": "Machine learning",
-    "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.platinumLicenseFeaturesLinkText": "Platinum features",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.securityDocumentationLinkText": "documentation",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.securityFeaturesConfigurationDescription": "Advanced security features, such as authentication ({authenticationTypeList}), field- and document-level security, and auditing, require configuration. See the {securityDocumentationLinkText} for instructions.",
+    "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.subscriptionFeaturesLinkText": "subscription features",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.termsAndConditionsDescription": "By starting this trial, you agree that it is subject to these {termsAndConditionsLinkText}.",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription.termsAndConditionsLinkText": "terms and conditions",
     "xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalTitle": "Start your free 30-day trial",
-    "xpack.licenseMgmt.licenseDashboard.startTrial.platinumFeaturesExperienceDescription": "Experience what machine learning, advanced security, and all our other {platinumLicenseFeaturesLinkText} have to offer.",
-    "xpack.licenseMgmt.licenseDashboard.startTrial.platinumLicenseFeaturesLinkText": "Platinum features",
     "xpack.licenseMgmt.licenseDashboard.startTrial.startTrialButtonLabel": "Start trial",
+    "xpack.licenseMgmt.licenseDashboard.startTrial.subscriptionFeaturesExperienceDescription": "Experience what machine learning, advanced security, and all our other {subscriptionFeaturesLinkText} have to offer.",
+    "xpack.licenseMgmt.licenseDashboard.startTrial.subscriptionFeaturesLinkText": "subscription features",
     "xpack.licenseMgmt.licenseDashboard.startTrialTitle": "Start a 30-day trial",
     "xpack.licenseMgmt.managementSectionDisplayName": "License Management",
     "xpack.licenseMgmt.replacingCurrentLicenseWithBasicLicenseWarningMessage": "Some functionality will be lost if you replace your {currentLicenseType} license with a BASIC license. Review the list of features below.",
@@ -10442,6 +10442,7 @@
     "xpack.logstash.upgradeFailureActions.goBackButtonLabel": "Go back",
     "xpack.logstash.upstreamPipelineArgumentMustContainAnIdPropertyErrorMessage": "upstreamPipeline argument must contain an id property",
     "xpack.logstash.workersTooltip": "The number of workers that will, in parallel, execute the filter and output stages of the pipeline. If you find that events are backing up, or that the CPU is not saturated, consider increasing this number to better utilize machine processing power.\n\nDefault value: Number of the host’s CPU cores",
+    "xpack.main.uiSettings.adminEmailDeprecation": "This setting is deprecated and will not be supported in Kibana 8.0. Please configure `monitoring.cluster_alerts.email_notifications.email_address` in your kibana.yml settings.",
     "xpack.main.uiSettings.adminEmailDescription": "Recipient email address for X-Pack admin operations, such as Cluster Alert email notifications from Monitoring.",
     "xpack.main.uiSettings.adminEmailTitle": "Admin email",
     "xpack.maps.addLayerPanel.addLayer": "Add layer",
