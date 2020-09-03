@@ -25,7 +25,9 @@ import { uiToReactComponent } from '../../../kibana_react/public';
 import { Action } from '../actions';
 
 export const defaultTitle = i18n.translate('uiActions.actionPanel.title', {
-  defaultMessage: 'Options',
+  // modified by HHonda
+  // defaultMessage: 'Options',
+  defaultMessage: 'Opções',
 });
 
 /**

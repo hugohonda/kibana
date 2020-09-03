@@ -11,21 +11,39 @@
   totalFunc="totalFunc">
 
   <div class="kbnAggTable__controls">
-    <small
+    <!-- modified by HHonda -->
+    <!-- <small
       i18n-id="visTypeTable.aggTable.exportLabel"
       i18n-default-message="Export:"
+    ></small>&nbsp;&nbsp; -->
+    <small
+      i18n-id="visTypeTable.aggTable.exportLabel"
+      i18n-default-message="Exportar:"
     ></small>&nbsp;&nbsp;
     <a class="small" ng-click="aggTable.exportAsCsv(false)">
-      <span
+      <!-- modified by HHonda -->
+      <!-- <span
         i18n-id="visTypeTable.aggTable.rawLabel"
         i18n-default-message="Raw"
        ></span>
        <i aria-hidden="true" class="fa fa-download"></i>
+    </a>&nbsp;&nbsp;&nbsp; -->
+      <span
+        i18n-id="visTypeTable.aggTable.rawLabel"
+        i18n-default-message="Formato Bruto"
+       ></span>
+       <i aria-hidden="true" class="fa fa-download"></i>
     </a>&nbsp;&nbsp;&nbsp;
     <a class="small" ng-click="aggTable.exportAsCsv(true)">
-      <span
+      <!-- modified by HHonda -->
+      <!-- <span
         i18n-id="visTypeTable.aggTable.formattedLabel"
         i18n-default-message="Formatted"
+       ></span>
+       <i aria-hidden="true" class="fa fa-download"></i> -->
+      <span
+        i18n-id="visTypeTable.aggTable.formattedLabel"
+        i18n-default-message="Formatado"
        ></span>
        <i aria-hidden="true" class="fa fa-download"></i>
     </a>

@@ -92,7 +92,9 @@ export default function (kibana) {
         {
           id: 'kibana:dev_tools',
           title: i18n.translate('kbn.devToolsTitle', {
-            defaultMessage: 'Dev Tools',
+            // modified by HHonda
+            // defaultMessage: 'Dev Tools',
+            defaultMessage: 'Ferramentas de Desenvolvimento',
           }),
           order: 9001,
           url: '/app/kibana#/dev_tools',
@@ -102,7 +104,9 @@ export default function (kibana) {
         {
           id: 'kibana:stack_management',
           title: i18n.translate('kbn.managementTitle', {
-            defaultMessage: 'Stack Management',
+            // modified by HHonda
+            // defaultMessage: 'Stack Management',
+            defaultMessage: 'Gestão de Stack',
           }),
           order: 9003,
           url: `${kbnBaseUrl}#/management`,
