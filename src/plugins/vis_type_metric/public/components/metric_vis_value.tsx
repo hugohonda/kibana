@@ -59,34 +59,34 @@ export class MetricVisValue extends Component<MetricVisValueProps> {
     });
 
     // modified by HHonda
-    var monthTranslationPtbr: { [key: string]: string; } = {
-      // 'Jan': 'Jan',
-      'Feb': 'Fev',
-      // 'Mar': 'Mar',
-      'Apr': 'Abr',
-      'May': 'Mai',
-      // 'Jun': 'Jun',
-      // 'Jul': 'Jul',
-      'Aug': 'Ago',
-      'Sep': 'Set',
-      'Oct': 'Out',
-      // 'Nov': 'Nov',
-      'Dec': 'Dez'
-    }
+    const monthTranslationPtbr: { [key: string]: string } = {
+      // Jan: 'Jan',
+      Feb: 'Fev',
+      // Mar: 'Mar',
+      Apr: 'Abr',
+      May: 'Mai',
+      // Jun: 'Jun',
+      // Jul: 'Jul',
+      Aug: 'Ago',
+      Sep: 'Set',
+      Oct: 'Out',
+      // Nov: 'Nov',
+      Dec: 'Dez',
+    };
 
-    var customValue = metric.value.replace(/<[^>]*>?/gm, '')
-    if(customValue.length > 3) {
-      if(customValue[3] === '/') {
-        const month = customValue.slice(0,3)
-        if(month in monthTranslationPtbr) {
-          customValue = monthTranslationPtbr[month] + customValue.slice(3)
+    let customValue = metric.value.replace(/<[^>]*>?/gm, '');
+    if (customValue.length > 3) {
+      if (customValue[3] === '/') {
+        const month = customValue.slice(0, 3);
+        if (month in monthTranslationPtbr) {
+          customValue = monthTranslationPtbr[month] + customValue.slice(3);
         }
       }
-      if(customValue.slice(-3) === ',00') {
-        customValue = customValue.slice(0,-3)
+      if (customValue.slice(-3) === ',00') {
+        customValue = customValue.slice(0, -3);
       }
     }
-    customValue = '<span ng-non-bindable="">' + customValue + '</span>'
+    customValue = '<span ng-non-bindable="">' + customValue + '</span>';
     //
 
     const metricComponent = (
