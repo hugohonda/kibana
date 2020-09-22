@@ -3329,10 +3329,10 @@
         "visTypeTagCloud.function.orientation.help": "Orientação das palavras dentro do tagcloud",
         "visTypeTagCloud.function.scale.help": "Escala para determinar o tamanho da fonte de uma palavra",
         "visTypeTagCloud.vis.editorConfig.orientations.multipleText": "Múltiplo",
-        "visTypeTagCloud.vis.editorConfig.orientations.rightAngledText": "Ângulo direito",
-        "visTypeTagCloud.vis.editorConfig.orientations.singleText": "solteiro",
+        "visTypeTagCloud.vis.editorConfig.orientations.rightAngledText": "Ângulo reto",
+        "visTypeTagCloud.vis.editorConfig.orientations.singleText": "Único'",
         "visTypeTagCloud.vis.editorConfig.scales.linearText": "Linear",
-        "visTypeTagCloud.vis.editorConfig.scales.logText": "Registro",
+        "visTypeTagCloud.vis.editorConfig.scales.logText": "Logarítmico",
         "visTypeTagCloud.vis.editorConfig.scales.squareRootText": "Raiz quadrada",
         "visTypeTagCloud.vis.schemas.metricTitle": "Tamanho de etiqueta",
         "visTypeTagCloud.vis.schemas.segmentTitle": "Tag",
@@ -3561,7 +3561,7 @@
         "visTypeTimeseries.markdown.editor.toggleEditorAriaLabel": "Alternar editor de séries",
         "visTypeTimeseries.markdown.editor.variableNamePlaceholder": "Nome variável",
         "visTypeTimeseries.markdown.optionsTab.backgroundColorLabel": "Cor de fundo:",
-        "visTypeTimeseries.markdown.optionsTab.customCSSLabel": "CSS personalizado (suporta menos)",
+        "visTypeTimeseries.markdown.optionsTab.customCSSLabel": "CSS personalizado (suporta Less)",
         "visTypeTimeseries.markdown.optionsTab.dataLabel": "Dados",
         "visTypeTimeseries.markdown.optionsTab.ignoreGlobalFilterLabel": "Ignorar filtro global?",
         "visTypeTimeseries.markdown.optionsTab.openLinksInNewTab": "Abrir links em uma nova guia?",
@@ -3788,9 +3788,9 @@
         "visTypeTimeseries.timeSeries.percentLabel": "Por cento",
         "visTypeTimeseries.timeseries.positionOptions.leftLabel": "Esquerda",
         "visTypeTimeseries.timeseries.positionOptions.rightLabel": "Certo",
-        "visTypeTimeseries.timeSeries.rainbowLabel": "arco Iris",
+        "visTypeTimeseries.timeSeries.rainbowLabel": "Arco Íris",
         "visTypeTimeseries.timeSeries.rightLabel": "Certo",
-        "visTypeTimeseries.timeseries.scaleOptions.logLabel": "Registro",
+        "visTypeTimeseries.timeseries.scaleOptions.logLabel": "Logarítmico",
         "visTypeTimeseries.timeseries.scaleOptions.normalLabel": "Normal",
         "visTypeTimeseries.timeSeries.separateAxisLabel": "Eixo separado?",
         "visTypeTimeseries.timeSeries.splitColorThemeLabel": "Tema de cor dividida",
@@ -3840,7 +3840,7 @@
         "visTypeTimeseries.vars.variableNameAriaLabel": "Nome variável",
         "visTypeTimeseries.vars.variableNamePlaceholder": "Nome variável",
         "visTypeTimeseries.visEditorVisualization.applyChangesLabel": "Aplicar mudanças",
-        "visTypeTimeseries.visEditorVisualization.autoApplyLabel": "Esta lavagem",
+        "visTypeTimeseries.visEditorVisualization.autoApplyLabel": "Auto aplicação das mudanças",
         "visTypeTimeseries.visEditorVisualization.changesHaveNotBeenAppliedMessage": "As alterações nesta visualização não foram aplicadas.",
         "visTypeTimeseries.visEditorVisualization.changesSuccessfullyAppliedMessage": "As alterações mais recentes foram aplicadas.",
         "visTypeTimeseries.visEditorVisualization.changesWillBeAutomaticallyAppliedMessage": "As alterações serão aplicadas automaticamente.",
@@ -8324,11 +8324,11 @@
         "xpack.lens.datatable.titleLabel": "Título",
         "xpack.lens.datatable.visualizationName": "Tabela de dados",
         "xpack.lens.datatable.visualizationOf": "Tabela {operations}",
-        "xpack.lens.datatypes.boolean": "boleano",
+        "xpack.lens.datatypes.boolean": "Boleano",
         "xpack.lens.datatypes.date": "Data",
         "xpack.lens.datatypes.ipAddress": "IP",
-        "xpack.lens.datatypes.number": "número",
-        "xpack.lens.datatypes.record": "registro",
+        "xpack.lens.datatypes.number": "Número",
+        "xpack.lens.datatypes.record": "Registro",
         "xpack.lens.datatypes.string": "String",
         "xpack.lens.deleteLayer": "Excluir camada",
         "xpack.lens.editLayerSettings": "Editar configurações da camada",
@@ -14894,7 +14894,7 @@
         "xpack.snapshotRestore.repositoryForm.nextButtonLabel": "Próximo",
         "xpack.snapshotRestore.repositoryForm.noRepositoryTypesErrorMessage": "Você pode instalar plug-ins para ativar diferentes tipos de repositórios. {docLink}",
         "xpack.snapshotRestore.repositoryForm.noRepositoryTypesErrorTitle": "Nenhum tipo de repositório disponível",
-        "xpack.snapshotRestore.repositoryForm.registerButtonLabel": "Registro",
+        "xpack.snapshotRestore.repositoryForm.registerButtonLabel": "Registrar",
         "xpack.snapshotRestore.repositoryForm.repositoryTypeDocLink": "documentos do repositório {repositoryType}",
         "xpack.snapshotRestore.repositoryForm.saveButtonLabel": "Salvar",
         "xpack.snapshotRestore.repositoryForm.savingButtonLabel": "Salvando ...",
@@ -17193,10 +17193,7 @@
         "visTypeTimeseries.aggLookup.positiveRateLabel": "Taxa Positiva",
         "visualize.listing.table.titleColumnName": "Título",
         "xpack.ingestPipelines.form.hideRequestButtonLabel": "Ocultar pedido",
-        "xpack.lens.pie.suggestionLabel": {
-            "text": "Como {chartName}",
-            "comment": "chartName já está traduzido"
-        },
+        "xpack.lens.pie.suggestionLabel": "Como {chartName}",
         "xpack.security.management.users.extendedUserDeprecationNotice": "o {username} user is deprecated. {reason}",
         "xpack.ingestManager.dataStreamList.loadingDataStreamsMessage": "Carregando streams de dados…",
         "xpack.ingestManager.securityRequiredErrorTitle": "Segurança não habilitada",
@@ -17231,10 +17228,7 @@
         "data.search.aggs.buckets.significantTerms.field.help": "Campo a ser usado para esta agregação",
         "apmOss.tutorial.specProvider.artifacts.dashboards.linkLabel": "Painel APM",
         "dashboard.addVisualizationLinkAriaLabel": "Adicionar uma visualização existente",
-        "xpack.canvas.workpadHeaderEditMenu.centerAlignMenuItemLabel": {
-            "text": "Centro",
-            "comment": "Isso se refere ao alinhamento centralizado horizontalmente."
-        },
+        "xpack.canvas.workpadHeaderEditMenu.centerAlignMenuItemLabel": "Centro",
         "savedObjectsManagement.objectsTable.flyout.legacyFileUsedTitle": "O suporte para arquivos JSON está indo embora",
         "xpack.ingestPipelines.list.pipelineDetails.cloneActionLabel": "Clonar",
         "savedObjectsManagement.indexPattern.confirmOverwriteButton": "Sobrescrever",
@@ -17557,10 +17551,7 @@
         "xpack.ingestManager.overviewPageDataStreamsPanelTitle": "Streams de dados",
         "xpack.monitoring.expiredLicenseStatusDescription": "Sua licença expirou em {expiryDate}",
         "xpack.uiActionsEnhanced.components.DiscoverDrilldownConfig.chooseIndexPattern": "Escolha o padrão de índice de destino",
-        "xpack.canvas.workpadHeaderEditMenu.middleAlignMenuItemLabel": {
-            "text": "Meio",
-            "comment": "Isso se refere ao alinhamento centralizado verticalmente."
-        },
+        "xpack.canvas.workpadHeaderEditMenu.middleAlignMenuItemLabel": "Meio",
         "apmOss.tutorial.flaskClient.configure.textPre": "Agentes são bibliotecas executadas dentro do processo do seu aplicativo. Os serviços APM são criados programaticamente com base no `SERVICE_NAME`.",
         "xpack.ingestManager.alphaMessageTitle": "Experimental",
         "xpack.drilldowns.components.flyoutDrilldownWizard.toast.drilldownCreatedTitle": "Detalhamento criado",
@@ -17633,10 +17624,7 @@
         "dashboard.badge.readOnly.tooltip": "Não é possível salvar os painéis",
         "xpack.ingestManager.integrations.packageInstallSuccessTitle": "Instalado {title}",
         "xpack.ml.newJob.wizard.estimateModelMemoryError": "Não foi possível calcular o limite de memória do modelo",
-        "xpack.canvas.savedElementsModal.myElementsTitle": {
-            "text": "Meus elementos",
-            "comment": "Título para a guia \"Meus elementos\" ao adicionar um novo elemento"
-        },
+        "xpack.canvas.savedElementsModal.myElementsTitle": "Meus elementos",
         "xpack.canvas.savedElementsModal.editElementTitle": "Editar elemento",
         "xpack.endpoint.application.endpoint.alertDetails.fileSize": "Tamanho do arquivo",
         "xpack.ingestManager.integrations.settings.confirmInstallModal.installDescription": "Os ativos Kibana serão instalados no Espaço atual (Padrão) e só estarão acessíveis para usuários que tenham permissão para visualizar este Espaço. Os ativos do Elasticsearch são instalados globalmente e estarão acessíveis a todos os usuários Kibana.",
@@ -17750,10 +17738,7 @@
         "apmOss.tutorial.goClient.instrument.textPost": "Veja a [documentação] ( ) para obter um guia detalhado para instrumentar o código-fonte Go. {documentationLink}",
         "xpack.ingestManager.agentConfigList.actionsColumnTitle": "Ações",
         "xpack.endpoint.policyDetailType": "Tipo",
-        "xpack.canvas.savedElementsModal.elementsTitle": {
-            "text": "Elementos",
-            "comment": "Título para a guia \"Elementos\" ao adicionar um novo elemento"
-        },
+        "xpack.canvas.savedElementsModal.elementsTitle": "Elementos",
         "xpack.ingestManager.disabledSecurityTitle": "Segurança não habilitada",
         "xpack.endpoint.host.details.os": "OS",
         "xpack.ingestManager.epm.browseAllButtonText": "Navegue por todas as integrações",
@@ -17929,10 +17914,7 @@
         "data.search.aggs.metrics.cardinality.customLabel.help": "Representa um rótulo personalizado para esta agregação",
         "xpack.canvas.savedElementsModal.deleteElementTitle": "Excluir elemento ' '? {elementName}",
         "data.search.aggs.buckets.histogram.hasExtendedBounds.help": "Especifica se deve usar has_extended_bounds para esta agregação",
-        "xpack.uptime.monitorList.loading": {
-            "text": "Carregando...",
-            "comment": "Exibido quando a lista de monitores está esperando por uma resposta do servidor"
-        },
+        "xpack.uptime.monitorList.loading": "Carregando...",
         "xpack.ingestManager.agentConfigList.agentsColumnTitle": "Agentes",
         "xpack.uptime.toggleTlsAlertButton.ariaLabel": "Abrir flyout de alerta TLS",
         "data.search.aggs.buckets.geoHash.precision.help": "Precisão a ser usada para esta agregação.",
@@ -18104,10 +18086,7 @@
         "xpack.ingestManager.createDatasource.cancelLinkText": "Cancelar",
         "xpack.siem.topN.signalEventsSelectLabel": "Eventos de sinal",
         "xpack.uptime.alerts.monitorStatus.filters.from": "De",
-        "xpack.canvas.workpadHeaderEditMenu.groupMenuItemLabel": {
-            "text": "Grupo",
-            "comment": "Refere-se ao agrupamento de vários elementos selecionados."
-        },
+        "xpack.canvas.workpadHeaderEditMenu.groupMenuItemLabel": "Grupo",
         "charts.controls.colorSchema.resetColorsButtonLabel": "Redefinir cores",
         "xpack.infra.metrics.alertFlyout.aggregationText.sum": "Soma",
         "visTypeTimeseries.calculateLabel.positiveRateLabel": "Taxa positiva de {field}",
@@ -18362,10 +18341,7 @@
         "xpack.siem.dataProviders.fieldLabel": "Campo",
         "xpack.canvas.workpadHeaderViewMenu.zoomFitToWindowText": "Ajustar à janela",
         "data.search.aggs.metrics.bucket_max.schema.help": "Esquema a ser usado para esta agregação",
-        "xpack.canvas.workpadHeaderEditMenu.ungroupMenuItemLabel": {
-            "text": "Desagrupar",
-            "comment": "Refere-se a desagrupar um elemento agrupado"
-        },
+        "xpack.canvas.workpadHeaderEditMenu.ungroupMenuItemLabel": "Desagrupar",
         "xpack.ingestPipelines.testPipelineFlyout.documentsTab.editorFieldAriaLabel": "Editor JSON de documentos",
         "xpack.ingestManager.deleteDatasource.failureMultipleNotificationTitle": "Erro ao excluir fontes de dados {count}",
         "savedObjectsManagement.objectsTable.relationships.columnRelationshipName": "Relacionamento direto",
@@ -18394,10 +18370,7 @@
         "xpack.canvas.workpadHeaderShareMenu.shareDownloadPDFTitle": "relatórios {PDF}",
         "xpack.triggersActionsUI.sections.actionForm.preconfiguredTitleMessage": "(pré-configurado)",
         "savedObjectsManagement.deleteConfirm.modalTitle": "Apagar ' '? {title}",
-        "xpack.canvas.workpadHeaderEditMenu.distributionMenutItemLabel": {
-            "text": "Distribuição",
-            "comment": "Refere-se às opções para espaçar uniformemente os elementos selecionados horizontalmente ou verticalmente."
-        },
+        "xpack.canvas.workpadHeaderEditMenu.distributionMenutItemLabel": "Distribuição",
         "dashboard.topNav.saveModal.storeTimeWithDashboardFormRowLabel": "Tempo de armazenamento com painel",
         "visualize.topNavMenu.saveAndReturnVisualizationDisabledButtonTooltip": "Aplicar ou descartar suas alterações antes de terminar",
         "apmOss.tutorial.djangoClient.install.textPre": "Instale o agente APM para Python como uma dependência.",
@@ -18615,10 +18588,7 @@
         "data.search.aggs.metrics.moving_avg.metricAgg.help": "Id para encontrar agg config para usar para construir agregações de pipeline pai",
         "xpack.ingestManager.overviewPageConfigurationsPanelAction": "Ver configurações",
         "xpack.endpoint.application.endpoint.alertDetails.hostNameCurrent": "Nome do host (atual)",
-        "xpack.canvas.workpadHeaderEditMenu.alignmentMenuItemLabel": {
-            "text": "Alinhamento",
-            "comment": "Isso se refere às opções de alinhamento vertical (ou seja, esquerda, centro, direita) e horizontal (ou seja, topo, meio, fundo) dos elementos selecionados"
-        },
+        "xpack.canvas.workpadHeaderEditMenu.alignmentMenuItemLabel": "Alinhamento",
         "data.search.aggs.function.buckets.filter.help": "Gera uma configuração agg serializada para um filtro agg",
         "xpack.infra.logs.alerting.comparator.ltOrEq": "menor ou igual",
         "data.search.aggs.buckets.ipRange.customLabel.help": "Representa um rótulo personalizado para esta agregação",
@@ -18679,10 +18649,7 @@
         "xpack.uptime.alerts.monitorStatus.filters.anyType": "qualquer tipo",
         "maps_legacy.wmsOptions.urlOfWMSWebServiceTip": "O URL do serviço da web WMS.",
         "xpack.transform.stepDetailsForm.transformDescriptionPlaceholderText": "Descrição (opcional)",
-        "xpack.drilldowns.components.flyoutDrilldownWizard.toast.drilldownsCRUDErrorTitle": {
-            "text": "Erro ao salvar o detalhamento",
-            "comment": "Título para brinde de erro genérico ao persistir falhas nas atualizações de detalhamento"
-        },
+        "xpack.drilldowns.components.flyoutDrilldownWizard.toast.drilldownsCRUDErrorTitle": "Erro ao salvar o detalhamento",
         "xpack.uptime.sourceConfiguration.ageThresholdDefaultValue": "o valor padrão é {defaultValue}",
         "xpack.siem.case.caseView.pushToServiceDisableByInvalidConnector": "O conector usado para enviar atualizações ao serviço externo foi excluído. Para atualizar casos em sistemas externos, selecione um conector diferente ou crie um novo.",
         "xpack.infra.metrics.alerting.inventory.threshold.defaultActionMessage": "\\{\\{alertName\\}\\} - \\{\\{context.group\\}\\}\n\n\\{\\{context.metricOf.condition0\\}\\} passou o limite de \\{\\{context.thresholdOf.condition0\\}\\}\nValor atual é \\{\\{context.valueOf.condition0\\}\\}\n",
@@ -18765,10 +18732,7 @@
         "data.search.aggs.function.buckets.significantTerms.help": "Gera uma configuração agg serializada para um agg de termos significativos",
         "visualize.listing.createNew.title": "Crie sua primeira visualização",
         "xpack.transform.transformList.editFlyoutFormNumberNotValidErrorMessage": "O valor deve ser um número acima de zero.",
-        "xpack.canvas.workpadHeaderEditMenu.orderMenuItemLabel": {
-            "text": "Ordem",
-            "comment": "Refere-se à ordem dos elementos exibidos na página da frente para trás"
-        },
+        "xpack.canvas.workpadHeaderEditMenu.orderMenuItemLabel": "Ordem",
         "savedObjects.saveModalOrigin.saveAndReturnLabel": "Salvar e retornar",
         "xpack.infra.metrics.expressionItems.components.closablePopoverTitle.closeLabel": "Fechar",
         "xpack.ingestManager.agentHealth.inactiveStatusText": "Inativo",
@@ -18797,10 +18761,7 @@
         "data.search.aggs.metrics.std_deviation.customLabel.help": "Representa um rótulo personalizado para esta agregação",
         "xpack.ingestManager.agentListStatus.onlineLabel": "Conectados",
         "xpack.ingestManager.editDatasource.stepDefineDatasourceTitle": "Defina sua fonte de dados",
-        "xpack.uptime.alerts.tls.criteriaExpression.description": {
-            "text": "quando",
-            "comment": "O contexto desse `quando` está no sentido condicional, como\" quando houver três biscoitos, coma todos \"."
-        },
+        "xpack.uptime.alerts.tls.criteriaExpression.description": "quando",
         "xpack.maps.mapSettingsPanel.initialLatLabel": "Latitude inicial",
         "xpack.canvas.workpadHeaderEditMenu.redoMenuItemLabel": "pronto",
         "xpack.monitoring.updateLicenseButtonLabel": "Licença de atualização",

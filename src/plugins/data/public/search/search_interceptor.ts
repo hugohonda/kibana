@@ -134,7 +134,9 @@ export class SearchInterceptor {
     if (this.longRunningToast) return;
     this.longRunningToast = this.toasts.addInfo(
       {
-        title: 'Your query is taking awhile',
+        // modified by HHonda
+        // title: 'Your query is taking awhile',
+        title: 'Sua query está demorando um pouco',
         text: getLongQueryNotification({
           application: this.application,
         }),
