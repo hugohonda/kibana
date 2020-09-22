@@ -58,6 +58,37 @@ export class MetricVisValue extends Component<MetricVisValueProps> {
       'mtrVis__container-isfilterable': hasFilter,
     });
 
+    // modified by HHonda
+    var monthTranslationPtbr: { [key: string]: string; } = {
+      // 'Jan': 'Jan',
+      'Feb': 'Fev',
+      // 'Mar': 'Mar',
+      'Apr': 'Abr',
+      'May': 'Mai',
+      // 'Jun': 'Jun',
+      // 'Jul': 'Jul',
+      'Aug': 'Ago',
+      'Sep': 'Set',
+      'Oct': 'Out',
+      // 'Nov': 'Nov',
+      'Dec': 'Dez'
+    }
+
+    var customValue = metric.value.replace(/<[^>]*>?/gm, '')
+    if(customValue.length > 3) {
+      if(customValue[3] === '/') {
+        const month = customValue.slice(0,3)
+        if(month in monthTranslationPtbr) {
+          customValue = monthTranslationPtbr[month] + customValue.slice(3)
+        }
+      }
+      if(customValue.slice(-3) === ',00') {
+        customValue = customValue.slice(0,-3)
+      }
+    }
+    customValue = '<span ng-non-bindable="">' + customValue + '</span>'
+    //
+
     const metricComponent = (
       <div
         className={containerClassName}
@@ -78,7 +109,9 @@ export class MetricVisValue extends Component<MetricVisValueProps> {
            * `metric.value` is set by the MetricVisComponent, so this component must make sure this value never contains
            * any unsafe HTML (e.g. by bypassing the field formatter).
            */
-          dangerouslySetInnerHTML={{ __html: metric.value }} // eslint-disable-line react/no-danger
+          // modified by HHonda
+          // dangerouslySetInnerHTML={{ __html: metric.value }} // eslint-disable-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: customValue }} // eslint-disable-line react/no-danger
         />
         {showLabel && <div>{metric.label}</div>}
       </div>
