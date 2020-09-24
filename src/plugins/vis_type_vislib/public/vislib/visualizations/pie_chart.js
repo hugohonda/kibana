@@ -244,7 +244,7 @@ export class PieChart extends Chart {
             // modified by HHonda
             // const value = numeral(d.value / 100).format('0.[00]%');
             const value = numeral(d.value / 100).format('0,[00]%');
-            const output = `|${d.name}| (${value})`
+            const output = `|${d.name}| (${value})`;
             if (d.name.match(/^\s+$/)) {
               return value;
             }
