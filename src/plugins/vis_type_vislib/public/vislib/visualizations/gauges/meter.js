@@ -277,9 +277,9 @@ export class MeterGauge {
           const percentage = (d.y - min) / (max - min);
           // modified by HHonda
           // return data.yAxisFormatter(percentage);
-          let output = data.yAxisFormatter(percentage)
+          const output = data.yAxisFormatter(percentage);
           if (output.slice(-4, -1) === ',00') {
-            return output.slice(0, -4) + '%'
+            return output.slice(0, -4) + '%';
           }
           return output;
         }
@@ -291,7 +291,7 @@ export class MeterGauge {
       // .style('font-size', '2em')
       .style('font-size', () => {
         if (this.gaugeConfig.style.fontResize) {
-          return width/10;
+          return width / 10;
         }
         return this.gaugeConfig.style.fontSize;
       })

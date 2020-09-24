@@ -78,7 +78,7 @@ function LabelsPanel({ stateParams, setValue, setGaugeValue }: GaugeOptionsInter
 
       <SwitchOption
         disabled={!stateParams.gauge.labels.show}
-        label='Auto-redimensionamento da fonte'
+        label="Auto-redimensionamento da fonte"
         paramName="fontResize"
         value={stateParams.gauge.style.fontResize}
         setValue={(paramName, value) =>
@@ -88,7 +88,7 @@ function LabelsPanel({ stateParams, setValue, setGaugeValue }: GaugeOptionsInter
 
       <NumberInputOption
         disabled={!stateParams.gauge.labels.show || stateParams.gauge.style.fontResize}
-        label= 'Tamanho da fonte'
+        label="Tamanho da fonte"
         max={1000}
         min={10}
         paramName="fontSize"
