@@ -275,13 +275,26 @@ export class MeterGauge {
       .text((d) => {
         if (this.gaugeConfig.percentageMode) {
           const percentage = (d.y - min) / (max - min);
-          return data.yAxisFormatter(percentage);
+          // modified by HHonda
+          // return data.yAxisFormatter(percentage);
+          let output = data.yAxisFormatter(percentage)
+          if (output.slice(-4, -1) === ',00') {
+            return output.slice(0, -4) + '%'
+          }
+          return output;
         }
         return data.yAxisFormatter(d.y);
       })
       .attr('style', 'dominant-baseline: central;')
       .style('text-anchor', 'middle')
-      .style('font-size', '2em')
+      // modified by HHonda
+      // .style('font-size', '2em')
+      .style('font-size', () => {
+        if (this.gaugeConfig.style.fontResize) {
+          return width/10;
+        }
+        return this.gaugeConfig.style.fontSize;
+      })
       .style('display', function () {
         const textLength = this.getBBox().width;
         // The text is too long if it's larger than the inner free space minus a couple of random pixels for padding.

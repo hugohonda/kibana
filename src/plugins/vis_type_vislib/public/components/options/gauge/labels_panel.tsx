@@ -22,7 +22,7 @@ import { EuiPanel, EuiSpacer, EuiTitle } from '@elastic/eui';
 import { i18n } from '@kbn/i18n';
 import { FormattedMessage } from '@kbn/i18n/react';
 
-import { SwitchOption, TextInputOption } from '../../../../../charts/public';
+import { NumberInputOption, SwitchOption, TextInputOption } from '../../../../../charts/public';
 import { GaugeOptionsInternalProps } from '../gauge';
 
 function LabelsPanel({ stateParams, setValue, setGaugeValue }: GaugeOptionsInternalProps) {
@@ -74,6 +74,28 @@ function LabelsPanel({ stateParams, setValue, setGaugeValue }: GaugeOptionsInter
         paramName="isDisplayWarning"
         value={stateParams.isDisplayWarning}
         setValue={setValue}
+      />
+
+      <SwitchOption
+        disabled={!stateParams.gauge.labels.show}
+        label='Auto-redimensionamento da fonte'
+        paramName="fontResize"
+        value={stateParams.gauge.style.fontResize}
+        setValue={(paramName, value) =>
+          setGaugeValue('style', { ...stateParams.gauge.style, [String(paramName)]: value })
+        }
+      />
+
+      <NumberInputOption
+        disabled={!stateParams.gauge.labels.show || stateParams.gauge.style.fontResize}
+        label= 'Tamanho da fonte'
+        max={1000}
+        min={10}
+        paramName="fontSize"
+        value={stateParams.gauge.style.fontSize}
+        setValue={(paramName, value) =>
+          setGaugeValue('style', { ...stateParams.gauge.style, [paramName]: value })
+        }
       />
     </EuiPanel>
   );
