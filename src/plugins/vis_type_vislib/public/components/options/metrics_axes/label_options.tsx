@@ -81,6 +81,13 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         setValue={setAxisLabel}
       />
 
+      <SwitchOption
+        label="Modo porcentagem"
+        paramName="percentageMode"
+        value={axisLabels.percentageMode}
+        setValue={setAxisLabel}
+      />
+
       <EuiSpacer size="m" />
 
       <EuiFlexGroup gutterSize="s">

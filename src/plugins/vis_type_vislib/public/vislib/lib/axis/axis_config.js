@@ -57,6 +57,8 @@ const defaults = {
     font: '"Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif',
     fontSize: '8pt',
     truncate: 100,
+    // modified by HHonda
+    percentageMode: false,
   },
   title: {
     text: '',
