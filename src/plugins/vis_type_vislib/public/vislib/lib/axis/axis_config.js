@@ -58,7 +58,8 @@ const defaults = {
     fontSize: '8pt',
     truncate: 100,
     // modified by HHonda
-    percentageMode: false,
+    hideDecimals: false,
+    concatTag: '',
   },
   title: {
     text: '',

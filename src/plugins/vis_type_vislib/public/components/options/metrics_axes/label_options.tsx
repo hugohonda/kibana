@@ -26,7 +26,9 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import { Axis } from '../../../types';
 import { TruncateLabelsOption } from '../../common';
 import { getRotateOptions } from '../../../utils/collections';
-import { SelectOption, SwitchOption } from '../../../../../charts/public';
+// modified by HHonda
+// import { SelectOption, SwitchOption } from '../../../../../charts/public';
+import { TextInputOption, SelectOption, SwitchOption } from '../../../../../charts/public';
 
 export type SetAxisLabel = <T extends keyof Axis['labels']>(
   paramName: T,
@@ -82,9 +84,18 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
       />
 
       <SwitchOption
-        label="Modo porcentagem"
-        paramName="percentageMode"
-        value={axisLabels.percentageMode}
+        disabled={!axisLabels.show}
+        label="Esconder decimais"
+        paramName="hideDecimals"
+        value={axisLabels.hideDecimals}
+        setValue={setAxisLabel}
+      />
+
+      <TextInputOption
+        disabled={!axisLabels.show}
+        label="Texto à direita"
+        paramName="concatTag"
+        value={axisLabels.concatTag}
         setValue={setAxisLabel}
       />
 

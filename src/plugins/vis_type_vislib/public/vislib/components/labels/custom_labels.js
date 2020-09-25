@@ -27,13 +27,13 @@ import d3 from 'd3';
  * @param size (number of characters to leave)
  * @returns {text} the updated text
  */
-const percentageLabel = function (text) {
+const customLabel = function (text, concatTag) {
   const node = d3.select(text).node();
   const str = $(node).text();
   if (str.slice(-3) === ',00') {
-    return str.slice(0, -3) + '%';
+    return str.slice(0, -3);
   }
   return str;
 };
 
-export { percentageLabel };
+export { customLabel };

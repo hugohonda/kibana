@@ -21,7 +21,7 @@ import d3 from 'd3';
 import $ from 'jquery';
 import { truncateLabel } from '../../components/labels/truncate_labels';
 // modified by HHonda
-import { percentageLabel } from '../../components/labels/percentage_labels';
+import { customLabel } from '../../components/labels/custom_labels';
 
 export class AxisLabels {
   constructor(axisConfig, scale) {
@@ -92,13 +92,13 @@ export class AxisLabels {
   }
 
   // modified by HHonda
-  percentageLabels() {
+  customLabels() {
     const config = this.axisConfig;
     return function (selection) {
-      if (!config.get('labels.percentageMode')) return;
+      if (!config.get('labels.hideDecimals')) return;
 
       selection.selectAll('.tick text').text(function () {
-        return percentageLabel(this, config.get('labels.percentageMode'));
+        return customLabel(this, config.get('labels.hideDecimals')) + config.get('labels.concatTag');
       });
     };
   }
@@ -161,7 +161,7 @@ export class AxisLabels {
         if (!config.get('labels.show')) selection.selectAll('text').attr('style', 'display: none;');
 
         // modified by HHonda
-        selection.call(self.percentageLabels());
+        selection.call(self.customLabels());
         selection.call(self.truncateLabels());
         selection.call(self.rotateAxisLabels());
         selection.call(self.filterAxisLabels());
