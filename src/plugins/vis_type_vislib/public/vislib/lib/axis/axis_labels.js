@@ -98,7 +98,9 @@ export class AxisLabels {
       if (!config.get('labels.hideDecimals')) return;
 
       selection.selectAll('.tick text').text(function () {
-        return customLabel(this, config.get('labels.hideDecimals')) + config.get('labels.concatTag');
+        return (
+          customLabel(this, config.get('labels.hideDecimals')) + config.get('labels.concatTag')
+        );
       });
     };
   }

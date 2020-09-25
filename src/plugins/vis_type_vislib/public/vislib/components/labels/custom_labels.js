@@ -27,7 +27,7 @@ import d3 from 'd3';
  * @param size (number of characters to leave)
  * @returns {text} the updated text
  */
-const customLabel = function (text, concatTag) {
+const customLabel = function (text) {
   const node = d3.select(text).node();
   const str = $(node).text();
   if (str.slice(-3) === ',00') {
