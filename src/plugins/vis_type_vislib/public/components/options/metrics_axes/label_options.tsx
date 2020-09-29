@@ -85,7 +85,7 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
 
       <SwitchOption
         disabled={!axisLabels.show}
-        label="Esconder decimais"
+        label="Esconder decimal zero"
         paramName="hideDecimals"
         value={axisLabels.hideDecimals}
         setValue={setAxisLabel}

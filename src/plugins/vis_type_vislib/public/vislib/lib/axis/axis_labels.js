@@ -20,8 +20,6 @@
 import d3 from 'd3';
 import $ from 'jquery';
 import { truncateLabel } from '../../components/labels/truncate_labels';
-// modified by HHonda
-import { customLabel } from '../../components/labels/custom_labels';
 
 export class AxisLabels {
   constructor(axisConfig, scale) {
@@ -92,15 +90,29 @@ export class AxisLabels {
   }
 
   // modified by HHonda
-  customLabels() {
+  hideZeroDecimals() {
     const config = this.axisConfig;
     return function (selection) {
       if (!config.get('labels.hideDecimals')) return;
 
       selection.selectAll('.tick text').text(function () {
-        return (
-          customLabel(this, config.get('labels.hideDecimals')) + config.get('labels.concatTag')
-        );
+        const node = d3.select(this).node();
+        const str = $(node).text();
+        if (str.slice(-3) === ',00') {
+          return str.slice(0, -3);
+        }
+        return str;
+      });
+    };
+  }
+
+  appendConcatText() {
+    const config = this.axisConfig;
+    return function (selection) {
+      selection.selectAll('.tick text').text(function () {
+        const node = d3.select(this).node();
+        const str = $(node).text();
+        return str + config.get('labels.concatTag');
       });
     };
   }
@@ -163,7 +175,8 @@ export class AxisLabels {
         if (!config.get('labels.show')) selection.selectAll('text').attr('style', 'display: none;');
 
         // modified by HHonda
-        selection.call(self.customLabels());
+        selection.call(self.hideZeroDecimals());
+        selection.call(self.appendConcatText());
         selection.call(self.truncateLabels());
         selection.call(self.rotateAxisLabels());
         selection.call(self.filterAxisLabels());
