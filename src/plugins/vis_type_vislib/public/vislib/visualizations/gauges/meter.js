@@ -283,7 +283,7 @@ export class MeterGauge {
           }
           return percentOutput;
         }
-        let output = data.yAxisFormatter(d.y)
+        const output = data.yAxisFormatter(d.y);
         if (output.slice(-3) === ',00') {
           return output.slice(0, -3);
         }
@@ -319,9 +319,9 @@ export class MeterGauge {
         // .attr('y', -30)
         .attr('y', () => {
           if (this.gaugeConfig.style.fontResize) {
-            return -15 - (width / 10);
+            return -15 - width / 10;
           }
-          return -30 - (this.gaugeConfig.style.fontSize / 2);
+          return -30 - this.gaugeConfig.style.fontSize / 2;
         })
         .attr('style', 'dominant-baseline: central; text-anchor: middle;')
         // modified by HHonda
@@ -329,7 +329,7 @@ export class MeterGauge {
           if (this.gaugeConfig.style.fontResize) {
             return width / 20;
           }
-          return this.gaugeConfig.style.fontSize / 2
+          return this.gaugeConfig.style.fontSize / 2;
         })
         .style('display', function () {
           const textLength = this.getBBox().width;
@@ -348,9 +348,9 @@ export class MeterGauge {
         // .attr('y', 20)
         .attr('y', () => {
           if (this.gaugeConfig.style.fontResize) {
-            return 5 + (width / 10);
+            return 5 + width / 10;
           }
-          return 20 + (this.gaugeConfig.style.fontSize / 2);
+          return 20 + this.gaugeConfig.style.fontSize / 2;
         })
         .attr('style', 'dominant-baseline: central; text-anchor: middle;')
         // modified by HHonda
@@ -358,7 +358,7 @@ export class MeterGauge {
           if (this.gaugeConfig.style.fontResize) {
             return width / 20;
           }
-          return this.gaugeConfig.style.fontSize / 2
+          return this.gaugeConfig.style.fontSize / 2;
         })
         .style('display', function () {
           const textLength = this.getBBox().width;
