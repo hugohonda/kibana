@@ -277,13 +277,17 @@ export class MeterGauge {
           const percentage = (d.y - min) / (max - min);
           // modified by HHonda
           // return data.yAxisFormatter(percentage);
-          const output = data.yAxisFormatter(percentage);
-          if (output.slice(-4, -1) === ',00') {
-            return output.slice(0, -4) + '%';
+          const percentOutput = data.yAxisFormatter(percentage);
+          if (percentOutput.slice(-4, -1) === ',00') {
+            return percentOutput.slice(0, -4) + '%';
           }
-          return output;
+          return percentOutput;
         }
-        return data.yAxisFormatter(d.y);
+        let output = data.yAxisFormatter(d.y)
+        if (output.slice(-3) === ',00') {
+          return output.slice(0, -3);
+        }
+        return output;
       })
       .attr('style', 'dominant-baseline: central;')
       .style('text-anchor', 'middle')
@@ -311,8 +315,22 @@ export class MeterGauge {
         .append('text')
         .attr('class', 'chart-label')
         .text(data.label)
-        .attr('y', -30)
+        // modified by HHonda
+        // .attr('y', -30)
+        .attr('y', () => {
+          if (this.gaugeConfig.style.fontResize) {
+            return -15 - (width / 10);
+          }
+          return -30 - (this.gaugeConfig.style.fontSize / 2);
+        })
         .attr('style', 'dominant-baseline: central; text-anchor: middle;')
+        // modified by HHonda
+        .style('font-size', () => {
+          if (this.gaugeConfig.style.fontResize) {
+            return width / 20;
+          }
+          return this.gaugeConfig.style.fontSize / 2
+        })
         .style('display', function () {
           const textLength = this.getBBox().width;
           const textTooLong = textLength > maxRadius;
@@ -326,8 +344,22 @@ export class MeterGauge {
         .append('text')
         .attr('class', 'chart-label')
         .text(this.gaugeConfig.style.subText)
-        .attr('y', 20)
+        // modified by HHonda
+        // .attr('y', 20)
+        .attr('y', () => {
+          if (this.gaugeConfig.style.fontResize) {
+            return 5 + (width / 10);
+          }
+          return 20 + (this.gaugeConfig.style.fontSize / 2);
+        })
         .attr('style', 'dominant-baseline: central; text-anchor: middle;')
+        // modified by HHonda
+        .style('font-size', () => {
+          if (this.gaugeConfig.style.fontResize) {
+            return width / 20;
+          }
+          return this.gaugeConfig.style.fontSize / 2
+        })
         .style('display', function () {
           const textLength = this.getBBox().width;
           const textTooLong = textLength > maxRadius;

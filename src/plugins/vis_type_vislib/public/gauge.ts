@@ -104,7 +104,7 @@ export const createGaugeVisTypeDefinition = (deps: VisTypeVislibDependencies) =>
           bgFill: 'rgba(105,112,125,0.2)',
           bgColor: true,
           subText: '',
-          fontSize: 60,
+          fontSize: 40,
           // modified by HHonda
           fontResize: false,
         },
