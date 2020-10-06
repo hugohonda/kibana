@@ -105,6 +105,8 @@ export const createLineVisTypeDefinition = (deps: VisTypeVislibDependencies) => 
           },
           valueAxis: 'ValueAxis-1',
           drawLinesBetweenPoints: true,
+          // modified by HHonda
+          dashedLine: false,
           lineWidth: 2,
           interpolate: InterpolationModes.LINEAR,
           showCircles: true,

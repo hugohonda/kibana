@@ -94,6 +94,15 @@ function LineOptions({ chart, vis, setChart }: LineOptionsParams) {
         value={chart.showCircles}
         setValue={setChart}
       />
+
+      <EuiSpacer size="m" />
+
+      <SwitchOption
+        label="Linha tracejada"
+        paramName="dashedLine"
+        value={chart.dashedLine}
+        setValue={setChart}
+      />
     </>
   );
 }

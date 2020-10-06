@@ -27,6 +27,8 @@ const defaults = {
   radiusRatio: 9,
   showLines: true,
   interpolate: 'linear',
+  // modified by HHonda
+  dashedLine: false,
   lineWidth: 2,
   color: undefined,
   fillColor: undefined,
@@ -161,6 +163,8 @@ export class LineChart extends PointSeries {
     const yScale = this.getValueAxis().getScale();
     const color = this.handler.data.getColorFunc();
     const ordered = this.handler.data.get('ordered');
+    // modified by HHonda
+    const dashedLine = this.seriesConfig.dashedLine;
     const lineWidth = this.seriesConfig.lineWidth;
     const interpolate = this.seriesConfig.interpolate;
     const isHorizontal = this.getCategoryAxis().axisConfig.isHorizontal();
@@ -201,7 +205,13 @@ export class LineChart extends PointSeries {
       .attr('stroke', () => {
         return color(data.label);
       })
-      .attr('stroke-width', lineWidth);
+      .attr('stroke-width', lineWidth)
+      .attr('stroke-dasharray', () => {
+        if (dashedLine) {
+          return '5,5';
+        }
+        return '0';
+      });
 
     return line;
   }
