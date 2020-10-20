@@ -51,7 +51,9 @@ export class EnhancedSearchInterceptor extends SearchInterceptor {
     if (this.longRunningToast) return;
     this.longRunningToast = this.deps.toasts.addInfo(
       {
-        title: 'Your query is taking a while',
+        // modified by HHonda
+        // title: 'Your query is taking awhile',
+        title: 'Sua consulta está demorando um pouco',
         text: getLongQueryNotification({
           cancel: this.cancelPending,
           runBeyondTimeout: this.runBeyondTimeout,

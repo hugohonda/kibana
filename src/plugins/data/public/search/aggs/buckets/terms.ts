@@ -79,7 +79,9 @@ export const getTermsBucketAgg = () =>
     title: termsTitle,
     makeLabel(agg) {
       const params = agg.params;
-      return agg.getFieldDisplayName() + ': ' + params.order.text;
+      // Modified by HHonda + Edmar Moretti
+      // return agg.getFieldDisplayName() + ': ' + params.order.text;
+      return params.order.text + ': ' + agg.getFieldDisplayName();
     },
     getSerializedFormat(agg) {
       const format = agg.params.field ? agg.params.field.format.toJSON() : {};

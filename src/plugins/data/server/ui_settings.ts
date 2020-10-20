@@ -17,6 +17,8 @@
  * under the License.
  */
 
+// @@@@ MISSING TRANSLATION
+
 import { i18n } from '@kbn/i18n';
 import { schema } from '@kbn/config-schema';
 import { UiSettingsParams } from 'kibana/server';
@@ -395,7 +397,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.numberFormatTitle', {
         defaultMessage: 'Number format',
       }),
-      value: '0,0.[000]',
+      // modified by HHonda
+      // value: '0,0.[000]',
+      value: '0.0,[000]',
       type: 'string',
       description: i18n.translate('data.advancedSettings.format.numberFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "number" format',
@@ -417,7 +421,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.percentFormatTitle', {
         defaultMessage: 'Percent format',
       }),
-      value: '0,0.[000]%',
+      // modified by HHonda
+      // value: '0,0.[000]%',
+      value: '0.0,[000]%',
       type: 'string',
       description: i18n.translate('data.advancedSettings.format.percentFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "percent" format',
@@ -439,7 +445,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.bytesFormatTitle', {
         defaultMessage: 'Bytes format',
       }),
-      value: '0,0.[0]b',
+      // modified by HHonda
+      // value: '0,0.[0]b',
+      value: '0.0,[0]b',
       type: 'string',
       description: i18n.translate('data.advancedSettings.format.bytesFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "bytes" format',
@@ -461,7 +469,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.currencyFormatTitle', {
         defaultMessage: 'Currency format',
       }),
-      value: '($0,0.[00])',
+      // modified by HHonda
+      // value: '($0,0.[00])',
+      value: '(R$0.0,[00])',
       type: 'string',
       description: i18n.translate('data.advancedSettings.format.currencyFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "currency" format',
@@ -483,7 +493,7 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.formattingLocaleTitle', {
         defaultMessage: 'Formatting locale',
       }),
-      value: 'en',
+      value: 'pt-br',
       type: 'select',
       options: numeralLanguageIds,
       optionLabels: Object.fromEntries(

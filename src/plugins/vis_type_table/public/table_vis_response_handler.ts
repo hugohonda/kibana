@@ -66,7 +66,9 @@ export function tableVisResponseHandler(table: Input, dimensions: any): TableCon
         (splitMap as any)[splitValue] = splitIndex++;
         const tableGroup: Required<TableGroup, 'tables'> = {
           $parent: converted,
-          title: `${splitColumnFormatter.convert(splitValue)}: ${splitColumn.name}`,
+          // Modified by HHonda
+          // title: `${splitColumnFormatter.convert(splitValue)}: ${splitColumn.name}`,
+          title: `${splitColumn.name}: ${splitColumnFormatter.convert(splitValue)}`,
           name: splitColumn.name,
           key: splitValue,
           column: splitColumnIndex,

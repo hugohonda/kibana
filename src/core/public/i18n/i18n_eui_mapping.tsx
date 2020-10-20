@@ -25,6 +25,8 @@ interface EuiValues {
   [key: string]: any;
 }
 
+// @@@@ MISSING TRANSLATION
+
 export const getEuiContextMapping = () => {
   const euiContextMapping = {
     'euiBasicTable.selectAllRows': i18n.translate('core.euiBasicTable.selectAllRows', {

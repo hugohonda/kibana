@@ -241,7 +241,13 @@ export class PieChart extends Chart {
             return;
           }
           if (showValues) {
-            const value = numeral(d.value / 100).format('0.[00]%');
+            // modified by HHonda
+            // const value = numeral(d.value / 100).format('0.[00]%');
+            // const output = `${d.name} (${value})`;
+            const value = numeral(d.value / 100).format('0,[00]%');
+            if (d.name.match(/^\s+$/)) {
+              return value;
+            }
             return `${d.name} (${value})`;
           }
           return d.name;

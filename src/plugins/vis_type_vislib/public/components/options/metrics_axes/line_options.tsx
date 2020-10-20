@@ -24,7 +24,9 @@ import { EuiFlexGroup, EuiFlexItem, EuiSpacer } from '@elastic/eui';
 
 import { Vis } from '../../../../../visualizations/public';
 import { SeriesParam } from '../../../types';
-import { NumberInputOption, SelectOption, SwitchOption } from '../../../../../charts/public';
+// modified by HHonda
+// import { NumberInputOption, SelectOption, SwitchOption } from '../../../../../charts/public';
+import { TextInputOption, NumberInputOption, SelectOption, SwitchOption } from '../../../../../charts/public';
 import { SetChart } from './chart_options';
 
 export interface LineOptionsParams {
@@ -92,6 +94,26 @@ function LineOptions({ chart, vis, setChart }: LineOptionsParams) {
         })}
         paramName="showCircles"
         value={chart.showCircles}
+        setValue={setChart}
+      />
+
+      {/* modified by HHonda */}
+      <EuiSpacer size="m" />
+
+      {/* modified by HHonda */}
+      <SwitchOption
+        label="Linha tracejada"
+        paramName="dashedLine"
+        value={chart.dashedLine}
+        setValue={setChart}
+      />
+
+      {/* modified by HHonda */}
+      <TextInputOption
+        disabled={!chart.dashedLine}
+        label="Padrão de tracejado"
+        paramName="dashArray"
+        value={chart.dashArray}
         setValue={setChart}
       />
     </>

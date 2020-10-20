@@ -19,6 +19,8 @@
 
 import { i18n } from '@kbn/i18n';
 
+// @@@@ MISSING TRANSLATION
+
 /** @internal */
 export const DEFAULT_APP_CATEGORIES = Object.freeze({
   kibana: {

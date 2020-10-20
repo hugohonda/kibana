@@ -39,7 +39,9 @@ function tableResponseHandler(table, dimensions) {
         splitMap[splitValue] = splitIndex++;
         const tableGroup = {
           $parent: converted,
-          title: `${splitColumnFormatter.convert(splitValue)}: ${splitColumn.name}`,
+          // Modified by Edmar Moretti + HHonda
+          // title: `${splitColumnFormatter.convert(splitValue)}: ${splitColumn.name}`,
+          title: `${splitColumn.name}: ${splitColumnFormatter.convert(splitValue)}`,
           name: splitColumn.name,
           key: splitValue,
           column: splitColumnIndex,

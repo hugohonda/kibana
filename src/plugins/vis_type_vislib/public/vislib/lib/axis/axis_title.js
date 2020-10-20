@@ -66,7 +66,16 @@ export class AxisTitle {
           })
           .attr('text-anchor', 'middle')
           .attr('dominant-baseline', 'hanging')
-          .text(config.get('title.text'))
+          // modified by HHonda
+          // .text(config.get('title.text'))
+          .text(() => {
+            const hangingText = config.get('title.text');
+            if (hangingText === 'filters') {
+              return '';
+            }
+            return hangingText;
+          })
+          //
           .node()
           .getBBox();
 

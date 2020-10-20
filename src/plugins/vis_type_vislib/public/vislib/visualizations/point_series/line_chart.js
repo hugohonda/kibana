@@ -30,6 +30,9 @@ const defaults = {
   lineWidth: 2,
   color: undefined,
   fillColor: undefined,
+  // modified by HHonda
+  dashedLine: false,
+  dashArray: '5,5',
 };
 /**
  * Line Chart Visualization
@@ -164,6 +167,9 @@ export class LineChart extends PointSeries {
     const lineWidth = this.seriesConfig.lineWidth;
     const interpolate = this.seriesConfig.interpolate;
     const isHorizontal = this.getCategoryAxis().axisConfig.isHorizontal();
+    // modified by HHonda
+    const dashedLine = this.seriesConfig.dashedLine;
+    const dashArray = this.seriesConfig.dashArray;
 
     const line = svg
       .append('g')
@@ -201,7 +207,14 @@ export class LineChart extends PointSeries {
       .attr('stroke', () => {
         return color(data.label);
       })
-      .attr('stroke-width', lineWidth);
+      .attr('stroke-width', lineWidth)
+      // modified by HHonda
+      .attr('stroke-dasharray', () => {
+        if (dashedLine) {
+          return dashArray;
+        }
+        return '0';
+      });
 
     return line;
   }

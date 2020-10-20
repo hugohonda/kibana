@@ -29,6 +29,8 @@ import {
   SetColorRangeValue,
   SwitchOption,
   ColorSchemas,
+  // modified by HHonda
+  NumberInputOption,
 } from '../../../../../charts/public';
 import { GaugeOptionsInternalProps } from '../gauge';
 import { Gauge } from '../../../gauge';
@@ -136,6 +138,29 @@ function RangesPanel({
         value={stateParams.gauge.scale.show}
         setValue={(paramName, value) =>
           setGaugeValue('scale', { ...stateParams.gauge.scale, [paramName]: value })
+        }
+      />
+
+      {/* modified by HHonda */}
+      <SwitchOption
+        label="Auto-redimensionamento da fonte"
+        paramName="fontResize"
+        value={stateParams.gauge.style.fontResize}
+        setValue={(paramName, value) =>
+          setGaugeValue('style', { ...stateParams.gauge.style, [String(paramName)]: value })
+        }
+      />
+
+      {/* modified by HHonda */}
+      <NumberInputOption
+        disabled={stateParams.gauge.style.fontResize}
+        label="Tamanho da fonte"
+        max={1000}
+        min={10}
+        paramName="fontSize"
+        value={stateParams.gauge.style.fontSize}
+        setValue={(paramName, value) =>
+          setGaugeValue('style', { ...stateParams.gauge.style, [paramName]: value })
         }
       />
     </EuiPanel>
