@@ -294,7 +294,7 @@ export class MeterGauge {
           return output.slice(0, -3);
         }
         return output;
-      })//
+      })
       .attr('style', 'dominant-baseline: central;')
       .style('text-anchor', 'middle')
       // modified by HHonda
@@ -328,14 +328,14 @@ export class MeterGauge {
             return -15 - width / 10;
           }
           return -30 - this.gaugeConfig.style.fontSize / 2;
-        })//
+        })
         // modified by HHonda
         .style('font-size', () => {
           if (this.gaugeConfig.style.fontResize) {
             return width / 20;
           }
           return this.gaugeConfig.style.fontSize / 2;
-        })//
+        })
         .attr('style', 'dominant-baseline: central; text-anchor: middle;')
         .style('display', function () {
           const textLength = this.getBBox().width;
@@ -357,14 +357,14 @@ export class MeterGauge {
             return 5 + width / 10;
           }
           return 20 + this.gaugeConfig.style.fontSize / 2;
-        })//
+        })
         // modified by HHonda
         .style('font-size', () => {
           if (this.gaugeConfig.style.fontResize) {
             return width / 20;
           }
           return this.gaugeConfig.style.fontSize / 2;
-        })//
+        })
         .attr('style', 'dominant-baseline: central; text-anchor: middle;')
         .style('display', function () {
           const textLength = this.getBBox().width;

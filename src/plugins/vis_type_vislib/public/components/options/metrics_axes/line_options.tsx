@@ -26,7 +26,12 @@ import { Vis } from '../../../../../visualizations/public';
 import { SeriesParam } from '../../../types';
 // modified by HHonda
 // import { NumberInputOption, SelectOption, SwitchOption } from '../../../../../charts/public';
-import { TextInputOption, NumberInputOption, SelectOption, SwitchOption } from '../../../../../charts/public';
+import {
+  TextInputOption,
+  NumberInputOption,
+  SelectOption,
+  SwitchOption,
+} from '../../../../../charts/public';
 import { SetChart } from './chart_options';
 
 export interface LineOptionsParams {
