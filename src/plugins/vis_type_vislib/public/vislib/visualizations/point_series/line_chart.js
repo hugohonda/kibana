@@ -27,11 +27,12 @@ const defaults = {
   radiusRatio: 9,
   showLines: true,
   interpolate: 'linear',
-  // modified by HHonda
-  dashedLine: false,
   lineWidth: 2,
   color: undefined,
   fillColor: undefined,
+  // modified by HHonda
+  dashedLine: false,
+  dashArray: '5,5',
 };
 /**
  * Line Chart Visualization
@@ -163,11 +164,12 @@ export class LineChart extends PointSeries {
     const yScale = this.getValueAxis().getScale();
     const color = this.handler.data.getColorFunc();
     const ordered = this.handler.data.get('ordered');
-    // modified by HHonda
-    const dashedLine = this.seriesConfig.dashedLine;
     const lineWidth = this.seriesConfig.lineWidth;
     const interpolate = this.seriesConfig.interpolate;
     const isHorizontal = this.getCategoryAxis().axisConfig.isHorizontal();
+    // modified by HHonda
+    const dashedLine = this.seriesConfig.dashedLine;
+    const dashArray = this.seriesConfig.dashArray;
 
     const line = svg
       .append('g')
@@ -206,9 +208,10 @@ export class LineChart extends PointSeries {
         return color(data.label);
       })
       .attr('stroke-width', lineWidth)
+      // modified by HHonda
       .attr('stroke-dasharray', () => {
         if (dashedLine) {
-          return '5,5';
+          return dashArray;
         }
         return '0';
       });

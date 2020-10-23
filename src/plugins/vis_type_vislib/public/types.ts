@@ -80,6 +80,7 @@ export interface SeriesParam {
   valueAxis: string;
   // modified by HHonda
   dashedLine: boolean;
+  dashArray: string;
 }
 
 export interface BasicVislibParams extends CommonVislibParams {
