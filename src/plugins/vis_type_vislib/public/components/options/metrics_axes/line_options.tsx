@@ -97,6 +97,7 @@ function LineOptions({ chart, vis, setChart }: LineOptionsParams) {
 
       <EuiSpacer size="m" />
 
+      {/* modified by HHonda */}
       <SwitchOption
         label="Linha tracejada"
         paramName="dashedLine"

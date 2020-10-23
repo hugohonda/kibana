@@ -291,14 +291,7 @@ export class MeterGauge {
       })
       .attr('style', 'dominant-baseline: central;')
       .style('text-anchor', 'middle')
-      // modified by HHonda
-      // .style('font-size', '2em')
-      .style('font-size', () => {
-        if (this.gaugeConfig.style.fontResize) {
-          return width / 10;
-        }
-        return this.gaugeConfig.style.fontSize;
-      })
+      .style('font-size', '2em')
       .style('display', function () {
         const textLength = this.getBBox().width;
         // The text is too long if it's larger than the inner free space minus a couple of random pixels for padding.
@@ -315,22 +308,8 @@ export class MeterGauge {
         .append('text')
         .attr('class', 'chart-label')
         .text(data.label)
-        // modified by HHonda
-        // .attr('y', -30)
-        .attr('y', () => {
-          if (this.gaugeConfig.style.fontResize) {
-            return -15 - width / 10;
-          }
-          return -30 - this.gaugeConfig.style.fontSize / 2;
-        })
+        .attr('y', -30)
         .attr('style', 'dominant-baseline: central; text-anchor: middle;')
-        // modified by HHonda
-        .style('font-size', () => {
-          if (this.gaugeConfig.style.fontResize) {
-            return width / 20;
-          }
-          return this.gaugeConfig.style.fontSize / 2;
-        })
         .style('display', function () {
           const textLength = this.getBBox().width;
           const textTooLong = textLength > maxRadius;
@@ -344,22 +323,8 @@ export class MeterGauge {
         .append('text')
         .attr('class', 'chart-label')
         .text(this.gaugeConfig.style.subText)
-        // modified by HHonda
-        // .attr('y', 20)
-        .attr('y', () => {
-          if (this.gaugeConfig.style.fontResize) {
-            return 5 + width / 10;
-          }
-          return 20 + this.gaugeConfig.style.fontSize / 2;
-        })
+        .attr('y', 20)
         .attr('style', 'dominant-baseline: central; text-anchor: middle;')
-        // modified by HHonda
-        .style('font-size', () => {
-          if (this.gaugeConfig.style.fontResize) {
-            return width / 20;
-          }
-          return this.gaugeConfig.style.fontSize / 2;
-        })
         .style('display', function () {
           const textLength = this.getBBox().width;
           const textTooLong = textLength > maxRadius;

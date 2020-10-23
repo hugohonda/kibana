@@ -78,6 +78,8 @@ export interface SeriesParam {
   showCircles: boolean;
   type: ChartTypes;
   valueAxis: string;
+  // modified by HHonda
+  dashedLine: boolean;
 }
 
 export interface BasicVislibParams extends CommonVislibParams {
