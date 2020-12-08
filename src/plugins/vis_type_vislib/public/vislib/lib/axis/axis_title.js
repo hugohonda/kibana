@@ -75,6 +75,9 @@ export class AxisTitle {
             }
             return hangingText;
           })
+          .attr('style', () => {
+            return config.get('title.styleConfig');
+          })
           //
           .node()
           .getBBox();

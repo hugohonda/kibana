@@ -117,7 +117,17 @@ export class AxisLabels {
       });
     };
   }
-  //
+
+  // modified by HHonda
+  customCSSStyle() {
+    const config = this.axisConfig;
+    return function (selection) {
+      selection.selectAll('.tick text').attr('style', function () {
+        const currentStyle = d3.select(this).attr('style');
+        return `${currentStyle} ${config.get('labels.styleConfig')}`;
+      });
+    };
+  }
 
   filterAxisLabels() {
     const self = this;
@@ -179,6 +189,7 @@ export class AxisLabels {
         // modified by HHonda
         selection.call(self.hideZeroDecimals());
         selection.call(self.appendConcatText());
+        selection.call(self.customCSSStyle());
         //
         selection.call(self.truncateLabels());
         selection.call(self.rotateAxisLabels());
