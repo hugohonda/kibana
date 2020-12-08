@@ -17,9 +17,13 @@
  * under the License.
  */
 
-import React, { useCallback, useMemo } from 'react';
+// modified by HHonda
+// import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { i18n } from '@kbn/i18n';
-import { EuiSpacer, EuiAccordion, EuiHorizontalRule } from '@elastic/eui';
+// modified by HHonda
+// import { EuiSpacer, EuiAccordion, EuiHorizontalRule } from '@elastic/eui';
+import { EuiFieldNumber, EuiSpacer, EuiAccordion, EuiHorizontalRule } from '@elastic/eui';
 
 import { Vis } from '../../../../../visualizations/public';
 import { ValueAxis } from '../../../types';
@@ -44,6 +48,7 @@ export interface ValueAxisOptionsParams {
   valueAxis: ValueAxis;
   vis: Vis;
   setMultipleValidity: (paramName: string, isValid: boolean) => void;
+  fontSize: number;
 }
 
 function ValueAxisOptions({
@@ -52,6 +57,7 @@ function ValueAxisOptions({
   isCategoryAxisHorizontal,
   valueAxis,
   vis,
+  fontSize,
   onValueAxisPositionChanged,
   setParamByIndex,
   setMultipleValidity,
@@ -182,6 +188,15 @@ function ValueAxisOptions({
             })}
             paramName="text"
             value={axis.title.text}
+            setValue={setValueAxisTitle}
+          />
+
+          {/* modified by HHonda */}
+          <EuiSpacer size="m" />
+          <TextInputOption
+            label="Configuração de estilo CSS"
+            paramName="styleConfig"
+            value={axis.title.styleConfig}
             setValue={setValueAxisTitle}
           />
 

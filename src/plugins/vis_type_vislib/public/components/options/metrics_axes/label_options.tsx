@@ -99,6 +99,13 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         setValue={setAxisLabel}
       />
 
+      <TextInputOption
+        label="Configuração de estilo CSS"
+        paramName="styleConfig"
+        value={axisLabels.styleConfig}
+        setValue={setAxisLabel}
+      />
+
       <EuiSpacer size="m" />
 
       <EuiFlexGroup gutterSize="s">

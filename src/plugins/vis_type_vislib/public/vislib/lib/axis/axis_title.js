@@ -75,6 +75,11 @@ export class AxisTitle {
             }
             return hangingText;
           })
+          .attr('style', () => {
+            // const textSize = String(config.get('title.fontSize')) + 'pt'
+            // return `font-size: ${textSize}`;
+            return config.get('title.styleConfig');
+          })
           .node()
           .getBBox();
 
