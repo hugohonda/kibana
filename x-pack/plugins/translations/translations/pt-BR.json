@@ -1660,7 +1660,7 @@
         "home.letsStartTitle": "Vamos começar",
         "home.loadTutorials.requestFailedErrorMessage": "A solicitação falhou com o código de status: {status}",
         "home.loadTutorials.unableToLoadErrorMessage": "Não foi possível carregar os tutoriais",
-        "home.pageTitle": "Casa",
+        "home.pageTitle": "Home",
         "home.recentlyAccessed.recentlyViewedTitle": "Visualizado recentemente",
         "home.sampleData.ecommerceSpec.averageSalesPerRegionTitle": "[Comércio eletrônico] Média de vendas por região",
         "home.sampleData.ecommerceSpec.averageSalesPriceTitle": "[eCommerce] Preço médio de venda",
