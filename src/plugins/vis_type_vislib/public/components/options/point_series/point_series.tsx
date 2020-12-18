@@ -69,17 +69,29 @@ function PointSeriesOptions(props: ValidationVisOptionsProps<BasicVislibParams>)
         )}
 
         {vis.type.name === ChartTypes.HISTOGRAM && (
-          <SwitchOption
-            data-test-subj="showValuesOnChart"
-            label={i18n.translate('visTypeVislib.editors.pointSeries.showLabels', {
-              defaultMessage: 'Show values on chart',
-            })}
-            paramName="show"
-            value={stateParams.labels.show}
-            setValue={(paramName, value) =>
-              setValue('labels', { ...stateParams.labels, [paramName]: value })
-            }
-          />
+          <>
+            <SwitchOption
+              data-test-subj="showValuesOnChart"
+              label={i18n.translate('visTypeVislib.editors.pointSeries.showLabels', {
+                defaultMessage: 'Show values on chart',
+              })}
+              paramName="show"
+              value={stateParams.labels.show}
+              setValue={(paramName, value) =>
+                setValue('labels', { ...stateParams.labels, [paramName]: value })
+              }
+            />
+            {/* modified by HHonda */}
+            <SwitchOption
+              disabled={!stateParams.labels.show}
+              label="Esconder decimal zero"
+              paramName="hideDecimals"
+              value={stateParams.labels.hideDecimals}
+              setValue={(paramName, value) =>
+                setValue('labels', { ...stateParams.labels, [paramName]: value })
+              }
+            />
+          </>
         )}
       </EuiPanel>
 

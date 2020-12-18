@@ -132,6 +132,8 @@ export class ColumnChart extends PointSeries {
     const chartData = this.chartData;
     const groupCount = this.getGroupedCount();
     const groupNum = this.getGroupedNum(this.chartData);
+    // modified by HHonda
+    const hideLabelsDecimals = this.labelOptions.hideDecimals;
     let barWidth;
     let gutterWidth;
 
@@ -224,7 +226,13 @@ export class ColumnChart extends PointSeries {
       barLabels
         .enter()
         .append('text')
-        .text(formatValue)
+        .text((d) => {
+          const formatted = formatValue(d);
+          if (hideLabelsDecimals && formatted.slice(-3) === ',00') {
+            return formatted.slice(0, -3);
+          }
+          return formatted;
+        })
         .attr('class', `visColumnChart__barLabel visColumnChart__barLabel--stack ${labelClass}`)
         .attr('x', isHorizontal ? labelX : labelY)
         .attr('y', isHorizontal ? labelY : labelX)
@@ -255,6 +263,8 @@ export class ColumnChart extends PointSeries {
     const isHorizontal = this.getCategoryAxis().axisConfig.isHorizontal();
     const isLogScale = this.getValueAxis().axisConfig.isLogScale();
     const isLabels = this.labelOptions.show;
+    // modified by HHonda
+    const hideLabelsDecimals = this.labelOptions.hideDecimals;
     let barWidth;
     let gutterWidth;
 
@@ -342,7 +352,13 @@ export class ColumnChart extends PointSeries {
       barLabels
         .enter()
         .append('text')
-        .text(formatValue)
+        .text((d) => {
+          const formatted = formatValue(d);
+          if (hideLabelsDecimals && formatted.slice(-3) === ',00') {
+            return formatted.slice(0, -3);
+          }
+          return formatted;
+        })
         .attr('class', 'visColumnChart__barLabel')
         .attr('x', isHorizontal ? labelX : labelY)
         .attr('y', isHorizontal ? labelY : labelX)
