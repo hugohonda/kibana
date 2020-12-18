@@ -67,7 +67,6 @@ export class AxisTitle {
           .attr('text-anchor', 'middle')
           .attr('dominant-baseline', 'hanging')
           // modified by HHonda
-          // .text(config.get('title.text'))
           .text(() => {
             const hangingText = config.get('title.text');
             if (hangingText === 'filters') {
@@ -75,9 +74,8 @@ export class AxisTitle {
             }
             return hangingText;
           })
+          // modified by HHonda
           .attr('style', () => {
-            // const textSize = String(config.get('title.fontSize')) + 'pt'
-            // return `font-size: ${textSize}`;
             return config.get('title.styleConfig');
           })
           .node()
