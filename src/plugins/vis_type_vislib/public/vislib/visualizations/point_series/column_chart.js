@@ -134,6 +134,7 @@ export class ColumnChart extends PointSeries {
     const groupNum = this.getGroupedNum(this.chartData);
     // modified by HHonda
     const hideLabelsDecimals = this.labelOptions.hideDecimals;
+    const labelStyle = this.labelOptions.styleConfig;
     let barWidth;
     let gutterWidth;
 
@@ -226,6 +227,8 @@ export class ColumnChart extends PointSeries {
       barLabels
         .enter()
         .append('text')
+        // modified by HHonda
+        // .text(formatValue)
         .text((d) => {
           const formatted = formatValue(d);
           if (hideLabelsDecimals && formatted.slice(-3) === ',00') {
@@ -236,6 +239,10 @@ export class ColumnChart extends PointSeries {
         .attr('class', `visColumnChart__barLabel visColumnChart__barLabel--stack ${labelClass}`)
         .attr('x', isHorizontal ? labelX : labelY)
         .attr('y', isHorizontal ? labelY : labelX)
+        // modified by HHonda
+        .attr('style', () => {
+          return labelStyle;
+        })
 
         // display must apply last, because labelDisplay decision it based
         // on text bounding box which depends on actual applied style.
@@ -265,6 +272,7 @@ export class ColumnChart extends PointSeries {
     const isLabels = this.labelOptions.show;
     // modified by HHonda
     const hideLabelsDecimals = this.labelOptions.hideDecimals;
+    const labelStyle = this.labelOptions.styleConfig;
     let barWidth;
     let gutterWidth;
 
@@ -352,6 +360,8 @@ export class ColumnChart extends PointSeries {
       barLabels
         .enter()
         .append('text')
+        // modified by HHonda
+        // .text(formatValue)
         .text((d) => {
           const formatted = formatValue(d);
           if (hideLabelsDecimals && formatted.slice(-3) === ',00') {
@@ -365,6 +375,10 @@ export class ColumnChart extends PointSeries {
         .attr('dominant-baseline', isHorizontal ? 'auto' : 'central')
         .attr('text-anchor', isHorizontal ? 'middle' : 'start')
         .attr('fill', labelColor)
+        // modified by HHonda
+        .attr('style', () => {
+          return labelStyle;
+        })
 
         // display must apply last, because labelDisplay decision it based
         // on text bounding box which depends on actual applied style.

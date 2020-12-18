@@ -34,6 +34,7 @@ export interface Labels {
   truncate?: number | null;
   // modified by HHonda
   hideDecimals: boolean | undefined;
+  styleConfig: string | undefined;
 }
 
 export interface Style {

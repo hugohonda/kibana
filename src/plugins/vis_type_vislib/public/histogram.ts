@@ -121,6 +121,7 @@ export const createHistogramVisTypeDefinition = (deps: VisTypeVislibDependencies
         show: false,
         // modified by HHonda
         hideDecimals: false,
+        styleConfig: '',
       },
       thresholdLine: {
         show: false,
