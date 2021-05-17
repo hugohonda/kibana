@@ -495,7 +495,7 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       }),
       // modified by HHonda
       // value: 'en',
-      value: 'pt',
+      value: 'pt-br',
       type: 'select',
       options: numeralLanguageIds,
       optionLabels: Object.fromEntries(
