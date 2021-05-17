@@ -114,7 +114,7 @@ export class MetricVisValue extends Component<MetricVisValueProps> {
           // modified by HHonda
           // dangerouslySetInnerHTML={{ __html: metric.value }} // eslint-disable-line react/no-danger
           dangerouslySetInnerHTML={{ __html: customValue }} // eslint-disable-line react/no-danger
-          />
+        />
         {showLabel && <div>{metric.label}</div>}
       </div>
     );
