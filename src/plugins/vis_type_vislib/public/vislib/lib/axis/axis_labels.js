@@ -101,6 +101,10 @@ export class AxisLabels {
         if (str.slice(-3) === ',00') {
           return str.slice(0, -3);
         }
+        // adicionado por Edmar Moretti
+        if (str.slice(-4) === ',00%') {
+          return str.replace(',00%','%');
+        }
         return str;
       });
     };
