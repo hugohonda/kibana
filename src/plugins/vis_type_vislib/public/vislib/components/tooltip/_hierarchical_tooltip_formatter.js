@@ -43,7 +43,9 @@ export function hierarchicalTooltipFormatter(metricFieldFormatter) {
       row.metric = metricFieldFormatter ? metricFieldFormatter.convert(row.metric) : row.metric;
 
       if (percent !== null && percent !== undefined) {
-        row.metric += ' (' + numeral(percent).format('0.[00]%') + ')';
+        // modified by HHonda
+        // row.metric += ' (' + numeral(percent).format('0.[00]%') + ')';
+        row.metric += ' (' + numeral(percent).format('0,[00]%') + ')';
       }
 
       return row;

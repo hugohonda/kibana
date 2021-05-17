@@ -126,7 +126,9 @@ export class InputControlVis extends Component<InputControlVisProps> {
           >
             <FormattedMessage
               id="inputControl.vis.inputControlVis.applyChangesButtonLabel"
-              defaultMessage="Apply changes"
+              // modified by HHonda
+              // defaultMessage="Apply changes"
+              defaultMessage="Aplicar alterações"
             />
           </EuiButton>
         </EuiFlexItem>
@@ -138,7 +140,9 @@ export class InputControlVis extends Component<InputControlVisProps> {
           >
             <FormattedMessage
               id="inputControl.vis.inputControlVis.cancelChangesButtonLabel"
-              defaultMessage="Cancel changes"
+              // modified by HHonda
+              // defaultMessage="Cancel changes"
+              defaultMessage="Cancelar alterações"
             />
           </EuiButtonEmpty>
         </EuiFlexItem>
@@ -150,7 +154,9 @@ export class InputControlVis extends Component<InputControlVisProps> {
           >
             <FormattedMessage
               id="inputControl.vis.inputControlVis.clearFormButtonLabel"
-              defaultMessage="Clear form"
+              // modified by HHonda
+              // defaultMessage="Clear form"
+              defaultMessage="Limpar formulário"
             />
           </EuiButtonEmpty>
         </EuiFlexItem>

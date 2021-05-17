@@ -41,7 +41,9 @@ export const DEFAULT_APP_CATEGORIES: Record<string, AppCategory> = Object.freeze
   observability: {
     id: 'observability',
     label: i18n.translate('core.ui.observabilityNavList.label', {
-      defaultMessage: 'Observability',
+      // modified by HHonda
+      // defaultMessage: 'Observability',
+      defaultMessage: 'Observabilidade',
     }),
     euiIconType: 'logoObservability',
     order: 3000,
@@ -49,7 +51,9 @@ export const DEFAULT_APP_CATEGORIES: Record<string, AppCategory> = Object.freeze
   security: {
     id: 'securitySolution',
     label: i18n.translate('core.ui.securityNavList.label', {
-      defaultMessage: 'Security',
+      // modified by HHonda
+      // defaultMessage: 'Security',
+      defaultMessage: 'Segurança',
     }),
     order: 4000,
     euiIconType: 'logoSecurity',
@@ -57,7 +61,9 @@ export const DEFAULT_APP_CATEGORIES: Record<string, AppCategory> = Object.freeze
   management: {
     id: 'management',
     label: i18n.translate('core.ui.managementNavList.label', {
-      defaultMessage: 'Management',
+      // modified by HHonda
+      // defaultMessage: 'Management',
+      defaultMessage: 'Gestão',
     }),
     order: 5000,
     euiIconType: 'managementApp',

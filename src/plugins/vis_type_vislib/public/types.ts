@@ -60,7 +60,12 @@ export interface Axis {
   scale: Scale;
   show: boolean;
   style: Style;
-  title: { text: string };
+  // modified by HHonda
+  // title: { text: string };
+  title: {
+    text: string;
+    styleConfig: string;
+  };
   type: AxisTypes;
 }
 
@@ -78,6 +83,9 @@ export interface SeriesParam {
   showCircles: boolean;
   type: ChartTypes;
   valueAxis: string;
+  // modified by HHonda
+  dashedLine: boolean;
+  dashArray: string;
 }
 
 export interface BasicVislibParams extends CommonVislibParams {

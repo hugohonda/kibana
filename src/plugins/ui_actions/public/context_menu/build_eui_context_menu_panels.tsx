@@ -27,7 +27,9 @@ import { Trigger } from '../triggers';
 import { BaseContext } from '../types';
 
 export const defaultTitle = i18n.translate('uiActions.actionPanel.title', {
-  defaultMessage: 'Options',
+  // modified by HHonda
+  // defaultMessage: 'Options',
+  defaultMessage: 'Opções',
 });
 
 export const txtMore = i18n.translate('uiActions.actionPanel.more', {

@@ -112,6 +112,9 @@ export const createLineVisTypeDefinition = (deps: VisTypeVislibDependencies) => 
           lineWidth: 2,
           interpolate: InterpolationModes.LINEAR,
           showCircles: true,
+          // modified by HHonda
+          dashedLine: false,
+          dashArray: '5,5',
         },
       ],
       addTooltip: true,

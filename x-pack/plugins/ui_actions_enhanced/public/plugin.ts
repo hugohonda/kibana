@@ -119,12 +119,13 @@ export class AdvancedUiActionsPublicPlugin
       UI_SETTINGS.TIMEPICKER_QUICK_RANGES
     ) as CommonlyUsedRange[];
     const { openModal } = createReactOverlays(core);
-    const timeRangeAction = new CustomTimeRangeAction({
-      openModal,
-      dateFormat,
-      commonlyUsedRanges,
-    });
-    uiActions.addTriggerAction(CONTEXT_MENU_TRIGGER, timeRangeAction);
+    // modified by Emar Moretti and HHonda
+    // const timeRangeAction = new CustomTimeRangeAction({
+    //   openModal,
+    //   dateFormat,
+    //   commonlyUsedRanges,
+    // });
+    // uiActions.addTriggerAction(CONTEXT_MENU_TRIGGER, timeRangeAction);
 
     const timeRangeBadge = new CustomTimeRangeBadge({
       openModal,
