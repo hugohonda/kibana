@@ -185,6 +185,15 @@ function ValueAxisOptions({
             setValue={setValueAxisTitle}
           />
 
+          {/* modified by HHonda */}
+          <EuiSpacer size="m" />
+          <TextInputOption
+            label="Configuração de estilo CSS"
+            paramName="styleConfig"
+            value={axis.title.styleConfig}
+            setValue={setValueAxisTitle}
+          />
+
           <LabelOptions
             axisLabels={axis.labels}
             axisFilterCheckboxName={`yAxisFilterLabelsCheckbox-${axis.id}`}

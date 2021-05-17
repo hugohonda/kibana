@@ -58,10 +58,16 @@ const defaults = {
     font: '"Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif',
     fontSize: '8pt',
     truncate: 100,
+    // modified by HHonda
+    hideDecimals: false,
+    concatTag: '',
+    styleConfig: '',
   },
   title: {
     text: '',
     elSelector: '.visAxis__column--{pos} .axis-div',
+    // modified by HHonda
+    styleConfig: '',
   },
   padForLabels: 0,
 };

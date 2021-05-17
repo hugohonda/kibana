@@ -32,6 +32,10 @@ export interface Labels {
   rotate?: Rotates;
   show: boolean;
   truncate?: number | null;
+  // modified by HHonda
+  hideDecimals: boolean | undefined;
+  styleConfig: string | undefined;
+  concatTag: string | undefined;
 }
 
 export interface Style {

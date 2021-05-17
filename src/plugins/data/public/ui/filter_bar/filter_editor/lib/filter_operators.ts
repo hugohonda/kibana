@@ -29,7 +29,9 @@ export interface Operator {
 
 export const isOperator = {
   message: i18n.translate('data.filter.filterEditor.isOperatorOptionLabel', {
-    defaultMessage: 'is',
+    // modified by HHonda
+    // defaultMessage: 'is',
+    defaultMessage: 'é',
   }),
   type: FILTERS.PHRASE,
   negate: false,
@@ -37,7 +39,9 @@ export const isOperator = {
 
 export const isNotOperator = {
   message: i18n.translate('data.filter.filterEditor.isNotOperatorOptionLabel', {
-    defaultMessage: 'is not',
+    // modified by HHonda
+    // defaultMessage: 'is not',
+    defaultMessage: 'não é',
   }),
   type: FILTERS.PHRASE,
   negate: true,
@@ -45,7 +49,9 @@ export const isNotOperator = {
 
 export const isOneOfOperator = {
   message: i18n.translate('data.filter.filterEditor.isOneOfOperatorOptionLabel', {
-    defaultMessage: 'is one of',
+    // modified by HHonda
+    // defaultMessage: 'is one of',
+    defaultMessage: 'é um dos',
   }),
   type: FILTERS.PHRASES,
   negate: false,
@@ -54,7 +60,9 @@ export const isOneOfOperator = {
 
 export const isNotOneOfOperator = {
   message: i18n.translate('data.filter.filterEditor.isNotOneOfOperatorOptionLabel', {
-    defaultMessage: 'is not one of',
+    // modified by HHonda
+    // defaultMessage: 'is not one of',
+    defaultMessage: 'não é um dos',
   }),
   type: FILTERS.PHRASES,
   negate: true,
@@ -63,7 +71,9 @@ export const isNotOneOfOperator = {
 
 export const isBetweenOperator = {
   message: i18n.translate('data.filter.filterEditor.isBetweenOperatorOptionLabel', {
-    defaultMessage: 'is between',
+    // modified by HHonda
+    // defaultMessage: 'is between',
+    defaultMessage: 'está entre',
   }),
   type: FILTERS.RANGE,
   negate: false,
@@ -72,7 +82,9 @@ export const isBetweenOperator = {
 
 export const isNotBetweenOperator = {
   message: i18n.translate('data.filter.filterEditor.isNotBetweenOperatorOptionLabel', {
-    defaultMessage: 'is not between',
+    // modified by HHonda
+    // defaultMessage: 'is not between',
+    defaultMessage: 'não está entre',
   }),
   type: FILTERS.RANGE,
   negate: true,
@@ -81,7 +93,9 @@ export const isNotBetweenOperator = {
 
 export const existsOperator = {
   message: i18n.translate('data.filter.filterEditor.existsOperatorOptionLabel', {
-    defaultMessage: 'exists',
+    // modified by HHonda
+    // defaultMessage: 'exists',
+    defaultMessage: 'existe',
   }),
   type: FILTERS.EXISTS,
   negate: false,
@@ -89,7 +103,9 @@ export const existsOperator = {
 
 export const doesNotExistOperator = {
   message: i18n.translate('data.filter.filterEditor.doesNotExistOperatorOptionLabel', {
-    defaultMessage: 'does not exist',
+    // modified by HHonda
+    // defaultMessage: 'does not exist',
+    defaultMessage: 'não existe',
   }),
   type: FILTERS.EXISTS,
   negate: true,

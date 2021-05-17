@@ -26,7 +26,9 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import { Axis } from '../../../types';
 import { TruncateLabelsOption } from '../../common';
 import { getRotateOptions } from '../../../utils/collections';
-import { SelectOption, SwitchOption } from '../../../../../charts/public';
+// modified by HHonda
+// import { SelectOption, SwitchOption } from '../../../../../charts/public';
+import { TextInputOption, SelectOption, SwitchOption } from '../../../../../charts/public';
 
 export type SetAxisLabel = <T extends keyof Axis['labels']>(
   paramName: T,
@@ -67,6 +69,32 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         })}
         paramName="show"
         value={axisLabels.show}
+        setValue={setAxisLabel}
+      />
+
+      {/* modified by HHonda */}
+      <SwitchOption
+        disabled={!axisLabels.show}
+        label="Esconder decimal zero"
+        paramName="hideDecimals"
+        value={axisLabels.hideDecimals}
+        setValue={setAxisLabel}
+      />
+
+      {/* modified by HHonda */}
+      <TextInputOption
+        disabled={!axisLabels.show}
+        label="Texto à direita"
+        paramName="concatTag"
+        value={axisLabels.concatTag}
+        setValue={setAxisLabel}
+      />
+
+      {/* modified by HHonda */}
+      <TextInputOption
+        label="Configuração de estilo CSS"
+        paramName="styleConfig"
+        value={axisLabels.styleConfig}
         setValue={setAxisLabel}
       />
 

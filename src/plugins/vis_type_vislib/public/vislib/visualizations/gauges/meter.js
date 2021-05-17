@@ -275,7 +275,14 @@ export class MeterGauge {
       .text((d) => {
         if (this.gaugeConfig.percentageMode) {
           const percentage = (d.y - min) / (max - min);
-          return data.yAxisFormatter(percentage);
+          // modified by HHonda
+          // return data.yAxisFormatter(percentage);
+          const percentOutput = data.yAxisFormatter(percentage);
+          if (percentOutput.slice(-4, -1) === ',00') {
+            return percentOutput.slice(0, -4) + '%';
+          }
+          return percentOutput;
+          //
         }
         return data.yAxisFormatter(d.y);
       })

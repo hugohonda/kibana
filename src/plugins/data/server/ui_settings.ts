@@ -47,7 +47,9 @@ const requestPreferenceOptionLabels = {
 // We add the `en` key manually here, since that's not a real numeral locale, but the
 // default fallback in case the locale is not found.
 const numeralLanguageIds = [
-  'en',
+  // Modified by HHonda
+  // 'en',
+  'pt-br',
   ...numeralLanguages.map((numeralLanguage: any) => {
     return numeralLanguage.id;
   }),
@@ -395,7 +397,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.numberFormatTitle', {
         defaultMessage: 'Number format',
       }),
-      value: '0,0.[000]',
+      // modified by HHonda
+      // value: '0,0.[000]',
+      value: '0.0,[000]',
       type: 'string',
       description: i18n.translate('data.advancedSettings.format.numberFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "number" format',
@@ -417,7 +421,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.percentFormatTitle', {
         defaultMessage: 'Percent format',
       }),
-      value: '0,0.[000]%',
+      // modified by HHonda
+      // value: '0,0.[000]%',
+      value: '0.0,[000]%',
       type: 'string',
       description: i18n.translate('data.advancedSettings.format.percentFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "percent" format',
@@ -439,7 +445,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.bytesFormatTitle', {
         defaultMessage: 'Bytes format',
       }),
-      value: '0,0.[0]b',
+      // modified by HHonda
+      // value: '0,0.[0]b',
+      value: '0.0,[0]b',
       type: 'string',
       description: i18n.translate('data.advancedSettings.format.bytesFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "bytes" format',
@@ -461,7 +469,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.currencyFormatTitle', {
         defaultMessage: 'Currency format',
       }),
-      value: '($0,0.[00])',
+      // modified by HHonda
+      // value: '($0,0.[00])',
+      value: '(R$0.0,[00])',
       type: 'string',
       description: i18n.translate('data.advancedSettings.format.currencyFormatText', {
         defaultMessage: 'Default {numeralFormatLink} for the "currency" format',
@@ -483,7 +493,9 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
       name: i18n.translate('data.advancedSettings.format.formattingLocaleTitle', {
         defaultMessage: 'Formatting locale',
       }),
-      value: 'en',
+      // modified by HHonda
+      // value: 'en',
+      value: 'pt',
       type: 'select',
       options: numeralLanguageIds,
       optionLabels: Object.fromEntries(
@@ -554,70 +566,89 @@ export function getUiSettings(): Record<string, UiSettingsParams<unknown>> {
             from: 'now/d',
             to: 'now/d',
             display: i18n.translate('data.advancedSettings.timepicker.today', {
-              defaultMessage: 'Today',
+              // modified by HHonda
+              // defaultMessage: 'Today',
+              defaultMessage: 'Hoje',
             }),
           },
           {
             from: 'now/w',
             to: 'now/w',
             display: i18n.translate('data.advancedSettings.timepicker.thisWeek', {
-              defaultMessage: 'This week',
+              // modified by HHonda
+              // defaultMessage: 'This week',
+              defaultMessage: 'Esta semana',
             }),
           },
           {
             from: 'now-15m',
             to: 'now',
             display: i18n.translate('data.advancedSettings.timepicker.last15Minutes', {
-              defaultMessage: 'Last 15 minutes',
+              // modified by HHonda
+              // defaultMessage: 'Last 15 minutes',
+              defaultMessage: 'Últimos 15 minutos',
             }),
           },
           {
             from: 'now-30m',
             to: 'now',
             display: i18n.translate('data.advancedSettings.timepicker.last30Minutes', {
-              defaultMessage: 'Last 30 minutes',
+              // defaultMessage: 'Last 30 minutes',
+              defaultMessage: 'Últimos 30 minutos',
             }),
           },
           {
             from: 'now-1h',
             to: 'now',
             display: i18n.translate('data.advancedSettings.timepicker.last1Hour', {
-              defaultMessage: 'Last 1 hour',
+              // modified by HHonda
+              // defaultMessage: 'Last 1 hour',
+              defaultMessage: 'Última hora',
             }),
           },
           {
             from: 'now-24h',
             to: 'now',
             display: i18n.translate('data.advancedSettings.timepicker.last24Hours', {
-              defaultMessage: 'Last 24 hours',
+              // modified by HHonda
+              // defaultMessage: 'Last 24 hours',
+              defaultMessage: 'Últimas 24 horas',
             }),
           },
           {
             from: 'now-7d',
             to: 'now',
             display: i18n.translate('data.advancedSettings.timepicker.last7Days', {
-              defaultMessage: 'Last 7 days',
+              // modified by HHonda
+              // defaultMessage: 'Last 7 days',
+              defaultMessage: 'Últimos 7 dias',
             }),
           },
           {
             from: 'now-30d',
             to: 'now',
             display: i18n.translate('data.advancedSettings.timepicker.last30Days', {
-              defaultMessage: 'Last 30 days',
+              // modified by HHonda
+              // defaultMessage: 'Last 30 days',
+              defaultMessage: 'Últimos 30 dias',
             }),
           },
           {
             from: 'now-90d',
             to: 'now',
             display: i18n.translate('data.advancedSettings.timepicker.last90Days', {
-              defaultMessage: 'Last 90 days',
+              // modified by HHonda
+              // defaultMessage: 'Last 90 days',
+              defaultMessage: 'Últimos 90 dias',
             }),
           },
           {
             from: 'now-1y',
             to: 'now',
             display: i18n.translate('data.advancedSettings.timepicker.last1Year', {
-              defaultMessage: 'Last 1 year',
+              // modified by HHonda
+              // defaultMessage: 'Last 1 year',
+              defaultMessage: 'Último ano',
             }),
           },
         ],

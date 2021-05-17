@@ -23,7 +23,9 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import { uniq } from 'lodash';
 
 import { ValidationVisOptionsProps } from '../../common';
-import { BasicOptions, SwitchOption } from '../../../../../charts/public';
+// modified by HHonda
+// import { BasicOptions, SwitchOption } from '../../../../../charts/public';
+import { TextInputOption, BasicOptions, SwitchOption } from '../../../../../charts/public';
 import { GridPanel } from './grid_panel';
 import { ThresholdPanel } from './threshold_panel';
 import { BasicVislibParams } from '../../../types';
@@ -74,17 +76,38 @@ function PointSeriesOptions(props: ValidationVisOptionsProps<BasicVislibParams>)
         )}
 
         {currentChartTypes.includes(ChartTypes.HISTOGRAM) && (
-          <SwitchOption
-            data-test-subj="showValuesOnChart"
-            label={i18n.translate('visTypeVislib.editors.pointSeries.showLabels', {
-              defaultMessage: 'Show values on chart',
-            })}
-            paramName="show"
-            value={stateParams.labels.show}
-            setValue={(paramName, value) =>
-              setValue('labels', { ...stateParams.labels, [paramName]: value })
-            }
-          />
+          <>
+            <SwitchOption
+              data-test-subj="showValuesOnChart"
+              label={i18n.translate('visTypeVislib.editors.pointSeries.showLabels', {
+                defaultMessage: 'Show values on chart',
+              })}
+              paramName="show"
+              value={stateParams.labels.show}
+              setValue={(paramName, value) =>
+                setValue('labels', { ...stateParams.labels, [paramName]: value })
+              }
+            />
+            {/* modified by HHonda */}
+            <SwitchOption
+              disabled={!stateParams.labels.show}
+              label="Esconder decimal zero"
+              paramName="hideDecimals"
+              value={stateParams.labels.hideDecimals}
+              setValue={(paramName, value) =>
+                setValue('labels', { ...stateParams.labels, [paramName]: value })
+              }
+            />
+            {/* modified by HHonda */}
+            <TextInputOption
+              label="Configuração de estilo CSS"
+              paramName="styleConfig"
+              value={stateParams.labels.styleConfig}
+              setValue={(paramName, value) =>
+                setValue('labels', { ...stateParams.labels, [paramName]: value })
+              }
+            />
+          </>
         )}
       </EuiPanel>
 
