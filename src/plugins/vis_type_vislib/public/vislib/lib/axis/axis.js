@@ -31,7 +31,6 @@ export class Axis extends ErrorHandler {
   constructor(visConfig, axisConfigArgs) {
     super();
     this.visConfig = visConfig;
-
     this.axisConfig = new AxisConfig(this.visConfig, axisConfigArgs);
     if (this.axisConfig.get('type') === 'category') {
       this.values = this.axisConfig.values;

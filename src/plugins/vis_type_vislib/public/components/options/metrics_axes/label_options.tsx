@@ -90,11 +90,17 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         setValue={setAxisLabel}
       />
 
-      {/* modified by HHonda */}
+      {/* modified by HHonda + Edmar Moretti */}
       <TextInputOption
-        label="Configuração de estilo CSS"
-        paramName="styleConfig"
-        value={axisLabels.styleConfig}
+        label="Estilo dos valores (SVG)"
+        paramName="styleValuesConfig"
+        value={axisLabels.styleValuesConfig}
+        setValue={setAxisLabel}
+      />
+      <TextInputOption
+        label="Estilo do título (SVG)"
+        paramName="styleTitleConfig"
+        value={axisLabels.styleTitleConfig}
         setValue={setAxisLabel}
       />
 

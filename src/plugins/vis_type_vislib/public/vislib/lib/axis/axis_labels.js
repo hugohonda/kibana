@@ -103,7 +103,7 @@ export class AxisLabels {
         }
         // adicionado por Edmar Moretti
         if (str.slice(-4) === ',00%') {
-          return str.replace(',00%','%');
+          return str.replace(',00%', '%');
         }
         return str;
       });
@@ -128,11 +128,10 @@ export class AxisLabels {
     return function (selection) {
       selection.selectAll('.tick text').attr('style', function () {
         const currentStyle = d3.select(this).attr('style');
-        return `${currentStyle} ${config.get('labels.styleConfig')}`;
+        return `${currentStyle} ${config.get('labels.styleValuesConfig')}`;
       });
     };
   }
-  //
 
   filterAxisLabels() {
     const self = this;

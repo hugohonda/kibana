@@ -100,7 +100,7 @@ function PointSeriesOptions(props: ValidationVisOptionsProps<BasicVislibParams>)
             />
             {/* modified by HHonda */}
             <TextInputOption
-              label="Configuração de estilo CSS"
+              label="Estilo dos valores (SVG)"
               paramName="styleConfig"
               value={stateParams.labels.styleConfig}
               setValue={(paramName, value) =>

@@ -187,12 +187,14 @@ function ValueAxisOptions({
 
           {/* modified by HHonda */}
           <EuiSpacer size="m" />
+          {/*
           <TextInputOption
-            label="Configuração de estilo CSS"
-            paramName="styleConfig"
-            value={axis.title.styleConfig}
+            label="Estilo do título (SVG)"
+            paramName="styleTitleConfig"
+            value={axis.title.styleTitleConfig}
             setValue={setValueAxisTitle}
           />
+          */}
 
           <LabelOptions
             axisLabels={axis.labels}

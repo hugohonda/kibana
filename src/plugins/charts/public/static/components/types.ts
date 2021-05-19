@@ -36,6 +36,9 @@ export interface Labels {
   hideDecimals: boolean | undefined;
   styleConfig: string | undefined;
   concatTag: string | undefined;
+  // modified by Edmar Moretti
+  styleValuesConfig: string | undefined;
+  styleTitleConfig: string | undefined;
 }
 
 export interface Style {

@@ -61,13 +61,14 @@ const defaults = {
     // modified by HHonda
     hideDecimals: false,
     concatTag: '',
-    styleConfig: '',
+    styleTitleConfig: '',
+    styleValuesConfig: '',
   },
   title: {
     text: '',
     elSelector: '.visAxis__column--{pos} .axis-div',
     // modified by HHonda
-    styleConfig: '',
+    styleTitleConfig: '',
   },
   padForLabels: 0,
 };

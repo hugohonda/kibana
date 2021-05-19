@@ -400,6 +400,7 @@ export class AggConfig {
     return this.params.field;
   }
 
+  // pega o nome que será incluído no eixo
   makeLabel(percentageMode = false) {
     if (this.params.customLabel) {
       return this.params.customLabel;
