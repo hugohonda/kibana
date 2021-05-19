@@ -64,7 +64,7 @@ export interface Axis {
   // title: { text: string };
   title: {
     text: string;
-    styleConfig: string;
+    styleTitleConfig: string;
   };
   type: AxisTypes;
 }

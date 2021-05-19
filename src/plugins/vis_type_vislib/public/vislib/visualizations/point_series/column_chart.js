@@ -237,6 +237,9 @@ export class ColumnChart extends PointSeries {
           if (hideLabelsDecimals && formatted.slice(-3) === ',00') {
             return formatted.slice(0, -3);
           }
+          if (hideLabelsDecimals && formatted.slice(-4) === ',00%') {
+            return formatted.replace(',00%', '%');
+          }
           return formatted;
         })
         //
@@ -368,12 +371,15 @@ export class ColumnChart extends PointSeries {
       barLabels
         .enter()
         .append('text')
-        // modified by HHonda
+        // modified by HHonda + Edmar Moretti
         // .text(formatValue)
         .text((d) => {
           const formatted = formatValue(d);
           if (hideLabelsDecimals && formatted.slice(-3) === ',00') {
             return formatted.slice(0, -3);
+          }
+          if (hideLabelsDecimals && formatted.slice(-4) === ',00%') {
+            return formatted.replace(',00%', '%');
           }
           return formatted;
         })

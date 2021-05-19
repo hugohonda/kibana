@@ -30,6 +30,11 @@ export class AxisTitle {
 
   render() {
     d3.select(this.axisConfig.get('rootEl')).selectAll(this.elSelector).call(this.draw());
+    // teste Edmar Moretti
+    const config = this.axisConfig;
+    if (config.get('type') === 'category') {
+      console.log(config);
+    }
   }
 
   destroy() {
@@ -38,7 +43,6 @@ export class AxisTitle {
 
   draw() {
     const config = this.axisConfig;
-
     return function (selection) {
       selection.each(function () {
         if (!config.get('show') && !config.get('title.show', false)) return;
@@ -75,9 +79,9 @@ export class AxisTitle {
             }
             return hangingText;
           })
-          // modified by HHonda
+          // modified by HHonda + Edmar Moretti
           .attr('style', () => {
-            return config.get('title.styleConfig');
+            return config.get('labels.styleTitleConfig');
           })
           //
           .node()

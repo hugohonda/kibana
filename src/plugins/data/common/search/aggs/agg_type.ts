@@ -248,7 +248,7 @@ export class AggType<
       }
 
       // always append custom label
-
+      // mostra o label na guia "dados"
       if (config.customLabels !== false) {
         params.push({
           name: 'customLabel',
