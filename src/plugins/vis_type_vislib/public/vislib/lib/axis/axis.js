@@ -158,10 +158,12 @@ export class Axis extends ErrorHandler {
 
       if (config.isHorizontal()) {
         selection.attr('height', Math.ceil(length));
+        // modified by Edmar Moretti
+        // inclusão de -3 para ajustar a posição da linha do eixo x quando o eixo ficar no topo
         if (position === 'top') {
           selection
             .select('g')
-            .attr('transform', `translate(0, ${length - parseInt(style.lineWidth)})`);
+            .attr('transform', `translate(0, ${length - parseInt(style.lineWidth) - 3})`);
           selection.select('path').attr('transform', 'translate(1,0)');
         }
         if (config.get('type') === 'value') {
