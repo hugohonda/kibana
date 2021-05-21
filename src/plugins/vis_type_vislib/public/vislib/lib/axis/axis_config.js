@@ -63,6 +63,8 @@ const defaults = {
     concatTag: '',
     styleTitleConfig: '',
     styleValuesConfig: '',
+    styleLineConfig: '',
+    styleTickConfig: '',
   },
   title: {
     text: '',

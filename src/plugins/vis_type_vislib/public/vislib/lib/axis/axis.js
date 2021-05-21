@@ -238,6 +238,9 @@ export class Axis extends ErrorHandler {
               .style('stroke', style.tickColor)
               .style('stroke-width', style.tickWidth)
               .style('stroke-opacity', style.opacity);
+            // modified by Edmar Moretti
+            svg.select('path').attr('style', config.get('labels.styleLineConfig'));
+            svg.selectAll('line').attr('style', config.get('labels.styleTickConfig'));
           }
           if (self.axisLabels) self.axisLabels.render(svg);
         }
