@@ -103,6 +103,18 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         value={axisLabels.styleTitleConfig}
         setValue={setAxisLabel}
       />
+      <TextInputOption
+        label="Estilo da linha do eixo (SVG)"
+        paramName="styleLineConfig"
+        value={axisLabels.styleLineConfig}
+        setValue={setAxisLabel}
+      />
+      <TextInputOption
+        label="Estilo dos ticks do eixo (SVG)"
+        paramName="styleTickConfig"
+        value={axisLabels.styleTickConfig}
+        setValue={setAxisLabel}
+      />
 
       <SwitchOption
         data-test-subj={axisFilterCheckboxName}
