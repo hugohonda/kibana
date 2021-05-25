@@ -23,12 +23,13 @@ import { i18n } from '@kbn/i18n';
 import { VisOptionsProps } from 'src/plugins/vis_default_editor/public';
 import { SwitchOption } from './switch';
 import { SelectOption } from './select';
-
+// Editado por Edmar Moretti
 interface BasicOptionsParams {
   addTooltip: boolean;
   legendPosition: string;
+  legendLabelColor: boolean;
 }
-
+// Editado por Edmar Moretti
 function BasicOptions<VisParams extends BasicOptionsParams>({
   stateParams,
   setValue,
@@ -36,6 +37,12 @@ function BasicOptions<VisParams extends BasicOptionsParams>({
 }: VisOptionsProps<VisParams>) {
   return (
     <>
+      <SwitchOption
+        label="Cor dos itens da legenda iguais ao símbolo?"
+        paramName="legendLabelColor"
+        value={stateParams.legendLabelColor}
+        setValue={setValue}
+      />
       <SelectOption
         label={i18n.translate('charts.controls.vislibBasicOptions.legendPositionLabel', {
           defaultMessage: 'Legend position',

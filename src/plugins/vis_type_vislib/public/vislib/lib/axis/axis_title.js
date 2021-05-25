@@ -30,11 +30,6 @@ export class AxisTitle {
 
   render() {
     d3.select(this.axisConfig.get('rootEl')).selectAll(this.elSelector).call(this.draw());
-    // teste Edmar Moretti
-    const config = this.axisConfig;
-    if (config.get('type') === 'category') {
-      console.log(config);
-    }
   }
 
   destroy() {
