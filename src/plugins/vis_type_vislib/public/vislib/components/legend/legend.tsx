@@ -222,7 +222,12 @@ export class VisLegend extends PureComponent<VisLegendProps, VisLegendState> {
         return 'downCenter';
     }
   };
+  // Editado por Edmar Moretti
+  getLegendLabelColor = () => {
+    return this.props.vislibVis.visConfigArgs.legendLabelColor;
+  };
 
+  // Editado por Edmar Moretti
   renderLegend = (anchorPosition: EuiPopoverProps['anchorPosition']) => (
     <ul className="visLegend__list" id={this.legendId}>
       {this.state.labels.map((item) => (
@@ -239,6 +244,7 @@ export class VisLegend extends PureComponent<VisLegendProps, VisLegendState> {
           getColor={this.getColor}
           onHighlight={this.highlight}
           onUnhighlight={this.unhighlight}
+          getLegendLabelColor={this.getLegendLabelColor}
         />
       ))}
     </ul>

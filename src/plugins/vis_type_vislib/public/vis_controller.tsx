@@ -94,8 +94,8 @@ export const createVislibVisController = (deps: VisTypeVislibDependencies) => {
               return cls.replace(/visLib--legend-\S+/g, '');
             })
             .addClass((legendClassName as any)[visParams.legendPosition]);
-
-          this.mountLegend(esResponse, visParams.legendPosition);
+          // Editado por Edmar Moretti
+          this.mountLegend(esResponse, visParams.legendPosition, visParams.labelColorStyle);
         }
 
         this.vislibVis.render(esResponse, this.vis.getUiState());
@@ -108,13 +108,14 @@ export const createVislibVisController = (deps: VisTypeVislibDependencies) => {
           CUSTOM_LEGEND_VIS_TYPES.includes(this.vislibVis.visConfigArgs.type)
         ) {
           this.unmountLegend();
-          this.mountLegend(esResponse, visParams.legendPosition);
+          // Editado por Edmar Moretti
+          this.mountLegend(esResponse, visParams.legendPosition, visParams.labelColorStyle);
           this.vislibVis.render(esResponse, this.vis.getUiState());
         }
       });
     }
 
-    mountLegend(visData: any, position: Positions) {
+    mountLegend(visData: any, position: Positions, labelColorStyle) {
       this.unmount = mountReactNode(
         <VisLegend
           ref={this.legendRef}

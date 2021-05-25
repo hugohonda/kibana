@@ -48,7 +48,7 @@ interface Props {
   setColor: (label: string, color: string) => (event: BaseSyntheticEvent) => void;
   getColor: (label: string) => string;
 }
-
+// Editado por Edmar Moretti
 const VisLegendItemComponent = ({
   item,
   legendId,
@@ -61,6 +61,7 @@ const VisLegendItemComponent = ({
   onUnhighlight,
   setColor,
   getColor,
+  getLegendLabelColor,
 }: Props) => {
   /**
    * Keydown listener for a legend entry.
@@ -117,6 +118,16 @@ const VisLegendItemComponent = ({
     </>
   );
 
+  // Editado por Edmar Moretti
+  const getLabelColor = (cor) => {
+    if (getLegendLabelColor()) {
+      return cor;
+    } else {
+      return 'none';
+    }
+  };
+
+  // Editado por Edmar Moretti
   const button = (
     <EuiButtonEmpty
       size="xs"
@@ -143,7 +154,12 @@ const VisLegendItemComponent = ({
         color={getColor(item.label)}
         data-test-subj={`legendSelectedColor-${getColor(item.label)}`}
       />
-      <span className="visLegend__valueTitle">{item.label}</span>
+      <span
+        className="visLegend__valueTitle"
+        style={{ color: `${getLabelColor(getColor(item.label))}` }}
+      >
+        {item.label}
+      </span>
     </EuiButtonEmpty>
   );
 

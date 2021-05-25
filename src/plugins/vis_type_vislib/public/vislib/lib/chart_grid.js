@@ -27,6 +27,8 @@ const defaults = {
   },
   categoryLines: false,
   valueAxis: undefined,
+  // Editado por Edmar Moretti
+  styleGridConfig: undefined,
 };
 
 export class ChartGrid {
@@ -39,34 +41,43 @@ export class ChartGrid {
   drawLine(svg, tick, axis, width, height) {
     const isHorizontal = axis.axisConfig.isHorizontal();
     const scale = axis.getScale();
-    svg
-      .append('path')
-      .attr('d', () => {
-        const x0 = isHorizontal ? tick : 0;
-        const x1 = isHorizontal ? tick : width;
-        const y0 = !isHorizontal ? tick : 0;
-        const y1 = !isHorizontal ? tick : height;
-        const d3Line = d3.svg
-          .line()
-          .x((d) => (isHorizontal ? scale(d[0]) : d[0]))
-          .y((d) => (!isHorizontal ? scale(d[1]) : d[1]));
-        return d3Line([
-          [x0, y0],
-          [x1, y1],
-        ]);
-      })
-      .attr('fill', 'none')
-      .attr('stroke', this.get('style.color'))
-      .attr('stroke-width', 1);
+    // Editado por Edmar Moretti a condição foi adicionada para evitar a primeira linha, que sobrepõe a linha do eixo
+    if (tick > 0) {
+      svg
+        .append('path')
+        .attr('d', () => {
+          const x0 = isHorizontal ? tick : 0;
+          const x1 = isHorizontal ? tick : width;
+          const y0 = !isHorizontal ? tick : 0;
+          const y1 = !isHorizontal ? tick : height;
+          const d3Line = d3.svg
+            .line()
+            .x((d) => (isHorizontal ? scale(d[0]) : d[0]))
+            .y((d) => (!isHorizontal ? scale(d[1]) : d[1]));
+          return d3Line([
+            [x0, y0],
+            [x1, y1],
+          ]);
+        })
+        .attr('fill', 'none')
+        .attr('stroke', this.get('style.color'))
+        .attr('stroke-width', 1)
+        // Editado por Edmar moretti
+        .attr('style', this.get('styleGridConfig'));
+    }
   }
-
+  // Editado por Edmar Moretti
   drawCategoryLines(svg, width, height) {
     const axis = this._handler.categoryAxes[0];
     if (!axis) return;
     const ticks = axis.getScale().ticks;
     if (!ticks) return;
+    let contador = 0;
     ticks().forEach((tick) => {
-      this.drawLine(svg, tick, axis, width, height);
+      if (contador % 2 === 0) {
+        this.drawLine(svg, tick, axis, width, height);
+      }
+      contador++;
     });
   }
 
