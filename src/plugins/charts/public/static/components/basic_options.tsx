@@ -28,6 +28,7 @@ interface BasicOptionsParams {
   addTooltip: boolean;
   legendPosition: string;
   legendLabelColor: boolean;
+  legendLabelWidth: boolean;
 }
 // Editado por Edmar Moretti
 function BasicOptions<VisParams extends BasicOptionsParams>({
@@ -41,6 +42,12 @@ function BasicOptions<VisParams extends BasicOptionsParams>({
         label="Cor dos itens da legenda iguais ao símbolo?"
         paramName="legendLabelColor"
         value={stateParams.legendLabelColor}
+        setValue={setValue}
+      />
+      <SwitchOption
+        label="Não limitar tamanho dos nomes na legenda"
+        paramName="legendLabelWidth"
+        value={stateParams.legendLabelWidth}
         setValue={setValue}
       />
       <SelectOption
