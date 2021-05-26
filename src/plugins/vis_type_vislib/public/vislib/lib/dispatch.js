@@ -171,6 +171,10 @@ export class Dispatch {
    * @returns event with list of data points related to the click
    */
   clickEventResponse(d, props = {}) {
+    // Editado por Edmar Moretti
+    if (this.handler.visConfig._values.selectOnClick) {
+      return;
+    }
     let isSlices = props.isSlices;
     if (isSlices === undefined) {
       const _data = d3.event.target.nearestViewportElement

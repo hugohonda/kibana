@@ -29,6 +29,7 @@ interface BasicOptionsParams {
   legendPosition: string;
   legendLabelColor: boolean;
   legendLabelWidth: boolean;
+  selectOnClick: boolean;
 }
 // Editado por Edmar Moretti
 function BasicOptions<VisParams extends BasicOptionsParams>({
@@ -38,6 +39,12 @@ function BasicOptions<VisParams extends BasicOptionsParams>({
 }: VisOptionsProps<VisParams>) {
   return (
     <>
+      <SwitchOption
+        label="Desativa seleção por clique"
+        paramName="selectOnClick"
+        value={stateParams.selectOnClick}
+        setValue={setValue}
+      />
       <SwitchOption
         label="Cor dos itens da legenda iguais ao símbolo?"
         paramName="legendLabelColor"
