@@ -62,6 +62,7 @@ const VisLegendItemComponent = ({
   setColor,
   getColor,
   getLegendLabelColor,
+  getLegendLabelWidth,
 }: Props) => {
   /**
    * Keydown listener for a legend entry.
@@ -126,6 +127,7 @@ const VisLegendItemComponent = ({
       return 'none';
     }
   };
+  const labelWidth = getLegendLabelWidth();
 
   // Editado por Edmar Moretti
   const button = (
@@ -211,7 +213,7 @@ const VisLegendItemComponent = ({
   );
 
   return (
-    <li key={item.label} className="visLegend__value">
+    <li key={item.label} className="visLegend__value" style={labelWidth}>
       {renderDetails()}
     </li>
   );

@@ -226,10 +226,17 @@ export class VisLegend extends PureComponent<VisLegendProps, VisLegendState> {
   getLegendLabelColor = () => {
     return this.props.vislibVis.visConfigArgs.legendLabelColor;
   };
+  getLegendLabelWidth = () => {
+    if (this.props.vislibVis.visConfigArgs.legendLabelWidth) {
+      return { width: 'auto', 'max-width': '1000px' };
+    }
+    return {};
+  };
 
   // Editado por Edmar Moretti
   renderLegend = (anchorPosition: EuiPopoverProps['anchorPosition']) => (
-    <ul className="visLegend__list" id={this.legendId}>
+    // Editado por Edmar Moretti
+    <ul className="visLegend__list" id={this.legendId} style={this.getLegendLabelWidth()}>
       {this.state.labels.map((item) => (
         <VisLegendItem
           item={item}
@@ -245,6 +252,7 @@ export class VisLegend extends PureComponent<VisLegendProps, VisLegendState> {
           onHighlight={this.highlight}
           onUnhighlight={this.unhighlight}
           getLegendLabelColor={this.getLegendLabelColor}
+          getLegendLabelWidth={this.getLegendLabelWidth}
         />
       ))}
     </ul>
