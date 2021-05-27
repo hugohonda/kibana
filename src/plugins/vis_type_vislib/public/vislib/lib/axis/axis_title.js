@@ -38,6 +38,8 @@ export class AxisTitle {
 
   draw() {
     const config = this.axisConfig;
+    // Editado por Edmar Moretti
+    const ts = config._values.labels.titlePosStart;
     return function (selection) {
       selection.each(function () {
         if (!config.get('show') && !config.get('title.show', false)) return;
@@ -58,12 +60,38 @@ export class AxisTitle {
         const bbox = svg
           .append('text')
           .attr('transform', function () {
+            // Editado por Edmar Moretti
             if (config.isHorizontal()) {
-              return `translate(${width / 2},0)`;
+              if (ts === false) {
+                return `translate(${width / 2},0)`;
+              } else {
+                return `translate(0,0)`;
+              }
+            } else {
+              if (ts === false) {
+                return `translate(0,${height / 2}) rotate(270)`;
+              } else {
+                return `translate(0,0) rotate(270)`;
+              }
             }
-            return `translate(0,${height / 2}) rotate(270)`;
           })
-          .attr('text-anchor', 'middle')
+          // Editado por Edmar Moretti
+          //.attr('text-anchor', 'middle')
+          .attr('text-anchor', function () {
+            if (config.isHorizontal()) {
+              if (ts === false) {
+                return `middle`;
+              } else {
+                return `start`;
+              }
+            } else {
+              if (ts === false) {
+                return `middle`;
+              } else {
+                return `end`;
+              }
+            }
+          })
           .attr('dominant-baseline', 'hanging')
           // modified by HHonda
           // .text(config.get('title.text'))
