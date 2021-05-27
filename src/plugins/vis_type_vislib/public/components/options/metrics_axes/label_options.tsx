@@ -84,7 +84,7 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
       {/* modified by HHonda */}
       <TextInputOption
         disabled={!axisLabels.show}
-        label="Texto à direita"
+        label="Texto adicional à direita"
         paramName="concatTag"
         value={axisLabels.concatTag}
         setValue={setAxisLabel}
@@ -101,6 +101,12 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         label="Estilo do título (SVG)"
         paramName="styleTitleConfig"
         value={axisLabels.styleTitleConfig}
+        setValue={setAxisLabel}
+      />
+      <SwitchOption
+        label="Posicionar o título no início do eixo"
+        paramName="titlePosStart"
+        value={axisLabels.titlePosStart}
         setValue={setAxisLabel}
       />
       <TextInputOption

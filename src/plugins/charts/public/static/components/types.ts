@@ -39,6 +39,7 @@ export interface Labels {
   // modified by Edmar Moretti
   styleValuesConfig: string | undefined;
   styleTitleConfig: string | undefined;
+  titlePosStart: boolean | undefined;
 }
 
 export interface Style {

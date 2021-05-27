@@ -65,6 +65,7 @@ const defaults = {
     styleValuesConfig: '',
     styleLineConfig: '',
     styleTickConfig: '',
+    titlePosStart: false,
   },
   title: {
     text: '',
