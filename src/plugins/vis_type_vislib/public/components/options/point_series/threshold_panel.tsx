@@ -26,6 +26,8 @@ import {
   SelectOption,
   SwitchOption,
   RequiredNumberInputOption,
+  // editado por Edmar Moretti
+  TextInputOption,
 } from '../../../../../charts/public';
 import { BasicVislibParams } from '../../../types';
 
@@ -123,6 +125,22 @@ function ThresholdPanel({
               onChange={setThresholdLineColor}
             />
           </EuiFormRow>
+
+          <TextInputOption
+            label="Texto da linha"
+            paramName="text"
+            value={stateParams.thresholdLine.text}
+            setValue={setThresholdLine}
+            setValidity={setThresholdLineValidity}
+          />
+
+          <TextInputOption
+            label="Estilo do texto da linha"
+            paramName="textStyle"
+            value={stateParams.thresholdLine.textStyle}
+            setValue={setThresholdLine}
+            setValidity={setThresholdLineValidity}
+          />
         </>
       )}
     </EuiPanel>

@@ -26,6 +26,9 @@ const thresholdLineDefaults = {
   width: 1,
   style: 'full',
   color: euiPaletteColorBlind()[9],
+  // editado por Edmar Moretti
+  text: '',
+  textStyle: '',
 };
 
 export class PointSeries {
@@ -135,6 +138,25 @@ export class PointSeries {
         .attr('stroke-width', thresholdLineWidth)
         .attr('stroke-dasharray', thresholdLineStyle)
         .attr('stroke', lineColor);
+      //editado por Edmar Moretti
+      const thresholdLineText = this.thresholdLineOptions.text;
+      let thresholdLineTextStyle = this.thresholdLineOptions.textStyle;
+      if (thresholdLineTextStyle === '') {
+        thresholdLineTextStyle =
+          'text-anchor: start; fill: ' + lineColor + '; stroke: none; font-size: 12px;';
+      }
+      svgElem
+        .append('text')
+        .attr('x', isHorizontal ? 2 : y(thresholdValue) + (thresholdLineWidth + 2))
+        .attr('y', isHorizontal ? y(thresholdValue) - (thresholdLineWidth + 2) : 0)
+        .attr(
+          'transform',
+          isHorizontal
+            ? 'none'
+            : 'rotate(90,' + (y(thresholdValue) + (thresholdLineWidth + 2)) + ',2)'
+        )
+        .attr('style', thresholdLineTextStyle)
+        .text(thresholdLineText);
     }
   }
 }
