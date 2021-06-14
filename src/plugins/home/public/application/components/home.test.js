@@ -190,7 +190,7 @@ describe('home', () => {
     test('should render DATA directory entry in "Ingest your data" panel', async () => {
       const directoryEntry = {
         id: 'dashboard',
-        title: 'Dashboard',
+        title: 'Painéis',
         description: 'Display and share a collection of visualizations and saved searches.',
         icon: 'dashboardApp',
         path: 'dashboard_landing_page',

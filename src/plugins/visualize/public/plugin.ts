@@ -136,10 +136,10 @@ export class VisualizePlugin
     }
     setUISettings(core.uiSettings);
     uiActions.addTriggerAction(VISUALIZE_FIELD_TRIGGER, visualizeFieldAction);
-
     core.application.register({
       id: 'visualize',
-      title: 'Visualize',
+      // Editado por Edmar Moretti
+      title: 'Visualizações',
       order: 8000,
       euiIconType: 'logoKibana',
       defaultPath: '#/',
@@ -217,7 +217,8 @@ export class VisualizePlugin
     if (home) {
       home.featureCatalogue.register({
         id: 'visualize',
-        title: 'Visualize',
+        // Editado por Edmar Moretti
+        title: 'Visualizações',
         description: i18n.translate('visualize.visualizeDescription', {
           defaultMessage:
             'Create visualizations and aggregate data stores in your Elasticsearch indices.',
