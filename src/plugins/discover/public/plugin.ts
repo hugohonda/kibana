@@ -238,7 +238,8 @@ export class DiscoverPlugin
     this.docViewsRegistry.setAngularInjectorGetter(this.getEmbeddableInjector);
     core.application.register({
       id: 'discover',
-      title: 'Discover',
+      // Editado por Edmar Moretti
+      title: 'Descobrir',
       updater$: this.appStateUpdater.asObservable(),
       order: 1000,
       euiIconType: 'logoKibana',

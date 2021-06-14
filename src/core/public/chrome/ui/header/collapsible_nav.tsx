@@ -167,6 +167,7 @@ export function CollapsibleNav({
       )}
 
       {/* Pinned items */}
+      {/* Editado por Edmar Moretti */}
       <EuiFlexItem grow={false} style={{ flexShrink: 0 }}>
         <EuiCollapsibleNavGroup
           background="light"
@@ -179,7 +180,7 @@ export function CollapsibleNav({
             })}
             listItems={[
               {
-                label: 'Home',
+                label: 'Início',
                 iconType: 'home',
                 href: homeHref,
                 onClick: (event) => {
