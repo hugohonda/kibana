@@ -30,6 +30,7 @@ interface BasicOptionsParams {
   legendLabelColor: boolean;
   legendLabelWidth: boolean;
   selectOnClick: boolean;
+  dontSplitChart: boolean;
 }
 // Editado por Edmar Moretti
 function BasicOptions<VisParams extends BasicOptionsParams>({
@@ -39,8 +40,15 @@ function BasicOptions<VisParams extends BasicOptionsParams>({
 }: VisOptionsProps<VisParams>) {
   return (
     <>
+      {/* Editado por Edmar Moretti */}
       <SwitchOption
-        label="Desativa seleção por clique"
+        label="Impedir divisão do gráfico"
+        paramName="dontSplitChart"
+        value={stateParams.dontSplitChart}
+        setValue={setValue}
+      />
+      <SwitchOption
+        label="Desativar seleção por clique"
         paramName="selectOnClick"
         value={stateParams.selectOnClick}
         setValue={setValue}
