@@ -71,7 +71,15 @@ export class Handler {
     if (visConfig.get('resize', false)) {
       this.resize = visConfig.get('resize');
     }
-
+    //console.log(vis.visConfig._values.dimensions.splitRow[0].accessor)
+    if (visConfig._values.dontSplitChart) {
+      if (visConfig.data.data.columns) {
+        visConfig.data.data.columns = [visConfig.data.data.columns[0]];
+      }
+      if (visConfig.data.data.rows) {
+        visConfig.data.data.rows = [visConfig.data.data.rows[0]];
+      }
+    }
     this.layout = new Layout(visConfig);
     this.binder = new Binder();
     this.renderArray = _.filter([this.layout, this.chartTitle, this.alerts], Boolean);
