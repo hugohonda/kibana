@@ -40,6 +40,8 @@ export const createGoalVisTypeDefinition = (deps: VisTypeVislibDependencies) => 
       addTooltip: true,
       addLegend: false,
       isDisplayWarning: false,
+      // Editado por Edmar Moretti - variável legendLabelColor
+      legendLabelColor: false,
       type: 'gauge',
       gauge: {
         verticalSplit: false,
