@@ -69,6 +69,8 @@ export const createGaugeVisTypeDefinition = (deps: VisTypeVislibDependencies) =>
       addTooltip: true,
       addLegend: true,
       isDisplayWarning: false,
+      // Editado por Edmar Moretti - variável legendLabelColor
+      legendLabelColor: false,
       gauge: {
         alignment: Alignments.AUTOMATIC,
         extendRange: true,
