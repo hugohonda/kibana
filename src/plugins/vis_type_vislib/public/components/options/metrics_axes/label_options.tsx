@@ -72,7 +72,7 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         setValue={setAxisLabel}
       />
 
-      {/* modified by HHonda */}
+      {/* modified by HHonda Esconder decimal zero */}
       <SwitchOption
         disabled={!axisLabels.show}
         label="Esconder decimal zero"
@@ -81,7 +81,7 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         setValue={setAxisLabel}
       />
 
-      {/* modified by HHonda */}
+      {/* modified by HHonda Texto adicional à direita */}
       <TextInputOption
         disabled={!axisLabels.show}
         label="Texto adicional à direita"
@@ -90,31 +90,35 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         setValue={setAxisLabel}
       />
 
-      {/* modified by HHonda + Edmar Moretti */}
+      {/* modified by HHonda + Edmar Moretti Estilo dos valores (SVG) */}
       <TextInputOption
         label="Estilo dos valores (SVG)"
         paramName="styleValuesConfig"
         value={axisLabels.styleValuesConfig}
         setValue={setAxisLabel}
       />
+      {/* modified by HHonda + Edmar Moretti Estilo do título (SVG) */}
       <TextInputOption
         label="Estilo do título (SVG)"
         paramName="styleTitleConfig"
         value={axisLabels.styleTitleConfig}
         setValue={setAxisLabel}
       />
+      {/* modified by HHonda + Edmar Moretti Posicionar o título no início do eixo */}
       <SwitchOption
         label="Posicionar o título no início do eixo"
         paramName="titlePosStart"
         value={axisLabels.titlePosStart}
         setValue={setAxisLabel}
       />
+      {/* modified by HHonda + Edmar Moretti Estilo da linha do eixo (SVG) */}
       <TextInputOption
         label="Estilo da linha do eixo (SVG)"
         paramName="styleLineConfig"
         value={axisLabels.styleLineConfig}
         setValue={setAxisLabel}
       />
+      {/* modified by HHonda + Edmar Moretti Estilo dos ticks do eixo (SVG) */}
       <TextInputOption
         label="Estilo dos ticks do eixo (SVG)"
         paramName="styleTickConfig"

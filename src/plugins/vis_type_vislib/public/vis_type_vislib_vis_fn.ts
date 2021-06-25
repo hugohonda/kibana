@@ -60,8 +60,13 @@ export const createVisTypeVislibVisFn = (): ExpressionFunctionDefinition<
   },
   fn(context, args) {
     const visConfigParams = JSON.parse(args.visConfig);
-    const convertedData = vislibSeriesResponseHandler(context, visConfigParams.dimensions);
-
+    // Editado por Edmar Moretti
+    // const convertedData = vislibSeriesResponseHandler(context, visConfigParams.dimensions, visConfigParams);
+    const convertedData = vislibSeriesResponseHandler(
+      context,
+      visConfigParams.dimensions,
+      visConfigParams
+    );
     return {
       type: 'render',
       as: 'visualization',

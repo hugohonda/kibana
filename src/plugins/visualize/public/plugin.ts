@@ -138,7 +138,7 @@ export class VisualizePlugin
     uiActions.addTriggerAction(VISUALIZE_FIELD_TRIGGER, visualizeFieldAction);
     core.application.register({
       id: 'visualize',
-      // Editado por Edmar Moretti
+      // Editado por Edmar Moretti tradução
       title: 'Visualizações',
       order: 8000,
       euiIconType: 'logoKibana',
@@ -217,7 +217,7 @@ export class VisualizePlugin
     if (home) {
       home.featureCatalogue.register({
         id: 'visualize',
-        // Editado por Edmar Moretti
+        // Editado por Edmar Moretti tradução
         title: 'Visualizações',
         description: i18n.translate('visualize.visualizeDescription', {
           defaultMessage:

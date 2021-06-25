@@ -48,7 +48,7 @@ interface Props {
   setColor: (label: string, color: string) => (event: BaseSyntheticEvent) => void;
   getColor: (label: string) => string;
 }
-// Editado por Edmar Moretti
+// Editado por Edmar Moretti Acrescenta as funções novas
 const VisLegendItemComponent = ({
   item,
   legendId,

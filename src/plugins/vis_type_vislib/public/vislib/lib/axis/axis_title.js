@@ -38,7 +38,7 @@ export class AxisTitle {
 
   draw() {
     const config = this.axisConfig;
-    // Editado por Edmar Moretti
+    // Editado por Edmar Moretti Opção de posicionar o ttulo no início
     const ts = config._values.labels.titlePosStart;
     return function (selection) {
       selection.each(function () {
@@ -56,7 +56,6 @@ export class AxisTitle {
           .attr('width', width)
           .attr('height', height)
           .attr('class', `axis-title ${axisPrefix}-axis-title`);
-
         const bbox = svg
           .append('text')
           .attr('transform', function () {
@@ -99,6 +98,21 @@ export class AxisTitle {
             const hangingText = config.get('title.text');
             if (hangingText === 'filters') {
               return '';
+            }
+            // Editado por Edmar Moretti - inclui o título do gráfico junto ao label do eixo
+            if (
+              config._values.type === 'category' &&
+              axisPrefix === 'x' &&
+              config.data.data.dontSplitChart === true
+            ) {
+              return hangingText + ' - ' + config.data.data.columns[0].label;
+            }
+            if (
+              config._values.type === 'value' &&
+              axisPrefix === 'x' &&
+              config.data.data.dontSplitChart === true
+            ) {
+              return hangingText + ' - ' + config.data.data.columns[0].label;
             }
             return hangingText;
           })

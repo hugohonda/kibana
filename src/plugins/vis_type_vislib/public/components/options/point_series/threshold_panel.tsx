@@ -26,7 +26,7 @@ import {
   SelectOption,
   SwitchOption,
   RequiredNumberInputOption,
-  // editado por Edmar Moretti
+  // editado por Edmar Moretti Inclusão de novo tipo de item de formulário
   TextInputOption,
 } from '../../../../../charts/public';
 import { BasicVislibParams } from '../../../types';

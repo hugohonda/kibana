@@ -158,8 +158,7 @@ export class Axis extends ErrorHandler {
 
       if (config.isHorizontal()) {
         selection.attr('height', Math.ceil(length));
-        // modified by Edmar Moretti
-        // inclusão de -3 para ajustar a posição da linha do eixo x quando o eixo ficar no topo
+        // modified by Edmar Moretti inclusão de -3 para ajustar a posição da linha do eixo x quando o eixo ficar no topo
         if (position === 'top') {
           selection
             .select('g')
@@ -240,7 +239,7 @@ export class Axis extends ErrorHandler {
               .style('stroke', style.tickColor)
               .style('stroke-width', style.tickWidth)
               .style('stroke-opacity', style.opacity);
-            // modified by Edmar Moretti
+            // modified by Edmar Moretti Aplica estilo
             svg.select('path').attr('style', config.get('labels.styleLineConfig'));
             svg.selectAll('line').attr('style', config.get('labels.styleTickConfig'));
           }

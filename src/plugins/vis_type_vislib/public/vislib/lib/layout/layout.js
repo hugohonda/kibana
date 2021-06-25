@@ -44,6 +44,8 @@ export class Layout {
   constructor(config) {
     this.el = config.get('el');
     this.data = config.data.data;
+    // Editado por Edmar Moretti - inclusão do parâmetro dontSplitChart
+    this.data.dontSplitChart = config._values.dontSplitChart;
     this.opts = config;
     this.layoutType = layoutTypes[config.get('type')](this.el, this.data);
   }

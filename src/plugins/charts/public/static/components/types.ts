@@ -32,11 +32,11 @@ export interface Labels {
   rotate?: Rotates;
   show: boolean;
   truncate?: number | null;
-  // modified by HHonda
+  // modified by HHonda interface Labels
   hideDecimals: boolean | undefined;
   styleConfig: string | undefined;
   concatTag: string | undefined;
-  // modified by Edmar Moretti
+  // modified by Edmar Moretti interface Labels
   styleValuesConfig: string | undefined;
   styleTitleConfig: string | undefined;
   titlePosStart: boolean | undefined;

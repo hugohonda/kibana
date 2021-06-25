@@ -29,7 +29,7 @@ export interface Operator {
 
 export const isOperator = {
   message: i18n.translate('data.filter.filterEditor.isOperatorOptionLabel', {
-    // modified by HHonda
+    // modified by HHonda Tradução
     // defaultMessage: 'is',
     defaultMessage: 'é',
   }),
@@ -39,7 +39,7 @@ export const isOperator = {
 
 export const isNotOperator = {
   message: i18n.translate('data.filter.filterEditor.isNotOperatorOptionLabel', {
-    // modified by HHonda
+    // modified by HHonda Tradução
     // defaultMessage: 'is not',
     defaultMessage: 'não é',
   }),
@@ -49,7 +49,7 @@ export const isNotOperator = {
 
 export const isOneOfOperator = {
   message: i18n.translate('data.filter.filterEditor.isOneOfOperatorOptionLabel', {
-    // modified by HHonda
+    // modified by HHonda Tradução
     // defaultMessage: 'is one of',
     defaultMessage: 'é um dos',
   }),
@@ -60,7 +60,7 @@ export const isOneOfOperator = {
 
 export const isNotOneOfOperator = {
   message: i18n.translate('data.filter.filterEditor.isNotOneOfOperatorOptionLabel', {
-    // modified by HHonda
+    // modified by HHonda Tradução
     // defaultMessage: 'is not one of',
     defaultMessage: 'não é um dos',
   }),
@@ -71,7 +71,7 @@ export const isNotOneOfOperator = {
 
 export const isBetweenOperator = {
   message: i18n.translate('data.filter.filterEditor.isBetweenOperatorOptionLabel', {
-    // modified by HHonda
+    // modified by HHonda Tradução
     // defaultMessage: 'is between',
     defaultMessage: 'está entre',
   }),
@@ -82,7 +82,7 @@ export const isBetweenOperator = {
 
 export const isNotBetweenOperator = {
   message: i18n.translate('data.filter.filterEditor.isNotBetweenOperatorOptionLabel', {
-    // modified by HHonda
+    // modified by HHonda Tradução
     // defaultMessage: 'is not between',
     defaultMessage: 'não está entre',
   }),
@@ -93,7 +93,7 @@ export const isNotBetweenOperator = {
 
 export const existsOperator = {
   message: i18n.translate('data.filter.filterEditor.existsOperatorOptionLabel', {
-    // modified by HHonda
+    // modified by HHonda Tradução
     // defaultMessage: 'exists',
     defaultMessage: 'existe',
   }),
@@ -103,7 +103,7 @@ export const existsOperator = {
 
 export const doesNotExistOperator = {
   message: i18n.translate('data.filter.filterEditor.doesNotExistOperatorOptionLabel', {
-    // modified by HHonda
+    // modified by HHonda Tradução
     // defaultMessage: 'does not exist',
     defaultMessage: 'não existe',
   }),
