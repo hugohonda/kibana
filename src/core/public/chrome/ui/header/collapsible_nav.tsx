@@ -167,7 +167,7 @@ export function CollapsibleNav({
       )}
 
       {/* Pinned items */}
-      {/* Editado por Edmar Moretti */}
+      {/* Editado por Edmar Moretti tradução */}
       <EuiFlexItem grow={false} style={{ flexShrink: 0 }}>
         <EuiCollapsibleNavGroup
           background="light"

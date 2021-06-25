@@ -23,7 +23,7 @@ import { i18n } from '@kbn/i18n';
 import { FormattedMessage } from '@kbn/i18n/react';
 
 import { VisOptionsProps } from 'src/plugins/vis_default_editor/public';
-// editado por Edmar Moretti
+// editado por Edmar Moretti para incluir novo tipo de item de formulário
 import { TextInputOption, SelectOption, SwitchOption } from '../../../../../charts/public';
 import { BasicVislibParams, ValueAxis } from '../../../types';
 
@@ -91,7 +91,7 @@ function GridPanel({ stateParams, setValue, hasHistogramAgg }: VisOptionsProps<B
         setValue={setGrid}
         data-test-subj="showCategoryLines"
       />
-      {/* modified by Edmar Moretti */}
+      {/* modified by Edmar Moretti Estilo das linhas do grid */}
       <TextInputOption
         label="Estilo das linhas do grid"
         paramName="styleGridConfig"

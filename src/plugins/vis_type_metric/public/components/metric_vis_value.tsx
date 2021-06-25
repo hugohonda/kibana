@@ -60,7 +60,7 @@ export class MetricVisValue extends Component<MetricVisValueProps> {
       'mtrVis__container-isfilterable': hasFilter,
     });
 
-    // modified by HHonda
+    // modified by HHonda Tradução dos meses
     const monthTranslationPtbr: { [key: string]: string } = {
       // Jan: 'Jan',
       Feb: 'Fev',

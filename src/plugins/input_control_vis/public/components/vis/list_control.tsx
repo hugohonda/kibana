@@ -135,7 +135,7 @@ class ListControlUi extends PureComponent<ListControlUiProps, ListControlUiState
         };
       })
       .sort((a, b) => {
-        // modified by HHonda + Edmar Moretti
+        // modified by HHonda + Edmar Moretti correçao no ordenamento de listas
         if (!isNaN(a.label * 1)) {
           return a.label * 1 - b.label * 1;
         }

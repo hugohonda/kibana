@@ -41,13 +41,16 @@ export function chartTitleSplit(selection) {
         .enter()
         .append('div')
         .attr('class', 'chart-title');
-
       if (data.rows) {
         parent.find('.visAxis__splitTitles--x').remove();
       } else {
         parent.find('.visAxis__splitTitles--y').remove();
       }
-
+      //Editado por Edmar Moretti - remove o título do gráfico quando dividido
+      if (data.dontSplitChart === true) {
+        parent.find('.visAxis__splitTitles--x').remove();
+        parent.find('.visAxis__splitTitles--y').remove();
+      }
       return div;
     }
 

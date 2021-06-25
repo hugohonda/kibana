@@ -392,7 +392,6 @@ export class AggConfig {
 
   getFieldDisplayName() {
     const field = this.getField();
-
     return field ? field.displayName || this.fieldName() : '';
   }
 

@@ -41,7 +41,7 @@ export const DEFAULT_APP_CATEGORIES: Record<string, AppCategory> = Object.freeze
   observability: {
     id: 'observability',
     label: i18n.translate('core.ui.observabilityNavList.label', {
-      // modified by HHonda
+      // modified by HHonda Tradução
       // defaultMessage: 'Observability',
       defaultMessage: 'Observabilidade',
     }),
@@ -51,7 +51,7 @@ export const DEFAULT_APP_CATEGORIES: Record<string, AppCategory> = Object.freeze
   security: {
     id: 'securitySolution',
     label: i18n.translate('core.ui.securityNavList.label', {
-      // modified by HHonda
+      // modified by HHonda Tradução
       // defaultMessage: 'Security',
       defaultMessage: 'Segurança',
     }),
@@ -61,7 +61,7 @@ export const DEFAULT_APP_CATEGORIES: Record<string, AppCategory> = Object.freeze
   management: {
     id: 'management',
     label: i18n.translate('core.ui.managementNavList.label', {
-      // modified by HHonda
+      // modified by HHonda Tradução
       // defaultMessage: 'Management',
       defaultMessage: 'Gestão',
     }),

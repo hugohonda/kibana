@@ -101,7 +101,7 @@ export class AxisLabels {
         if (str.slice(-3) === ',00') {
           return str.slice(0, -3);
         }
-        // adicionado por Edmar Moretti
+        // adicionado por Edmar Moretti Remove 00
         if (str.slice(-4) === ',00%') {
           return str.replace(',00%', '%');
         }

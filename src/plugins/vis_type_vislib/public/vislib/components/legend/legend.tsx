@@ -222,7 +222,7 @@ export class VisLegend extends PureComponent<VisLegendProps, VisLegendState> {
         return 'downCenter';
     }
   };
-  // Editado por Edmar Moretti
+  // Editado por Edmar Moretti obtém a cor usada no símbolo
   getLegendLabelColor = () => {
     return this.props.vislibVis.visConfigArgs.legendLabelColor;
   };
@@ -233,9 +233,9 @@ export class VisLegend extends PureComponent<VisLegendProps, VisLegendState> {
     return {};
   };
 
-  // Editado por Edmar Moretti
+  // Editado por Edmar Moretti Legenda
   renderLegend = (anchorPosition: EuiPopoverProps['anchorPosition']) => (
-    // Editado por Edmar Moretti
+    // Editado por Edmar Moretti aplica ao texto a cor do símbolo da legenda
     <ul className="visLegend__list" id={this.legendId} style={this.getLegendLabelWidth()}>
       {this.state.labels.map((item) => (
         <VisLegendItem

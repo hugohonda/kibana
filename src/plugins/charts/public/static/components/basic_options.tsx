@@ -23,7 +23,7 @@ import { i18n } from '@kbn/i18n';
 import { VisOptionsProps } from 'src/plugins/vis_default_editor/public';
 import { SwitchOption } from './switch';
 import { SelectOption } from './select';
-// Editado por Edmar Moretti
+// Editado por Edmar Moretti Inclusão de variáveis
 interface BasicOptionsParams {
   addTooltip: boolean;
   legendPosition: string;
@@ -32,7 +32,6 @@ interface BasicOptionsParams {
   selectOnClick: boolean;
   dontSplitChart: boolean;
 }
-// Editado por Edmar Moretti
 function BasicOptions<VisParams extends BasicOptionsParams>({
   stateParams,
   setValue,
@@ -40,7 +39,7 @@ function BasicOptions<VisParams extends BasicOptionsParams>({
 }: VisOptionsProps<VisParams>) {
   return (
     <>
-      {/* Editado por Edmar Moretti */}
+      {/* Editado por Edmar Moretti Impedir divisão do gráfico */}
       <SwitchOption
         label="Impedir divisão do gráfico"
         paramName="dontSplitChart"

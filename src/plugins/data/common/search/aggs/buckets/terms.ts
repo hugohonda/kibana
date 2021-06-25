@@ -79,7 +79,7 @@ export const getTermsBucketAgg = () =>
     title: termsTitle,
     makeLabel(agg) {
       const params = agg.params;
-      // Editado por Edmar Moretti + HHonda
+      // Editado por Edmar Moretti + HHonda Muda a ordem de apresentação do título em buscas
       // return agg.getFieldDisplayName() + ': ' + params.order.text;
       return params.order.text + ': ' + agg.getFieldDisplayName();
     },

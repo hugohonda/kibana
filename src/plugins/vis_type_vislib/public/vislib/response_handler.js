@@ -19,11 +19,9 @@
 
 import { getFormatService } from '../services';
 import { buildHierarchicalData, buildPointSeriesData } from './helpers';
-
 function tableResponseHandler(table, dimensions) {
   const converted = { tables: [] };
   const split = dimensions.splitColumn || dimensions.splitRow;
-
   if (split) {
     converted.direction = dimensions.splitRow ? 'row' : 'column';
     const splitColumnIndex = split[0].accessor;
@@ -37,11 +35,16 @@ function tableResponseHandler(table, dimensions) {
 
       if (!splitMap.hasOwnProperty(splitValue)) {
         splitMap[splitValue] = splitIndex++;
+        // Editado por Edmar Moretti Não inclui o label default se for vazio
+        let prefixo = '';
+        if (splitColumn.meta.aggConfigParams.customLabel) {
+          prefixo = splitColumn.name + ' ';
+        }
         const tableGroup = {
           $parent: converted,
-          // Editado por Edmar Moretti + HHonda
+          // Editado por Edmar Moretti + HHonda Define o título de gráficos divididos
           // title: `${splitColumnFormatter.convert(splitValue)}: ${splitColumn.name}`,
-          title: `${splitColumn.name}: ${splitColumnFormatter.convert(splitValue)}`,
+          title: `${prefixo}${splitColumnFormatter.convert(splitValue)}`,
           name: splitColumn.name,
           key: splitValue,
           column: splitColumnIndex,
@@ -67,7 +70,6 @@ function tableResponseHandler(table, dimensions) {
       rows: table.rows,
     });
   }
-
   return converted;
 }
 
@@ -103,7 +105,6 @@ function convertTableGroup(tableGroup, convertTable) {
 
   return out;
 }
-
 function handlerFunction(convertTable) {
   return function (response, dimensions) {
     const tableGroup = tableResponseHandler(response, dimensions);

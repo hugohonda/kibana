@@ -299,7 +299,7 @@ export class DashboardPlugin
 
     const app: App = {
       id: DashboardConstants.DASHBOARDS_ID,
-      // Editado por Edmar Moretti
+      // Editado por Edmar Moretti Tradução
       title: 'Painéis',
       order: 2500,
       euiIconType: 'logoKibana',

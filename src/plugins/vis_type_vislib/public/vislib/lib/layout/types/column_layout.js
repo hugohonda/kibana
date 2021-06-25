@@ -43,7 +43,6 @@ export function columnLayout(el, data) {
   if (!el || !data) {
     throw new Error('Both an el and data need to be specified');
   }
-
   return [
     {
       parent: el,

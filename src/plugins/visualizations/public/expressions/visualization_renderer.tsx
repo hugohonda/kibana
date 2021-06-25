@@ -29,8 +29,7 @@ export const visualization = () => ({
   displayName: 'visualization',
   reuseDomNode: true,
   render: async (domNode: HTMLElement, config: any, handlers: any) => {
-    // Acrescentado Edmar Moretti + HHonda
-    // remove a palavra 'filters' dos títulos dos eixos x e y
+    // Acrescentado Edmar Moretti + HHonda remove a palavra 'filters' dos títulos dos eixos x e y
     try {
       if (config.visData.xAxisLabel === 'filters') {
         config.visData.xAxisLabel = ' ';
