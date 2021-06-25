@@ -138,6 +138,13 @@ function RangesPanel({
           setGaugeValue('scale', { ...stateParams.gauge.scale, [paramName]: value })
         }
       />
+      {/* Editado por Edmar Moretti Cor dos textos da legenda Gauge */}
+      <SwitchOption
+        label="Cor dos itens da legenda iguais ao símbolo?"
+        paramName="legendLabelColor"
+        value={stateParams.legendLabelColor}
+        setValue={setValue}
+      />
     </EuiPanel>
   );
 }
