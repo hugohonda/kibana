@@ -47,7 +47,7 @@ export class AxisTitle {
         const el = this;
         const div = d3.select(el);
         const width = $(el).width();
-        const height = $(el).height();
+        const height = $(el).height() + 20;
         const axisPrefix = config.isHorizontal() ? 'x' : 'y';
 
         const svg = div
@@ -64,7 +64,7 @@ export class AxisTitle {
               if (ts === false) {
                 return `translate(${width / 2},0)`;
               } else {
-                return `translate(0,0)`;
+                return `translate(0,-5)`;
               }
             } else {
               if (ts === false) {
