@@ -122,6 +122,8 @@ class ListControlUi extends PureComponent<ListControlUiProps, ListControlUiState
             defaultMessage: 'Select...',
           })}
           disabled={true}
+          // adicionado por Edmar Moretti
+          compressed="true"
         />
       );
     }
@@ -149,7 +151,6 @@ class ListControlUi extends PureComponent<ListControlUiProps, ListControlUiState
         value: selectedOption,
       };
     });
-
     return (
       <EuiComboBox
         placeholder={intl.formatMessage({
@@ -165,6 +166,8 @@ class ListControlUi extends PureComponent<ListControlUiProps, ListControlUiState
         singleSelection={!this.props.multiselect}
         data-test-subj={`listControlSelect${this.props.controlIndex}`}
         inputRef={this.setTextInputRef}
+        // adicionado por Edmar Moretti
+        compressed="true"
       />
     );
   }

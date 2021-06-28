@@ -123,6 +123,8 @@ export class InputControlVis extends Component<InputControlVisProps> {
             onClick={this.handleSubmit}
             disabled={!this.props.hasChanges()}
             data-test-subj="inputControlSubmitBtn"
+            // Adicionado por Edmar Moretti
+            size="s"
           >
             <FormattedMessage
               id="inputControl.vis.inputControlVis.applyChangesButtonLabel"
@@ -137,6 +139,8 @@ export class InputControlVis extends Component<InputControlVisProps> {
             onClick={this.handleReset}
             disabled={!this.props.hasChanges()}
             data-test-subj="inputControlCancelBtn"
+            // Adicionado por Edmar Moretti
+            size="s"
           >
             <FormattedMessage
               id="inputControl.vis.inputControlVis.cancelChangesButtonLabel"
@@ -151,6 +155,8 @@ export class InputControlVis extends Component<InputControlVisProps> {
             onClick={this.handleClearAll}
             disabled={!this.props.hasValues()}
             data-test-subj="inputControlClearBtn"
+            // Adicionado por Edmar Moretti
+            size="s"
           >
             <FormattedMessage
               id="inputControl.vis.inputControlVis.clearFormButtonLabel"

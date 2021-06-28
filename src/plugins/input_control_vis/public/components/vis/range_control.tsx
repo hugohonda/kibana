@@ -127,6 +127,7 @@ export class RangeControl extends PureComponent<RangeControlProps, RangeControlS
         label={this.props.control.label}
         controlIndex={this.props.controlIndex}
         disableMsg={this.props.control.isEnabled() ? undefined : this.props.control.disabledReason}
+        compressed="true"
       >
         {this.renderControl()}
       </FormRow>
