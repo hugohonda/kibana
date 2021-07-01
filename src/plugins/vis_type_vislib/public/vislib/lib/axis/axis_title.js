@@ -38,7 +38,7 @@ export class AxisTitle {
 
   draw() {
     const config = this.axisConfig;
-    // Editado por Edmar Moretti Opção de posicionar o ttulo no início
+    // Editado por Edmar Moretti Opção de posicionar o título no início
     const ts = config._values.labels.titlePosStart;
     return function (selection) {
       selection.each(function () {
@@ -47,7 +47,7 @@ export class AxisTitle {
         const el = this;
         const div = d3.select(el);
         const width = $(el).width();
-        const height = $(el).height() + 20;
+        const height = $(el).height();
         const axisPrefix = config.isHorizontal() ? 'x' : 'y';
 
         const svg = div
