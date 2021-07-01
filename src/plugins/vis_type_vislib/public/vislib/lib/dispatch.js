@@ -171,7 +171,7 @@ export class Dispatch {
    * @returns event with list of data points related to the click
    */
   clickEventResponse(d, props = {}) {
-    // Editado por Edmar Moretti
+    // Editado por Edmar Moretti - remove seleção por clique
     if (this.handler.visConfig._values.selectOnClick) {
       return;
     }

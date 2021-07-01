@@ -38,7 +38,7 @@ export class AxisTitle {
 
   draw() {
     const config = this.axisConfig;
-    // Editado por Edmar Moretti Opção de posicionar o ttulo no início
+    // Editado por Edmar Moretti Opção de posicionar o título no início
     const ts = config._values.labels.titlePosStart;
     return function (selection) {
       selection.each(function () {

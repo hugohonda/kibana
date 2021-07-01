@@ -27,7 +27,7 @@ const defaults = {
   },
   categoryLines: false,
   valueAxis: undefined,
-  // Editado por Edmar Moretti
+  // Editado por Edmar Moretti styleGridConfig
   styleGridConfig: undefined,
 };
 
