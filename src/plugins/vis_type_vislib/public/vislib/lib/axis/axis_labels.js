@@ -166,8 +166,16 @@ export class AxisLabels {
         const outsideLowerBound = currentTickStartEdge < lowerBound;
         const overlapsLastTick =
           currentTickEndEdge >= lastTickStartEdge && currentTickStartEdge <= lastTickEndEdge;
-
-        if (outsideUpperBound || outsideLowerBound || overlapsLastTick) {
+        // Editado por Edmar Moretti - mantém o último valor do gráfico
+        //if (outsideUpperBound || outsideLowerBound || overlapsLastTick) {
+        if (config.get('labels.keepLastValue') === true && outsideUpperBound) {
+          d3.select(this).attr('dy', 0);
+        }
+        if (
+          (config.get('labels.keepLastValue') === false && outsideUpperBound) ||
+          outsideLowerBound ||
+          overlapsLastTick
+        ) {
           d3.select(this.parentNode).remove();
         } else {
           lastTickStartEdge = currentTickCenter - currentTickHalfSize;

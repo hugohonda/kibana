@@ -137,6 +137,15 @@ function LabelOptions({ axisLabels, axisFilterCheckboxName, setAxisLabel }: Labe
         setValue={setAxisLabel}
       />
 
+      {/* Edmar Moretti manter último valor */}
+      <SwitchOption
+        data-test-subj={axisFilterCheckboxName}
+        disabled={!axisLabels.show}
+        label="Mantem o último valor ao filtrar as etiquetas"
+        paramName="keepLastValue"
+        value={axisLabels.keepLastValue}
+        setValue={setAxisLabel}
+      />
       <EuiSpacer size="m" />
 
       <EuiFlexGroup gutterSize="s">

@@ -40,6 +40,7 @@ export interface Labels {
   styleValuesConfig: string | undefined;
   styleTitleConfig: string | undefined;
   titlePosStart: boolean | undefined;
+  keepLastValue: boolean | undefined;
 }
 
 export interface Style {

@@ -58,7 +58,7 @@ const defaults = {
     font: '"Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif',
     fontSize: '8pt',
     truncate: 100,
-    // modified by HHonda
+    // modified by HHonda + Edmar Moretti
     hideDecimals: false,
     concatTag: '',
     styleTitleConfig: '',
@@ -66,6 +66,7 @@ const defaults = {
     styleLineConfig: '',
     styleTickConfig: '',
     titlePosStart: false,
+    keepLastValue: false,
   },
   title: {
     text: '',
