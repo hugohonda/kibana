@@ -238,7 +238,7 @@ export class DiscoverPlugin
     this.docViewsRegistry.setAngularInjectorGetter(this.getEmbeddableInjector);
     core.application.register({
       id: 'discover',
-      // Editado por Edmar Moretti
+      // Editado por Edmar Moretti - tradução
       title: 'Descobrir',
       updater$: this.appStateUpdater.asObservable(),
       order: 1000,

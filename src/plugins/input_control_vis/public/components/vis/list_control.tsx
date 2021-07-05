@@ -166,7 +166,7 @@ class ListControlUi extends PureComponent<ListControlUiProps, ListControlUiState
         singleSelection={!this.props.multiselect}
         data-test-subj={`listControlSelect${this.props.controlIndex}`}
         inputRef={this.setTextInputRef}
-        // adicionado por Edmar Moretti
+        // adicionado por Edmar Moretti - compactação do formulário de controle
         compressed="true"
       />
     );

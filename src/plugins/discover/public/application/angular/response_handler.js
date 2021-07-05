@@ -39,7 +39,7 @@ function tableResponseHandler(table, dimensions) {
         splitMap[splitValue] = splitIndex++;
         const tableGroup = {
           $parent: converted,
-          // Editado por Edmar Moretti + HHonda
+          // Editado por Edmar Moretti + HHonda - inversão do nome antes e depois dos dois pontos
           // title: `${splitColumnFormatter.convert(splitValue)}: ${splitColumn.name}`,
           title: `${splitColumn.name}: ${splitColumnFormatter.convert(splitValue)}`,
           name: splitColumn.name,
