@@ -310,7 +310,7 @@ class HeaderHelpMenuUI extends Component<Props, State> {
         <EuiIcon type="help" size="m" />
       </EuiHeaderSectionItemButton>
     );
-
+    // Editado por Edmar Moretti - inclusão da data da customização no menu
     return (
       <EuiPopover
         anchorPosition="downRight"
@@ -336,7 +336,7 @@ class HeaderHelpMenuUI extends Component<Props, State> {
               <FormattedMessage
                 id="core.ui.chrome.headerGlobalNav.helpMenuVersion"
                 defaultMessage="v {version}"
-                values={{ version: kibanaVersion }}
+                values={{ version: kibanaVersion + ' (Customização HH e EM de 05/07/2021)' }}
               />
             </EuiFlexItem>
           </EuiFlexGroup>
