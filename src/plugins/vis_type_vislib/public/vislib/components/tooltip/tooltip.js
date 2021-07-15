@@ -85,6 +85,9 @@ Tooltip.prototype.$getSizer = _.once(function () {
  */
 Tooltip.prototype.show = function () {
   const $tooltip = this.$get();
+  // Adicionado por Edmar Moretti - alteração da palavra filters para Classe no tooltip
+  $tooltip.html($tooltip.html().replace('>filters</div>', '>Classe</div>'));
+
   const $chart = this.$getChart();
   const html = $tooltip.html();
 
