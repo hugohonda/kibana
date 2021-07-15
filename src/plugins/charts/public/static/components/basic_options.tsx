@@ -19,11 +19,11 @@
 
 import React from 'react';
 import { i18n } from '@kbn/i18n';
-
 import { VisOptionsProps } from 'src/plugins/vis_default_editor/public';
 import { SwitchOption } from './switch';
 import { SelectOption } from './select';
 // Editado por Edmar Moretti Inclusão de variáveis
+import { NumberInputOption } from './number_input';
 interface BasicOptionsParams {
   addTooltip: boolean;
   legendPosition: string;
@@ -31,6 +31,7 @@ interface BasicOptionsParams {
   legendLabelWidth: boolean;
   selectOnClick: boolean;
   dontSplitChart: boolean;
+  customAxisPadding: number;
 }
 function BasicOptions<VisParams extends BasicOptionsParams>({
   stateParams,
@@ -62,6 +63,12 @@ function BasicOptions<VisParams extends BasicOptionsParams>({
         label="Não limitar tamanho dos nomes na legenda"
         paramName="legendLabelWidth"
         value={stateParams.legendLabelWidth}
+        setValue={setValue}
+      />
+      <NumberInputOption
+        label="Distanciamento dos títulos"
+        paramName="customAxisPadding"
+        value={stateParams.customAxisPadding}
         setValue={setValue}
       />
       <SelectOption

@@ -336,7 +336,7 @@ class HeaderHelpMenuUI extends Component<Props, State> {
               <FormattedMessage
                 id="core.ui.chrome.headerGlobalNav.helpMenuVersion"
                 defaultMessage="v {version}"
-                values={{ version: kibanaVersion + ' (Customização HH e EM de 05/07/2021)' }}
+                values={{ version: kibanaVersion + ' (Customização HH e EM de 15/07/2021)' }}
               />
             </EuiFlexItem>
           </EuiFlexGroup>
