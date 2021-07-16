@@ -38,7 +38,7 @@ export class AxisTitle {
 
   draw() {
     const config = this.axisConfig;
-    // Editado por Edmar Moretti Opção de posicionar o título no início
+    // Editado por Edmar Moretti Opção de posicionar o título no início do eixo e para fazer o merge do título do eixo com o título do gráfico quando dividido
     const ts = config._values.labels.titlePosStart;
     return function (selection) {
       selection.each(function () {
@@ -56,10 +56,9 @@ export class AxisTitle {
           .attr('width', width)
           .attr('height', height)
           .attr('class', `axis-title ${axisPrefix}-axis-title`);
-        const bbox = svg
+        let bbox = svg
           .append('text')
           .attr('transform', function () {
-            // Editado por Edmar Moretti
             if (config.isHorizontal()) {
               if (ts === false) {
                 return `translate(${width / 2},0)`;
@@ -74,8 +73,6 @@ export class AxisTitle {
               }
             }
           })
-          // Editado por Edmar Moretti
-          //.attr('text-anchor', 'middle')
           .attr('text-anchor', function () {
             if (config.isHorizontal()) {
               if (ts === false) {
@@ -92,38 +89,43 @@ export class AxisTitle {
             }
           })
           .attr('dominant-baseline', 'hanging')
-          // modified by HHonda
-          // .text(config.get('title.text'))
+          // modified by HHonda + Edmar Moretti - definição do estilo do título
+          .attr('style', () => {
+            return config.get('labels.styleTitleConfig');
+          });
+        bbox.append('tspan').text(() => {
+          const hangingText = config.get('title.text');
+          if (hangingText === 'filters') {
+            return '';
+          }
+          return hangingText;
+        });
+        bbox
+          .append('tspan')
           .text(() => {
             const hangingText = config.get('title.text');
-            if (hangingText === 'filters') {
-              return '';
+            let prefixo = ' - ';
+            if (hangingText === 'filters' || hangingText === ' ') {
+              prefixo = '';
             }
-            // Editado por Edmar Moretti - inclui o título do gráfico junto ao label do eixo
             if (
               config._values.type === 'category' &&
               axisPrefix === 'x' &&
               config.data.data.dontSplitChart === true
             ) {
-              return hangingText + ' - ' + config.data.data.columns[0].label;
+              return prefixo + config.data.data.columns[0].label;
             }
             if (
               config._values.type === 'value' &&
               axisPrefix === 'x' &&
               config.data.data.dontSplitChart === true
             ) {
-              return hangingText + ' - ' + config.data.data.columns[0].label;
+              return prefixo + config.data.data.columns[0].label;
             }
-            return hangingText;
+            return '';
           })
-          // modified by HHonda + Edmar Moretti
-          .attr('style', () => {
-            return config.get('labels.styleTitleConfig');
-          })
-          //
-          .node()
-          .getBBox();
-
+          .attr('style', 'fill-opacity:0.6;stroke-opacity:0.6;font-weight:normal');
+        bbox = bbox.node().getBBox();
         if (config.isHorizontal()) {
           svg.attr('height', Math.ceil(bbox.height));
         } else {

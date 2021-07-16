@@ -342,6 +342,10 @@ export class ColumnChart extends PointSeries {
 
     function heightFunc(d) {
       const baseValue = isLogScale ? 1 : 0;
+      // Editado por Edmar Moretti - mostra uma linha na barra quando o valor for 0
+      if (Math.abs(yScale(baseValue) - yScale(d.y)) === 0) {
+        return 1;
+      }
       return Math.abs(yScale(baseValue) - yScale(d.y));
     }
 
@@ -354,7 +358,9 @@ export class ColumnChart extends PointSeries {
       .attr('x', isHorizontal ? x : y)
       .attr('width', isHorizontal ? widthFunc : heightFunc)
       .attr('y', isHorizontal ? y : x)
-      .attr('height', isHorizontal ? heightFunc : widthFunc);
+      .attr('height', isHorizontal ? heightFunc : widthFunc)
+      // Editado por Edmar Moretti - mostra uma linha na barra quando o valor for 0
+      .style('stroke-width', '1');
 
     const layer = d3.select(bars[0].parentNode);
     const barLabels = layer.selectAll('text').data(

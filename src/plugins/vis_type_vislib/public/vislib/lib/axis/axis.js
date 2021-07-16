@@ -136,8 +136,13 @@ export class Axis extends ErrorHandler {
     const style = config.get('style');
     const chartEl = this.visConfig.get('el');
     const position = config.get('position');
-    const axisPadding = 5;
-
+    // Editado por Edmar Moretti - aumenta a margem do gráfico com os títulos
+    // const axisPadding = 5;
+    let axisPadding = 10;
+    if (this.visConfig._values.customAxisPadding) {
+      axisPadding = this.visConfig._values.customAxisPadding;
+    }
+    //
     return function (selection) {
       const text = selection.selectAll('.tick text');
       const lengths = [];

@@ -143,7 +143,12 @@ class MetricVisComponent extends Component<MetricVisComponentProps> {
 
         if (bucketColumnId) {
           const bucketValue = this.getFormattedValue(bucketFormatter, row[bucketColumnId]);
+          // Editado por Edmar Moretti - remove - do label das métricas quando um for vazio
+          // title = `${bucketValue} - ${title}`;
           title = `${bucketValue} - ${title}`;
+          if (column.name === ' ') {
+            title = `${bucketValue}`;
+          }
         }
 
         const shouldColor = config.colorsRange.length > 1;
