@@ -226,17 +226,26 @@ export class VisLegend extends PureComponent<VisLegendProps, VisLegendState> {
   getLegendLabelColor = () => {
     return this.props.vislibVis.visConfigArgs.legendLabelColor;
   };
-  getLegendLabelWidth = () => {
+  getLegendLabelWidth = (anchorPosition) => {
     if (this.props.vislibVis.visConfigArgs.legendLabelWidth) {
       return { width: 'auto', 'max-width': '1000px' };
     }
-    return {};
+    // Editado por Edmar Moretti - aumenta o espaçamento da legenda
+    if (anchorPosition === 'downCenter') {
+      return { 'margin-bottom': '10px' };
+    } else {
+      return {};
+    }
   };
 
   // Editado por Edmar Moretti Legenda
   renderLegend = (anchorPosition: EuiPopoverProps['anchorPosition']) => (
     // Editado por Edmar Moretti aplica ao texto a cor do símbolo da legenda
-    <ul className="visLegend__list" id={this.legendId} style={this.getLegendLabelWidth()}>
+    <ul
+      className="visLegend__list"
+      id={this.legendId}
+      style={this.getLegendLabelWidth(anchorPosition)}
+    >
       {this.state.labels.map((item) => (
         <VisLegendItem
           item={item}
